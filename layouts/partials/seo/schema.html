@@ -1,0 +1,110 @@
+{{/* 结构化数据（JSON-LD）
+   2026-11-06 新增：主题原本完全没有结构化数据，补 Article / WebSite / BreadcrumbList。
+
+   注意 Hugo 三个坑（踩过）：
+   1. head 里拿不到正文 shortcode 的 Scratch -> 这里只用 front matter 和 site 变量
+   2. <script> 内模板输出必须 jsonify | safeJS，否则被 JS 上下文转义毁掉
+   3. HTML 注释会被构建管线吞 -> 用裸文本标记排查
+
+   为什么重要：谷歌用这套判断「这是什么页面、谁写的、什么时候更新」，
+   直接影响搜索结果的富摘要展现（日期、作者、面包屑）。
+*/}}
+
+{{- if .IsHome -}}
+{{- /* 首页：WebSite + Organization */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Title | jsonify | safeJS }},
+  "url": {{ site.BaseURL | jsonify | safeJS }},
+  "description": {{ site.Params.description | jsonify | safeJS }},
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": {{ site.Params.author | jsonify | safeJS }}
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.BaseURL }}search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- else -}}
+{{- /* 内页：Article + BreadcrumbList */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description": {{ (or .Description site.Params.description) | jsonify | safeJS }},
+  "url": {{ .Permalink | jsonify | safeJS }},
+  {{- with .Date }}
+  "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | jsonify | safeJS }},
+  {{- end }}
+  {{- with .Lastmod }}
+  "dateModified": {{ .Format "2006-01-02T15:04:05-07:00" | jsonify | safeJS }},
+  {{- end }}
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": {{ (or .Params.author site.Params.author) | jsonify | safeJS }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.Title | jsonify | safeJS }},
+    "url": {{ site.BaseURL | jsonify | safeJS }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify | safeJS }}
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": {{ site.BaseURL | jsonify | safeJS }}
+    }
+    {{- if .Parent }}
+    {{- if not .Parent.IsHome }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Parent.Title | jsonify | safeJS }},
+      "item": {{ .Parent.Permalink | jsonify | safeJS }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify | safeJS }}
+    }
+    {{- else }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify | safeJS }}
+    }
+    {{- end }}
+    {{- else }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify | safeJS }}
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}

@@ -118,76 +118,76 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       icon = "/img/icons/youlian.svg"  # 网友圈菜单图标路径（如果不存在会使用默认图标）
 
   # 生活菜单（一级菜单，包含二级菜单）
-  [[menu.main]]
-    name = "生活"
-    url = "#"
-    weight = 4
-    identifier = "life"               # 用于二级菜单的父级标识
-    [menu.main.params]
-      icon = "/img/icons/shenghuo.svg"
+#   [[menu.main]]
+#     name = "生活"
+#     url = "#"
+#     weight = 4
+#     identifier = "life"               # 用于二级菜单的父级标识
+#     [menu.main.params]
+#       icon = "/img/icons/shenghuo.svg"
   
   # 相册（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "相册"
-    url = "/gallery/"
-    weight = 1
-    parent = "life"                   # 指定父级菜单为"生活"
-    [menu.main.params]
-      icon = "/img/icons/xiangce.svg"
+#   [[menu.main]]
+#     name = "相册"
+#     url = "/gallery/"
+#     weight = 1
+#     parent = "life"                   # 指定父级菜单为"生活"
+#     [menu.main.params]
+#       icon = "/img/icons/xiangce.svg"
   
   # 装备（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "装备"
-    url = "/gear/"
-    weight = 2
-    parent = "life"                   # 指定父级菜单为"生活"
-    [menu.main.params]
-      icon = "/img/icons/zhuangbei.svg"
+#   [[menu.main]]
+#     name = "装备"
+#     url = "/gear/"
+#     weight = 2
+#     parent = "life"                   # 指定父级菜单为"生活"
+#     [menu.main.params]
+#       icon = "/img/icons/zhuangbei.svg"
   
   # 说说（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "说说"
-    url = "/shuoshuo/"
-    weight = 3
-    parent = "life"                   # 指定父级菜单为"生活"
-    [menu.main.params]
-      icon = "/img/icons/shuoshuo.svg"
+#   [[menu.main]]
+#     name = "说说"
+#     url = "/shuoshuo/"
+#     weight = 3
+#     parent = "life"                   # 指定父级菜单为"生活"
+#     [menu.main.params]
+#       icon = "/img/icons/shuoshuo.svg"
   
   # 愿望清单（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "愿望清单"
-    url = "/wishlist/"
-    weight = 4
-    parent = "life"                   # 指定父级菜单为"生活"
-    [menu.main.params]
-      icon = "/img/icons/yuanwang.svg"
+#   [[menu.main]]
+#     name = "愿望清单"
+#     url = "/wishlist/"
+#     weight = 4
+#     parent = "life"                   # 指定父级菜单为"生活"
+#     [menu.main.params]
+#       icon = "/img/icons/yuanwang.svg"
 
   # 音乐星球（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "音乐星球"
-    url = "/music-planet/"
-    weight = 5
-    parent = "life"
-    [menu.main.params]
-      icon = "/img/icons/yinyue.svg"
+#   [[menu.main]]
+#     name = "音乐星球"
+#     url = "/music-planet/"
+#     weight = 5
+#     parent = "life"
+#     [menu.main.params]
+#       icon = "/img/icons/yinyue.svg"
 
   # 追番星球（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "追番星球"
-    url = "/bangumi-planet/"
-    weight = 6
-    parent = "life"
-    [menu.main.params]
-      icon = "/img/icons/zhuifan.svg"
+#   [[menu.main]]
+#     name = "追番星球"
+#     url = "/bangumi-planet/"
+#     weight = 6
+#     parent = "life"
+#     [menu.main.params]
+#       icon = "/img/icons/zhuifan.svg"
 
   # 小说书单（二级菜单，属于"生活"菜单）
-  [[menu.main]]
-    name = "小说书单"
-    url = "/booklist/"
-    weight = 7
-    parent = "life"
-    [menu.main.params]
-      icon = "/img/icons/xiaoshuo.svg"
+#   [[menu.main]]
+#     name = "小说书单"
+#     url = "/booklist/"
+#     weight = 7
+#     parent = "life"
+#     [menu.main.params]
+#       icon = "/img/icons/xiaoshuo.svg"
 
   [[menu.main]]
     name = "留言"
@@ -249,8 +249,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   grayscaleMode = false                     # 全站变灰模式（一键开启，适用于特殊纪念日等场景）
   
   # ===== 基础信息配置 =====
-  author = "Demius Theme"                      # 网站作者/所有者
-  description = "A fully featured demo site for the Demius theme"  # 网站描述，用于SEO
+  author = "兔子的储物间"                      # 网站作者/所有者
+  description = "游戏与科技背后的人和事。写游戏商业史、怀旧考据和那些没人讲清楚的故事。"  # 网站描述，用于SEO
   
   # ===== 布局显示配置 =====
   homeColumns = 3                # 首页中间栏引擎：1=单列|2=双列|3=瀑布流
@@ -753,14 +753,9 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       
       # 系列文章列表
       [[params.aside.seriesPosts.series]]
-        name = "Hugo 博客搭建系列"
-        description = " Demius主题功能使用文档 "
-        slugs = ["a5wxauo6","ge0yozpt","5cilldeb"]  # 文章slug列表
-      
-      [[params.aside.seriesPosts.series]]
-        name = "Demius 主题使用"
-        description = "Demius 主题功能详解"
-        slugs = ["lyb5xlt2", "7hsd4t0x", "pkdvxhfn"]
+        name = "游戏商业史"
+        description = "那些厂商不愿提的事"
+        slugs = []  # 写了文章后填 slug
 
   # ===== 相关文章配置 =====
   [related]
@@ -790,9 +785,9 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   [params.announcement]
     enable = true                          # 是否启用公告栏
     important = false                      # 是否为重要公告（影响显示样式）
-    title = "Demius 主题公告"                 # 公告标题
-    content = "Demius 主题演示站正在运行中，文档中部署相关内容仅为示例，请根据自身需求进行配置。<strong style=\"color: #2ecc71;\">QQ群：1065475281</strong>"  # 公告内容
-    date = "2025-10-26"                    # 公告日期
+    title = "本站刚开张"                 # 公告标题
+    content = "正在把以前写的东西一篇篇搬过来。游戏商业史、怀旧考据、还有那些厂商不太愿意提的事。"  # 公告内容
+    date = "2026-11-06"                    # 公告日期
   [params.announcement.link]
       text = "了解更多"                    # 链接文本
       url = "/about"                       # 链接地址

@@ -260,6 +260,9 @@
     </script>
     
     {{ block "head" . }}{{ end }}
+
+    {{/* 2026-11-06 补：结构化数据（主题原本没有） */}}
+    {{ partial "seo/schema.html" . }}
   </head>
   
 <body{{ if .IsHome }} class="home"{{ else if .IsPage }}{{ if eq .Type "posts" }} class="single-post"{{ end }}{{ end }}>
