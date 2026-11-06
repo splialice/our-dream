@@ -3,9 +3,9 @@
 # 请根据您的需求修改相应的配置项
 
 # ===== 站点基础配置 =====
-baseURL = 'https://example.com'          # 网站基础URL，生产环境需改为实际域名
+baseURL = 'https://pixeldango.com/'          # 网站基础URL，结尾必须有斜杠
 languageCode = 'zh-CN'                     # 网站语言代码
-title = 'Demius Theme'                         # 网站标题
+title = 'Pixel Dango'                         # 网站标题
 theme = 'demius'                           
 
 # 忽略特定的日志警告
@@ -780,7 +780,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # ===== 广告配置 =====
   [params.advertisement]
-    enable = true                          # 是否启用广告位
+    enable = false                         # 关掉占位广告位（配好真实广告再开）
     title = "推荐产品"                     # 广告标题
     description = "产品描述信息：广告位测试"  # 广告描述
     image = "https://example.com/images/advertisement.jpg"  # 广告图片URL（示例，请替换为实际图片地址）
@@ -799,14 +799,14 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # ===== 联系信息配置 =====
   [params.contact]
-    email = "admin@example.com"            # 联系邮箱
+    email = "hello@pixeldango.com"            # 联系邮箱
 
   # ===== 社交链接配置 =====
   [params.social]
     # 关注我们的链接
     links = [
       { name = "GitHub", icon = "fab fa-github", url = "https://github.com/your-account", color = "#333333" },
-      { name = "邮箱", icon = "fas fa-envelope", url = "mailto:hello@example.com", color = "#333333" },
+      { name = "邮箱", icon = "fas fa-envelope", url = "mailto:hello@pixeldango.com", color = "#333333" },
       { name = "RSS", icon = "fas fa-rss", url = "/index.xml", color = "#333333" }
     ]
 
