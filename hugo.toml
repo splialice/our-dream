@@ -4,7 +4,7 @@
 
 # ===== 站点基础配置 =====
 baseURL = 'https://pixeldango.com/'          # 网站基础URL，结尾必须有斜杠
-languageCode = 'zh-CN'                     # 网站语言代码
+languageCode = 'en-US'                     # 网站语言代码
 title = 'Pixel Dango'                         # 网站标题
 theme = 'demius'                           
 
@@ -20,7 +20,7 @@ rssLimit = 20                              # RSS输出的最大文章数量
   pagerSize = 12                            # 每页文章数量（单栏/双栏布局生效）
 
 # ===== 多语言和区域设置 =====
-defaultContentLanguage = 'zh'              # 默认内容语言
+defaultContentLanguage = 'en'              # 默认内容语言
 hasCJKLanguage = true                      # 启用中日韩语言支持，优化中文排版
 
 # ===== 永久链接和分类配置 =====
@@ -39,7 +39,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 [menu]
   # 主导航菜单配置
   [[menu.main]]
-    name = "首页"
+    name = "Home"
     url = "/"
     weight = 1
     [menu.main.params]
@@ -47,7 +47,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 统计菜单（一级菜单，包含二级菜单）
   [[menu.main]]
-    name = "统计"
+    name = "Stats"
     url = "#"
     weight = 2
     identifier = "statistics"         # 用于二级菜单的父级标识
@@ -56,7 +56,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 归档（二级菜单，属于"统计"菜单）
   [[menu.main]]
-    name = "归档"
+    name = "Archive"
     url = "/posts/"
     weight = 1
     parent = "statistics"             # 指定父级菜单为"统计"
@@ -65,7 +65,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 分类（二级菜单，属于"统计"菜单）
   [[menu.main]]
-    name = "分类"
+    name = "Categories"
     url = "/categories/"
     weight = 2
     parent = "statistics"             # 指定父级菜单为"统计"
@@ -74,7 +74,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 标签（二级菜单，属于"统计"菜单）
   [[menu.main]]
-    name = "标签"
+    name = "Tags"
     url = "/tags/"
     weight = 3
     parent = "statistics"             # 指定父级菜单为"统计"
@@ -83,7 +83,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # 数据（二级菜单，属于"统计"菜单）
   [[menu.main]]
-    name = "数据"
+    name = "Data"
     url = "/data/"
     weight = 4
     parent = "statistics"             # 指定父级菜单为"统计"
@@ -92,7 +92,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 网友菜单（一级菜单，包含二级菜单）
   [[menu.main]]
-    name = "网友"
+    name = "Friends"
     url = "#"
     weight = 3
     identifier = "friends"              # 用于二级菜单的父级标识
@@ -101,7 +101,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 友链（二级菜单，属于"网友"菜单）
   [[menu.main]]
-    name = "友链"
+    name = "Links"
     url = "/links/"
     weight = 1
     parent = "friends"                  # 指定父级菜单为"网友"
@@ -110,7 +110,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 网友圈（二级菜单，属于"网友"菜单）
   [[menu.main]]
-    name = "网友圈"
+    name = "Circle"
     url = "/friends-circle/"
     weight = 2
     parent = "friends"                  # 指定父级菜单为"网友"
@@ -119,7 +119,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 生活菜单（一级菜单，包含二级菜单）
 #   [[menu.main]]
-#     name = "生活"
+#     name = "Life"
 #     url = "#"
 #     weight = 4
 #     identifier = "life"               # 用于二级菜单的父级标识
@@ -128,7 +128,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # 相册（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "相册"
+#     name = "Gallery"
 #     url = "/gallery/"
 #     weight = 1
 #     parent = "life"                   # 指定父级菜单为"生活"
@@ -137,7 +137,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # 装备（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "装备"
+#     name = "Gear"
 #     url = "/gear/"
 #     weight = 2
 #     parent = "life"                   # 指定父级菜单为"生活"
@@ -146,7 +146,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # 说说（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "说说"
+#     name = "Notes"
 #     url = "/shuoshuo/"
 #     weight = 3
 #     parent = "life"                   # 指定父级菜单为"生活"
@@ -155,7 +155,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # 愿望清单（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "愿望清单"
+#     name = "Wishlist"
 #     url = "/wishlist/"
 #     weight = 4
 #     parent = "life"                   # 指定父级菜单为"生活"
@@ -164,7 +164,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 音乐星球（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "音乐星球"
+#     name = "Music"
 #     url = "/music-planet/"
 #     weight = 5
 #     parent = "life"
@@ -173,7 +173,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 追番星球（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "追番星球"
+#     name = "Anime"
 #     url = "/bangumi-planet/"
 #     weight = 6
 #     parent = "life"
@@ -182,7 +182,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 小说书单（二级菜单，属于"生活"菜单）
 #   [[menu.main]]
-#     name = "小说书单"
+#     name = "Books"
 #     url = "/booklist/"
 #     weight = 7
 #     parent = "life"
@@ -190,21 +190,21 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 #       icon = "/img/icons/xiaoshuo.svg"
 
   [[menu.main]]
-    name = "留言"
+    name = "Guestbook"
     url = "/message/"
     weight = 5
     [menu.main.params]
       icon = "/img/icons/liuyan.svg"
 
   [[menu.main]]
-    name = "关于"
+    name = "About"
     identifier = "about"
     weight = 6
     [menu.main.params]
       icon = "/img/icons/guanyu.svg"
 
   [[menu.main]]
-    name = "关于本站"
+    name = "About"
     url = "/about/"
     weight = 1
     parent = "about"
@@ -212,7 +212,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       icon = "/img/icons/guanyu.svg"
 
   [[menu.main]]
-    name = "支持清单"
+    name = "Supporters"
     url = "/supporters/"
     weight = 2
     parent = "about"
@@ -221,14 +221,14 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # 多级菜单示例
   [[menu.main]]
-    name = "项目"
+    name = "Projects"
     identifier = "projects"
     weight = 7
     [menu.main.params]
       icon = "/img/icons/web.svg"
 
   [[menu.main]]
-    name = "Web开发"
+    name = "Web dev"
     url = "https://example.com/"
     weight = 1
     parent = "projects"
@@ -236,7 +236,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       icon = "/img/icons/web.svg"
 
   [[menu.main]]
-    name = "移动应用"
+    name = "Mobile apps"
     url = "https://example.com/"
     weight = 2
     parent = "projects"
@@ -299,8 +299,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   # ===== 打赏按钮配置 =====
   [params.reward]
     enable = true                          # 是否启用打赏按钮
-    buttonText = "☕ 感谢支持"              # 按钮显示文字
-    title = "如果觉得文章有帮助，可以请我喝杯杯咖啡~"  # 打赏提示文字
+    buttonText = "☕ Support this"              # 按钮显示文字
+    title = "Found this useful? You can buy me a coffee."  # 打赏提示文字
     wechat = "/img/weixin.webp"    # 微信收款码图片URL
     alipay = "/img/zhifubao.jpg"    # 支付宝收款码图片URL
   
@@ -310,14 +310,14 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [params.postActions.like]
       enable = true                        # 是否启用点赞功能
       icon = "fas fa-heart"                # 点赞图标（FontAwesome图标类名）
-      text = "点赞"                        # 按钮文字
-      likedText = "已赞"                   # 已点赞时的文字
+      text = "Like"                        # 按钮文字
+      likedText = "Liked"                  # 已点赞时的文字
     
     # 转发功能
     [params.postActions.share]
       enable = true                        # 是否启用转发功能
       icon = "fas fa-share-alt"            # 转发图标（FontAwesome图标类名）
-      text = "分享"                        # 按钮文字
+      text = "Share"                       # 按钮文字
       
       # 转发平台配置（按顺序显示）
       # 支持的平台：微信、微博、QQ、复制链接，{ name = "Twitter", icon = "fab fa-twitter", color = "#1DA1F2", url = "https://twitter.com/intent/tweet?url={url}&text={title}" },
@@ -480,8 +480,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
     # 一言组件配置
     [params.aside.hitokoto]
-      title = "一言"                       # 组件标题
-      enabled = true                       # 是否启用组件
+      title = "Quote"                      # 组件标题
+      enabled = false                      # 2026-11-06 关掉：这是今日诗词 API，返回中文古诗，英文站不适用
       apiType = "jinrishici"                    # API类型：nsmao（青桔API）或 jinrishici（今日诗词）
       showFrom = true                      # 是否显示来源
       # 青桔API配置
@@ -789,7 +789,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     content = "正在把以前写的东西一篇篇搬过来。游戏商业史、怀旧考据、还有那些厂商不太愿意提的事。"  # 公告内容
     date = "2026-11-06"                    # 公告日期
   [params.announcement.link]
-      text = "了解更多"                    # 链接文本
+      text = "Learn more"                    # 链接文本
       url = "/about"                       # 链接地址
 
   # ===== 联系信息配置 =====
@@ -801,18 +801,18 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     # 关注我们的链接
     links = [
       { name = "GitHub", icon = "fab fa-github", url = "https://github.com/your-account", color = "#333333" },
-      { name = "邮箱", icon = "fas fa-envelope", url = "mailto:hello@pixeldango.com", color = "#333333" },
+      { name = "Email", icon = "fas fa-envelope", url = "mailto:hello@pixeldango.com", color = "#333333" },
       { name = "RSS", icon = "fas fa-rss", url = "/index.xml", color = "#333333" }
     ]
 
     # 自定义内容区域
     [params.social.custom]
       enable = true                        # 是否启用自定义内容
-      title = "推荐阅读"                   # 自定义内容标题
+      title = "Recommended"                   # 自定义内容标题
       content = """
       <div class="custom-share-content">
         <a href="https://example.com" target="_blank">
-          <img src="/img/bj.jpg" alt="推荐阅读" class="share-qrcode" style="margin-top: 0.5rem;">
+          <img src="/img/bj.jpg" alt="Recommended" class="share-qrcode" style="margin-top: 0.5rem;">
         </a>
       </div>
       """
@@ -1082,8 +1082,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   # 自定义内容
   custom = """
     <div class="footer-links">
-      <a href="/about">关于</a>
-      <a href="/sitemap.xml">网站地图</a>
+      <a href="/about">About</a>
+      <a href="/sitemap.xml">Sitemap</a>
     </div>
   """
 
@@ -1091,7 +1091,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   [params.footer.runningTime]
     enable = true                          # 是否启用运行时间显示
     startDate = "2024-01-01"               # 网站建站日期（格式：YYYY-MM-DD）
-    prefix = "本站已运行"                   # 前缀文字
+    prefix = "Running for"                   # 前缀文字
 
 # ===== 弹窗公告配置 =====
 [params.popup]

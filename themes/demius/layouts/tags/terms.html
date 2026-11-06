@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="categories-page">
   <header class="categories-header">
-    <h1>{{ site.Params.navTags | default "标签" }}</h1>
+    <h1>{{ site.Params.navTags | default "Tags" }}</h1>
     {{ with .Content }}<div class="tags-description">{{ . }}</div>{{ end }}
   </header>
   <div class="categories-cloud">
