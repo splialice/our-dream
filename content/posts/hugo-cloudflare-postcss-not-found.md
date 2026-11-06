@@ -1,5 +1,5 @@
 ---
-title: "Hugo 部署到 Cloudflare Pages 报 PostCSS not found：三种原因，只有一个是对的"
+title: "Hugo 部署 Cloudflare 报 PostCSS not found"
 slug: hugo-cloudflare-postcss-not-found
 date: 2026-11-06T20:45:00+08:00
 lastmod: 2026-11-06T20:45:00+08:00
@@ -7,6 +7,7 @@ draft: false
 description: "本地 hugo 构建正常，推到 Cloudflare 就报 postcss binary not found。这是长期存在的坑，社区答案大多不完整。本文给出可复现的三步配置与验证方法。"
 summary: "本地能构建、线上报 POSTCSS not found，原因不在主题也不在 Hugo 版本，而在 Cloudflare 构建环境没跑 npm install。"
 tags: ["Hugo", "Cloudflare Pages", "PostCSS", "部署排错"]
+cover: "/img/covers/postcss-not-found.svg"
 categories: ["建站折腾"]
 comments: true
 ---
