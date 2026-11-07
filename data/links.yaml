@@ -1,9 +1,72 @@
 groups:
-  - name: "一些博客"
+  # ============================================================
+  # 2026-11-07 改成盘点/资源库（原为友链页）
+  # 用途：给「盘点系列」和日常写作提供可引用的源头资料。
+  # 原则：只收真正能查到东西的站点，不收"你给我链我回你链"的互惠友链。
+  # ============================================================
+
+  - name: "Game history & databases"
     links:
-      - name: "字·兮·书"
-        url: "https://blog.demius.tech"
-        avatar: "/img/avatar.png"
-        description: "时间就是生命，Life is money，Money is life"
-        tags: ["技术"]
-        rss: "https://blog.demius.tech/index.xml"
+      - name: "MobyGames"
+        url: "https://www.mobygames.com/"
+        avatar: ""
+        description: "Game database with credits, release dates and platform info. The credits section is the fastest way to verify who actually worked on a title."
+        tags: ["database", "credits"]
+
+      - name: "GDRI (Game Developer Research Institute)"
+        url: "https://gdri.smspower.org/"
+        avatar: ""
+        description: "Researches uncredited developers behind retro titles. Useful when a game's actual studio is missing from official sources."
+        tags: ["research", "retro"]
+
+      - name: "The Cutting Room Floor"
+        url: "https://tcrf.net/"
+        avatar: ""
+        description: "Unused content, cut features and debug menus found in game data. Good for showing what a project looked like before release."
+        tags: ["unused content", "preservation"]
+
+      - name: "Video Game History Foundation"
+        url: "https://gamehistory.org/"
+        avatar: ""
+        description: "Preservation research and archival work on source material, press kits and development documents."
+        tags: ["archive", "preservation"]
+
+  - name: "Industry data"
+    links:
+      - name: "SteamDB"
+        url: "https://steamdb.info/"
+        avatar: ""
+        description: "Tracks Steam app changes, price history, player counts and delisted titles. Best source for concrete numbers on PC releases."
+        tags: ["data", "steam"]
+
+      - name: "Newzoo"
+        url: "https://newzoo.com/"
+        avatar: ""
+        description: "Games market research and consumer data. Free reports cover global revenue and player segments."
+        tags: ["market research"]
+
+      - name: "VGC (Video Games Chronicle)"
+        url: "https://www.videogameschronicle.com/"
+        avatar: ""
+        description: "Industry news with original sourcing. Frequently breaks studio closures, cancellations and layoffs."
+        tags: ["news"]
+
+  - name: "Technical references"
+    links:
+      - name: "Hugo Documentation"
+        url: "https://gohugo.io/documentation/"
+        avatar: ""
+        description: "Static site generator documentation. Shortcodes, template lookup order and build options are the pages I check most."
+        tags: ["docs", "hugo"]
+
+      - name: "Cloudflare Pages Docs"
+        url: "https://developers.cloudflare.com/pages/"
+        avatar: ""
+        description: "Build configuration, framework presets and custom domains for Pages."
+        tags: ["docs", "deploy"]
+
+      - name: "Google Search Central"
+        url: "https://developers.google.com/search/docs"
+        avatar: ""
+        description: "Official documentation for indexing, structured data and search appearance. The canonical reference for any SEO question."
+        tags: ["docs", "seo"]

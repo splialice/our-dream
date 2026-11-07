@@ -4,6 +4,10 @@ slug: immersive-reading
 date: 2025-11-05T09:30:00+08:00
 lastmod: 2025-11-15T21:00:00+08:00
 draft: false
+# 2026-11-07 主题作者的演示文，英文站不保留（内容留档，删掉 build 三行即可恢复）
+build:
+  render: never
+  list: never
 description: "演示 Demius 主题的沉浸阅读、PJAX、短代码、音乐/视频嵌入和局部加密写作方式。"
 summary: "进一步展示 Demius 主题的沉浸阅读按钮、浮动工具条、短代码组件、视频与音乐播放，以及局部加密内容。"
 tags: ["沉浸模式", "短代码", "多媒体"]

@@ -1,27 +1,24 @@
 ---
-title: "友链"
+title: "Resources"
 date: 2025-10-18T17:00:00+08:00
+lastmod: 2026-11-07T10:00:00+08:00
 type: "links"
 layout: "links"
-comments: true
+comments: false
 ---
 
-## 友链申请
+## What this page is
 
-麻烦请先添加本站友链，按照下面的模板在评论区留言，我会及时的审核，审核通过后会添加到友链中，如果有问题，请留言，我会及时的回复。
+Sources I actually check when writing. Every entry here is a place where something can be verified: a credit list, a release date, a sales figure, an official specification.
 
-已经添加的友链本站会不定时回访，如本站被下友链，请及时的通知我，我会及时的删除贵方的友链，如未通知本站即下友链，本站将视为无效友链，不予添加。
+I am not collecting links for the sake of collecting links. If a site does not help confirm a fact, it does not belong here.
 
-本站主动添加的友链，两周内如未加友链，本站将视为无效友链，不予添加。
+## How I use it
 
+Most of what I write involves a claim that is easy to repeat and hard to check. Who actually developed a game. How many units something sold. Why a format failed. That kind of claim needs a source, and these are the ones I go back to.
 
+When a source contradicts itself, I say so in the article instead of picking the convenient version.
 
+## Suggesting an addition
 
-```yaml
-- name: "字·兮·书"
-        url: "https://blog.demius.tech"
-        avatar: "/img/avatar.png"
-        description: "时间就是生命，Life is money，Money is life"
-        tags: ["技术"]
-        rss: "https://blog.demius.tech/index.xml"
-```
+If you know a source that is missing, leave a comment. I will add it if it holds up to the same standard: specific, checkable, and useful to someone who is trying to find out what happened.

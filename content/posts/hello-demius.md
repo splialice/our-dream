@@ -4,6 +4,10 @@ slug: hello-demius
 date: 2025-11-01T10:00:00+08:00
 lastmod: 2025-11-15T20:00:00+08:00
 draft: false
+# 2026-11-07 主题作者的演示文，英文站不保留（内容留档，删掉 build 三行即可恢复）
+build:
+  render: never
+  list: never
 description: "带你 10 分钟跑通 Demius 主题的全部基础能力，了解三栏布局、侧栏组件、卡片风格以及沉浸式交互。"
 summary: "带你 10 分钟跑通 Demius 主题的全部基础能力，了解三栏布局、侧栏组件、卡片风格以及沉浸式交互。"
 tags: ["主题上手", "组件基础", "发布日志"]

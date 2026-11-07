@@ -219,29 +219,6 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [menu.main.params]
       icon = "/img/icons/zhichi.svg"
 
-  # 多级菜单示例
-  [[menu.main]]
-    name = "Projects"
-    identifier = "projects"
-    weight = 7
-    [menu.main.params]
-      icon = "/img/icons/web.svg"
-
-  [[menu.main]]
-    name = "Web dev"
-    url = "https://example.com/"
-    weight = 1
-    parent = "projects"
-    [menu.main.params]
-      icon = "/img/icons/web.svg"
-
-  [[menu.main]]
-    name = "Mobile apps"
-    url = "https://example.com/"
-    weight = 2
-    parent = "projects"
-    [menu.main.params]
-      icon = "/img/icons/shouji.svg"
 
 # ===== 主题参数配置 =====
 [params]
@@ -752,9 +729,10 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       borderRadius = ""                    # 圆角大小（留空则使用默认圆角）
       
       # 系列文章列表
+      # 2026-11-07 盘点系列：写了文章后把 slug 填进 slugs（主题靠手动维护，不是 taxonomy）
       [[params.aside.seriesPosts.series]]
-        name = "游戏商业史"
-        description = "那些厂商不愿提的事"
+        name = "Retrospectives"
+        description = "Why things went the way they did"
         slugs = []  # 写了文章后填 slug
 
   # ===== 相关文章配置 =====
