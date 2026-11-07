@@ -1046,7 +1046,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 # ===== 悬浮音乐播放器配置（独立配置，与侧栏音乐组件分离） =====
 [params.floatMusicPlayer]
   # 是否启用悬浮音乐播放器（桌面独立小组件，位于左下角）
-  enabled = true
+  enabled = false    # 2026-11-07 关掉：接的是网易云/QQ音乐，英文站用不到
   
   # 数据源配置：从 data/music-planet.yaml 中选择数据
   # 方式1：通过section索引选择（从0开始，支持多个索引）

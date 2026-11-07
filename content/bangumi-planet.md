@@ -7,6 +7,10 @@ draft: false
 type: bangumi-planet
 layout: bangumi-planet
 description: "我的追番追剧列表，记录看过的、在看的和想看的番剧/影视作品。"
+# 2026-11-07 英文站用不到，停止渲染（内容保留，删掉这三行即可恢复）
+build:
+  render: never
+  list: never
 ---
 
 ## 追番星球
