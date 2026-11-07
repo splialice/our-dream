@@ -261,6 +261,12 @@
     
     {{ block "head" . }}{{ end }}
 
+    {{/* 2026-11-07 补：Open Graph / Twitter Card（主题原本没有） */}}
+    {{ partial "seo/opengraph.html" . }}
+
+    {{/* 2026-11-07 补：Open Graph / Twitter Card（主题原本没有） */}}
+    {{ partial "seo/opengraph.html" . }}
+
     {{/* 2026-11-06 补：结构化数据（主题原本没有） */}}
     {{ partial "seo/schema.html" . }}
   </head>

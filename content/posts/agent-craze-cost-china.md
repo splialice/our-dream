@@ -8,7 +8,7 @@ description: "An AI agent in China costs roughly one fiftieth of what the same r
 summary: "I ran an AI agent for a week. 202 million tokens, 16 yuan, about 2 dollars. Here is the bill, and why it explains the whole phenomenon."
 tags: ["AI agents", "DeepSeek", "computer use", "cost analysis"]
 categories: ["AI"]
-cover: "/img/covers/default.svg"
+cover: "/img/covers/agent-craze-cover.jpg"
 comments: false
 ---
 
