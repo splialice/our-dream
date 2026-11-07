@@ -8,7 +8,7 @@ description: "本地 hugo 构建正常，推到 Cloudflare 就报 postcss binary
 summary: "本地能构建、线上报 POSTCSS not found，原因不在主题也不在 Hugo 版本，而在 Cloudflare 构建环境没跑 npm install。"
 tags: ["Hugo", "Cloudflare Pages", "PostCSS", "部署排错"]
 cover: "/img/covers/postcss-not-found.svg"
-categories: ["建站折腾"]
+categories: ["Site building"]
 comments: true
 ---
 

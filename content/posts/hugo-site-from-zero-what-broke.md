@@ -7,7 +7,7 @@ draft: false
 description: "A real build log: theme setup, Cloudflare Pages, English interface conversion, and the five problems that cost me the most time. No theory, just what happened and how I fixed it."
 summary: "I built this site over two days. Five things broke. Here is each one, why it broke, and the fix that actually worked."
 tags: ["Hugo", "Cloudflare Pages", "build log", "troubleshooting"]
-categories: ["Building this site"]
+categories: ["Site building"]
 cover: "/img/covers/default.svg"
 comments: true
 ---

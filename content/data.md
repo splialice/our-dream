@@ -5,6 +5,9 @@ type: "data"
 layout: "data"
 comments: false
 slug: "data"
+build:
+  render: never
+  list: never
 ---
 
 欢迎来到数据统计页面！这里展示了网站的各项数据指标。

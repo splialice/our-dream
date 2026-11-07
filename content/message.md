@@ -1,59 +1,43 @@
 ---
-title: "留言板"
+title: "Contact"
 slug: message
 date: 2025-10-28T18:00:00+08:00
+lastmod: 2026-11-07T10:35:00+08:00
 type: message
 layout: message
-description: "欢迎在这里留言，分享你的想法和建议"
+description: "How to reach me, and what I actually want to hear about."
 ---
 
-## 💬 欢迎留言
+## Get in touch
 
-欢迎来到留言板！在这里你可以：
+Email is the reliable way. Everything else is slower.
 
-- 📝 **自由留言**：分享你的想法、建议或问题
-- 💡 **技术交流**：讨论技术话题，共同学习进步
-- 🤝 **交个朋友**：认识志同道合的朋友
-- 📣 **反馈建议**：对网站有什么建议都可以告诉我
+**hello@pixeldango.com**
 
-## 📋 留言须知
+## What is worth writing about
 
-1. **友善交流**：请保持友善和尊重，营造良好的交流氛围
-2. **相关内容**：欢迎与技术、学习、生活相关的话题
-3. **禁止内容**：
-   - ❌ 广告、推广、垃圾信息
-   - ❌ 不文明、攻击性言论
-   - ❌ 违法违规内容
+**A factual correction.** If something I wrote is wrong, I want to know. Tell me which sentence and what the correct version is. If you have a source, include it. Corrections get fixed and, when the error was substantive, noted in the article.
 
-## 🎨 留言板功能
+**A source I missed.** Especially for anything involving development credits, sales figures or dates. The Resources page exists for this reason.
 
-- ✅ **Markdown 支持**：支持 Markdown 语法，让留言更丰富
-- ✅ **表情支持**：可以使用 emoji 表情 😊
-- ✅ **回复功能**：可以回复其他人的留言
-- ✅ **邮件通知**：收到回复时会邮件通知（如果开启）
-- ✅ **实时更新**：留言实时显示
+**A question about something I built.** If you are stuck on the same Hugo or Cloudflare problem I wrote about, ask. I answer everything that is not asking me to debug your entire project.
 
-## 💭 常见问题
+**A disagreement.** If you think my reading of why something happened is wrong, say so and say why. Those are the most interesting emails.
 
-### Q: 留言需要注册账号吗？
-A: 不需要！填写昵称和邮箱即可留言，非常简单。
+## What I will not reply to
 
-### Q: 留言会被公开吗？
-A: 是的，所有留言都是公开的，请注意保护个人隐私。
+- Guest post offers, link exchanges, and "collaboration" pitches that are really advertising
+- Requests to remove accurate information about a company
+- Anything asking me to write content for free in exchange for exposure
 
-### Q: 留言可以删除吗？
-A: 可以！如果需要删除自己的留言，请联系我。
+## On comments
 
-### Q: 支持什么格式？
-A: 支持 Markdown 语法，可以使用链接、图片、代码等格式。
+Comments are off for now. Not because I do not want to hear from you, but because the comment system needs a backend I have not set up yet, and a comment box that silently fails to submit is worse than no comment box.
 
-## 📮 其他联系方式
+When it is working, it will be here.
 
-如果你不想公开留言，也可以通过以下方式联系我：
+## About the writing
 
-- 📧 **邮箱**：hello@example.com
+Two kinds of things end up on this site. One is game history: who made what, why a format or a console or a studio ended the way it did. The other is technical notes from building things, mostly this site.
 
-## 🎉 开始留言吧！
-
-期待你的留言！👇
-
+They are in the same place because they come from the same practice. Neither one is reliable without the other. A claim about how a company failed needs the same discipline as a claim about why a build failed: find the source, state what it says, say what you do not know.

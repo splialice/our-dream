@@ -12,7 +12,7 @@ theme = 'demius'
 ignoreLogs = ['warning-goldmark-raw-html']
 
 # ===== RSS订阅配置 =====
-copyright = "Copyright © 2024-2026 Alex书"  # RSS版权信息
+copyright = "Copyright © 2026 Pixel Dango"  # RSS版权信息
 rssLimit = 20                              # RSS输出的最大文章数量
 
 # ===== 分页配置 =====
@@ -226,8 +226,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   grayscaleMode = false                     # 全站变灰模式（一键开启，适用于特殊纪念日等场景）
   
   # ===== 基础信息配置 =====
-  author = "兔子的储物间"                      # 网站作者/所有者
-  description = "游戏与科技背后的人和事。写游戏商业史、怀旧考据和那些没人讲清楚的故事。"  # 网站描述，用于SEO
+  author = "Pixel Dango"                      # 网站作者/所有者
+  description = "Game history and technical notes. Why consoles, formats and studios ended the way they did."  # 网站描述，用于SEO
   
   # ===== 布局显示配置 =====
   homeColumns = 3                # 首页中间栏引擎：1=单列|2=双列|3=瀑布流
@@ -300,12 +300,15 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       # 支持的平台：微信、微博、QQ、复制链接，{ name = "Twitter", icon = "fab fa-twitter", color = "#1DA1F2", url = "https://twitter.com/intent/tweet?url={url}&text={title}" },
       #  { name = "Facebook", icon = "fab fa-facebook", color = "#1877F2", url = "https://www.facebook.com/sharer/sharer.php?u={url}" },
       #  { name = "微博", icon = "fab fa-weibo", color = "#E6162D", url = "https://service.weibo.com/share/share.php?url={url}&title={title}" },
+      # 2026-11-07 换成英文站适用的平台（原为微信/QQ/复制链接）
       platforms = [
-        { name = "微信", icon = "fab fa-weixin", color = "#07C160" },
+        { name = "X", icon = "fab fa-x-twitter", color = "#000000", url = "https://twitter.com/intent/tweet?url={url}&text={title}" },
         
-        { name = "QQ", icon = "fab fa-qq", color = "#12B7F5", url = "https://connect.qq.com/widget/shareqq/index.html?url={url}&title={title}&summary={description}" },
+        { name = "LinkedIn", icon = "fab fa-linkedin", color = "#0A66C2", url = "https://www.linkedin.com/sharing/share-offsite/?url={url}" },
         
-        { name = "复制链接", icon = "fas fa-link", color = "#666666" }
+        { name = "Hacker News", icon = "fab fa-hacker-news", color = "#FF6600", url = "https://news.ycombinator.com/submitlink?u={url}&t={title}" },
+        
+        { name = "Copy link", icon = "fas fa-link", color = "#666666" }
       ]
   
   # ===== 视频支持配置 =====
@@ -341,7 +344,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # ===== 轮播图配置 =====
   [params.carousel]
-    enable = true                          # 是否启用轮播图功能
+    enable = false                         # 2026-11-07 关掉：轮播图是主题作者的示例内容，英文站不用
     height = 200                           # 轮播图高度(px)
     autoplay = true                        # 是否自动播放
     interval = 5000                        # 自动播放间隔(毫秒)
@@ -370,8 +373,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     wideMode = "false"                   # 侧栏宽度模式：false或"normal"=260px（默认），"medium"=332px（中宽），true或"wide"=415px（超宽）
     
     # 左右栏模块顺序配置
-    left  = ["author","announcement","visitor-info","life-time","recent-Comments","popular-Posts","advertisement"]
-    right = ["toc","tags","social-Media","hitokoto","random-image","music","series-posts","related-Posts", "recent-Posts","categories", "archive","data-stats"]
+    left  = ["author","announcement"]
+    right = ["toc","series-posts","related-Posts"]
 
     # 各组件显示开关（默认true表示不配置时默认显示）
     showAuthor = true                      # 作者信息卡片
@@ -763,8 +766,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   [params.announcement]
     enable = true                          # 是否启用公告栏
     important = false                      # 是否为重要公告（影响显示样式）
-    title = "本站刚开张"                 # 公告标题
-    content = "正在把以前写的东西一篇篇搬过来。游戏商业史、怀旧考据、还有那些厂商不太愿意提的事。"  # 公告内容
+    title = "Just started"                 # 公告标题
+    content = "New site. Migrating older writing in, one piece at a time. Game history first."  # 公告内容
     date = "2026-11-06"                    # 公告日期
   [params.announcement.link]
       text = "Learn more"                    # 链接文本

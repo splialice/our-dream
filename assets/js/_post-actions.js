@@ -186,11 +186,11 @@
       
       // 根据平台执行不同操作
       switch (platform) {
-        case '微信':
+        case 'WeChat':
           this.showWechatQRCode(window.location.href);
           break;
           
-        case '复制链接':
+        case 'Copy link':
           this.copyLink(window.location.href);
           break;
           
@@ -224,12 +224,12 @@
         <div class="qrcode-overlay"></div>
         <div class="qrcode-content">
           <div class="qrcode-header">
-            <span>微信扫一扫分享</span>
+            <span>Scan to share</span>
             <button class="qrcode-close">&times;</button>
           </div>
           <div class="qrcode-body">
             <div id="wechatQRCode"></div>
-            <p class="qrcode-tip">打开微信扫一扫，分享到朋友圈</p>
+            <p class="qrcode-tip">Open WeChat and scan the code</p>
           </div>
         </div>
       `;

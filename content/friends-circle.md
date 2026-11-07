@@ -7,6 +7,10 @@ draft: false
 type: friends-circle
 layout: friends-circle
 description: "展示友链站点的最新文章动态"
+# 2026-11-07 英文站用不到，停止渲染
+build:
+  render: never
+  list: never
 ---
 
 ## 网友圈

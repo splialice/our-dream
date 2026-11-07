@@ -1,60 +1,51 @@
 ---
-title: "关于"
+title: "About"
 date: 2025-10-25T20:00:00+08:00
+lastmod: 2026-11-07T10:35:00+08:00
 type: "page"
 layout: "single"
-comments: true
+comments: false
+description: "Who writes here, what this site is for, and how the material is sourced."
 ---
 
-## 关于本站
+## What this site is
 
-欢迎来到我的个人博客！
+Two kinds of writing, in one place.
 
-玩博客的经历起起伏伏，从最初的WordPress到Typecho，到Hexo，再到现在的Hugo，其他框架也尝试过，但最终还是选择了Hugo，并且选择重新开发了主题Demius
+**Game history.** Why a console, a format, a studio or a whole category of game ended the way it did. The questions I keep coming back to are usually about decisions: someone chose a disc instead of a cartridge, a platform chose a walled garden instead of an open one, and ten years later the consequence is obvious. I want to know who made that call and what they were looking at when they made it.
 
-这个名字有啥寓意呢，其实是创造的一个新的词，给它的含义是“天才妖精”，因为本身就是从两个英文单词天才和妖精各取一半而来，反正就是胡编乱造的，哈哈哈，希望大家喜欢
+**Technical notes.** Mostly from building things. This site itself is one of them. When something breaks in a way that took me hours to understand, I write down the actual cause, because the top search results for that error are usually incomplete.
 
-目前本站正在建设中，欢迎大家关注我的博客，新的主题有很多不足之处需要不断的更新，欢迎大家提出宝贵的意见，我会不断的完善
+The two belong together. A claim about why a company failed needs the same discipline as a claim about why a build failed: find the source, say what it says, and be explicit about what you could not verify.
 
-本站的很多功能样式等等都是之前用过的主题在魔改的过程中发现的一些好玩的功能，由于主题需要不断的测试调整，技术有限，有时候新增的功能还会影响已经实现的功能
+## How the material is handled
 
-所以如果有新的好玩的功能，请先在评论区提出，我会尽快的实现，如果有好的建议，欢迎提出，我会及时的修改，当然个人能力有限，如果有更好的实现方式，欢迎提出
+Three rules I try to hold to:
 
+**Sources are named.** When a number appears, it came from somewhere. If a source is uncertain, the article says so instead of rounding it into something that sounds confident.
 
-### 👋 个人简介
+**Disagreement is stated.** Game history is full of contradictory accounts, especially around credits and sales. When two sources conflict, both go in the text. Picking the convenient version is how errors get repeated for twenty years.
 
-不是折腾网络就是折腾人生，折腾吃，折腾玩，折腾着活着，反正大家都一样，来这个世界几十年，开心一天算一天啦！
+**Errors get corrected.** If something here is wrong and you can show it, it gets fixed. Corrections are noted when they matter.
 
-红红火火恍恍惚惚哈哈哈哈哈
+## What you will not find here
 
+No buying guides written from a spec sheet. No "top 10" lists where the ranking is decided before the writing starts. No coverage of something I have not actually looked into.
 
-### 🛠️ 已经能熟练背诵以下技能的名子
+If a piece is thin, it is because I did not have enough to make it thick. I would rather publish less.
 
-- **前端开发**: HTML, CSS, JavaScript, Vue.js
-- **后端开发**: Node.js, Python, Go, Java
-- **博客框架**: Hugo, Hexo, Typecho, Wordpress
-- **工具技能**: Git, Docker, Linux, Windows, MacOS
-- **其他技能**: 品菜，写作，赶海，听歌，钓鱼，看书，看电影，看剧，看动漫......
+## The name
 
-### 🎯 当前专注
+Pixel Dango is a nonsense name. It sounded right, so it stayed.
 
-- Hugo 主题开发与优化
-- 开源项目贡献
-- 技术博客写作与分享
-- 学习新的编程语言和框架
+## Getting in touch
 
-### 📫 联系方式
+Corrections, sources and disagreements are welcome: **hello@pixeldango.com**
 
-- 📧 邮箱：demiusking@outlook.com
-- 🐱 GitHub：[demius-theme](https://github.com/demius-theme)
+More detail on the [contact page](/message/).
 
-### 本站信息
+## About the build
 
-- 主题：Demius
-- 生成器：Hugo
-- 托管：待补充
+Static site, generated with [Hugo](https://gohugo.io/), deployed on [Cloudflare Pages](https://pages.cloudflare.com/). The theme is a modified copy of one called Demius, converted to English and trimmed down.
 
----
-
-感谢您的访问！
-
+If any of that breaks, the fix usually ends up as an article. That is the whole editorial policy.
