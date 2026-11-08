@@ -1,0 +1,10 @@
+{{- /*
+  canonical 标签（2026-11-08 补）
+  背景：Demius 主题不带 canonical，og 和 schema 都是后补的，这是第三项。
+  canonical 的作用是告诉搜索引擎「这个页面的规范地址是哪个」，
+  防止带参数/大小写/尾斜杠不同被当成重复内容。
+  用 .Permalink 取绝对地址，Hugo 会按 permalink 配置自动生成。
+*/ -}}
+{{- if .Permalink -}}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- end -}}

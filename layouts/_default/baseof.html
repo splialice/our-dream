@@ -261,6 +261,9 @@
     
     {{ block "head" . }}{{ end }}
 
+    {{/* 2026-11-08 补：canonical（主题原本没有） */}}
+    {{ partial "seo/canonical.html" . }}
+
     {{/* 2026-11-07 补：Open Graph / Twitter Card（主题原本没有） */}}
     {{ partial "seo/opengraph.html" . }}
 

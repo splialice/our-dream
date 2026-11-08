@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1d26"/>
+      <stop offset="100%" stop-color="#0d0f14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff4d4d"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3ddc84"/>
+      <stop offset="100%" stop-color="#28c840"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 网格纹理 -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+
+  <!-- 终端窗口 -->
+  <rect x="90" y="96" width="1020" height="440" rx="12" fill="#12151c" stroke="#2a3040" stroke-width="2"/>
+  <rect x="90" y="96" width="1020" height="44" rx="12" fill="#1a1f2b"/>
+  <rect x="90" y="128" width="1020" height="12" fill="#1a1f2b"/>
+  <circle cx="120" cy="118" r="7" fill="#ff5f57"/>
+  <circle cx="144" cy="118" r="7" fill="#febc2e"/>
+  <circle cx="168" cy="118" r="7" fill="#28c840"/>
+  <text x="210" y="123" font-family="monospace" font-size="14" fill="#5a6478">cloudflare pages · build log · 2026-11-08</text>
+
+  <!-- 第 1 段：clone 成功 -->
+  <text x="126" y="182" font-family="monospace" font-size="15" fill="#4a5568">10:02:50</text>
+  <text x="236" y="182" font-family="monospace" font-size="15" fill="#3ddc84">Cloning repository... OK</text>
+  <text x="126" y="208" font-family="monospace" font-size="15" fill="#4a5568">10:02:51</text>
+  <text x="236" y="208" font-family="monospace" font-size="15" fill="#8a94a8">HEAD is now at 8403a74</text>
+
+  <!-- 分隔 -->
+  <line x1="126" y1="228" x2="1074" y2="228" stroke="#2a3040" stroke-width="1"/>
+
+  <!-- 第 2 段：下载失败 -->
+  <text x="126" y="258" font-family="monospace" font-size="15" fill="#4a5568">10:02:54</text>
+  <text x="236" y="258" font-family="monospace" font-size="15" fill="#c3cad9">Downloading hugo extended_0.167.0...</text>
+  <text x="126" y="284" font-family="monospace" font-size="15" fill="#4a5568">10:02:54</text>
+  <text x="236" y="284" font-family="monospace" font-size="15" fill="#ff4d4d" font-weight="bold">curl: (22) The requested URL returned error: 504</text>
+  <text x="126" y="310" font-family="monospace" font-size="15" fill="#4a5568">10:02:55</text>
+  <text x="236" y="310" font-family="monospace" font-size="15" fill="#ff8a3d">mkdir: ... File exists</text>
+
+  <!-- 分隔 -->
+  <line x1="126" y1="330" x2="1074" y2="330" stroke="#2a3040" stroke-width="1"/>
+
+  <!-- 第 3 段：结论 -->
+  <text x="126" y="360" font-family="monospace" font-size="15" fill="#4a5568">10:02:55</text>
+  <text x="236" y="360" font-family="monospace" font-size="15" fill="#ff4d4d" font-weight="bold">Error: Exit with error code: 1</text>
+  <text x="126" y="392" font-family="monospace" font-size="15" fill="#3ddc84">Hugo never ran. Not one page was generated.</text>
+
+  <!-- 对比：报告 vs 实际 -->
+  <rect x="126" y="420" width="948" height="86" rx="8" fill="#0a0c10" stroke="#2a3040" stroke-width="1"/>
+  <text x="150" y="450" font-family="monospace" font-size="15" fill="#8a94a8">publish job reported</text>
+  <text x="470" y="450" font-family="monospace" font-size="17" fill="#3ddc84" font-weight="bold">9 succeeded</text>
+  <text x="150" y="482" font-family="monospace" font-size="15" fill="#8a94a8">articles actually live</text>
+  <text x="470" y="482" font-family="monospace" font-size="17" fill="#ff4d4d" font-weight="bold">0</text>
+
+  <!-- 底部结论条 -->
+  <rect x="90" y="562" width="1020" height="2" fill="url(#accent)" opacity="0.85"/>
+  <text x="90" y="600" font-family="monospace" font-size="17" fill="#c3cad9">A green checkmark on the push is compatible with an immediate collapse during the build.</text>
+
+  <!-- 站点标记 -->
+  <text x="1110" y="600" font-family="monospace" font-size="14" fill="#3a4256" text-anchor="end">pixeldango.com</text>
+</svg>
