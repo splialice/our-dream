@@ -2,6 +2,21 @@
 <html lang="{{ site.Language.LanguageCode | default "en" }}" data-theme="{{ if site.Params.darkMode }}dark{{ else }}light{{ end }}"{{ if site.Params.grayscaleMode }} class="grayscale-mode"{{ end }}>
   <head>
     <meta charset="utf-8">
+
+    {{/* Google Analytics 4 (2026-11-09)
+         放在 charset 之后、其余 head 之前，Google 推荐顺序。
+         主题 demius 不调用 Hugo 内置模板，故此处手写。
+         hugo.toml 未配置 googleAnalytics 时整段不输出。 */}}
+    {{ with site.Config.Services.GoogleAnalytics.ID }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ . }}');
+    </script>
+    {{ end }}
+
     <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="{{ .Site.Params.author }}">

@@ -8,6 +8,11 @@ languageCode = 'en-US'                     # 网站语言代码
 title = 'Pixel Dango'                         # 网站标题
 theme = 'demius'                           
 
+# ===== Google Analytics 4（2026-11-09 接入）=====
+# 测量 ID 来源：GA4 → 管理 → 数据流 → pixeldango1（数据流 ID 16301033085）
+# 主题 demius 未调用 Hugo 内置 google_analytics 模板，故由 layouts/_default/baseof.html 手动输出
+googleAnalytics = 'G-770Y4W7ZN4'
+
 # 忽略特定的日志警告
 ignoreLogs = ['warning-goldmark-raw-html']
 
