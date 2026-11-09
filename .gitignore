@@ -13,3 +13,6 @@ desktop.ini
 
 # 临时调试产物
 build_err*.txt
+
+# Hugo 运行时锁文件
+.hugo_build.lock
