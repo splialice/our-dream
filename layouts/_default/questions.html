@@ -19,17 +19,17 @@
   </header>
 
   {{ range $i, $group := site.Data.questions.groups }}
-  <section class="qa-group" data-group-index="{{ $i }}">
-    <header class="qa-group-head">
+  <details class="qa-group" data-group-index="{{ $i }}" open>
+    <summary class="qa-group-head">
       <span class="qa-group-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ $group.icon | safeHTML }}</svg>
       </span>
       <h2 class="qa-group-title">{{ $group.name }}</h2>
       <span class="qa-group-num" data-group-count>0</span>
-      <button type="button" class="qa-collapse" aria-label="Collapse section" aria-expanded="true" aria-hidden="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </button>
-    </header>
+      <span class="qa-group-toggle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+    </summary>
     <div class="qa-list">
       {{ range $group.items }}
       <details class="qa-item" data-text="{{ printf "%s %s %s" .q .a .detail | lower }}">
@@ -47,7 +47,7 @@
       </details>
       {{ end }}
     </div>
-  </section>
+  </details>
   {{ end }}
 
   <p class="qa-empty" id="qa-empty" hidden>Nothing matches that yet. Try a shorter word.</p>
@@ -59,17 +59,32 @@
   --qa-border: rgba(15, 23, 42, .10);
   --qa-muted: rgba(15, 23, 42, .64);
   --qa-hover: rgba(0, 102, 204, .06);
-  padding: .5rem 0 2.5rem;
+  --qa-sticky: rgba(255, 255, 255, .80);
+  /* 纵向长度上限：列表在中间这栏内部滚动，页面本身不再无限往下拉 */
+  max-height: calc(100vh - 7rem);
+  max-height: calc(100dvh - 7rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: .5rem .5rem 2.5rem 0;
 }
 [data-theme="dark"] .qa-hub {
   --qa-card: rgba(255, 255, 255, .045);
   --qa-border: rgba(255, 255, 255, .12);
   --qa-muted: rgba(229, 229, 229, .62);
   --qa-hover: rgba(77, 171, 247, .09);
+  --qa-sticky: rgba(26, 26, 26, .88);
+}
+.qa-head {
+  position: sticky; top: 0; z-index: 5;
+  margin: -.5rem -.5rem 0 0; padding: .5rem .5rem 0 0;
+  background: var(--qa-sticky);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .qa-title { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0 0 .55rem; letter-spacing: -.02em; }
 .qa-intro { color: var(--qa-muted); margin: 0; line-height: 1.7; }
-.qa-tools { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; margin: 1.6rem 0 1rem; }
+.qa-tools { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; margin: 1.4rem 0 .9rem; }
 .qa-search {
   display: flex; align-items: center; gap: .6rem; flex: 1 1 300px; min-width: 0;
   padding: .72rem 1.05rem; border: 1px solid var(--qa-border); border-radius: 999px;
@@ -84,23 +99,31 @@
 }
 .qa-search input::placeholder { color: var(--qa-muted); opacity: .85; }
 .qa-count { font-size: .82rem; color: var(--qa-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.qa-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }
+.qa-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.6rem; }
 .qa-chip {
+  position: relative; z-index: 2;
   padding: .42rem .9rem; border: 1px solid var(--qa-border); border-radius: 999px;
   background: var(--qa-card); color: var(--qa-muted);
   font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer;
-  transition: border-color .18s ease, color .18s ease, background .18s ease;
+  transition: border-color .18s ease, color .18s ease, background .18s ease, transform .1s ease;
 }
 .qa-chip:hover { border-color: var(--accent); color: var(--accent); }
+.qa-chip:active { transform: translateY(1px); }
 .qa-chip.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
 .qa-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.qa-group { margin-bottom: 2.2rem; }
+/* 分组：原生 details，点标题即折叠，不依赖脚本 */
+.qa-group { margin-bottom: 1.6rem; }
 .qa-group-head {
+  position: relative; z-index: 2;
   display: flex; align-items: center; gap: .8rem; margin: 0 0 .9rem;
   padding: .8rem 1rem; border: 1px solid var(--qa-border);
   border-radius: 14px; background: var(--qa-card);
+  cursor: pointer; list-style: none;
 }
+.qa-group-head::-webkit-details-marker { display: none; }
+.qa-group-head:hover { border-color: var(--accent); }
+.qa-group-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .qa-group-icon {
   display: flex; align-items: center; justify-content: center; flex: none;
   width: 2.3rem; height: 2.3rem; border-radius: 10px;
@@ -114,16 +137,11 @@
   background: var(--qa-hover); border: 1px solid var(--qa-border);
   font-size: .75rem; color: var(--qa-muted); font-variant-numeric: tabular-nums;
 }
-.qa-collapse {
-  display: flex; align-items: center; justify-content: center; flex: none;
-  width: 1.8rem; height: 1.8rem; padding: 0; border: 1px solid var(--qa-border);
-  border-radius: 8px; background: transparent; color: var(--qa-muted); cursor: pointer;
-}
-.qa-collapse svg { width: 1rem; height: 1rem; transition: transform .2s ease; }
-.qa-collapse:hover { color: var(--accent); border-color: var(--accent); }
-.qa-collapse:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.qa-group.is-collapsed .qa-collapse svg { transform: rotate(-90deg); }
-.qa-group.is-collapsed .qa-list { display: none; }
+.qa-group-toggle { display: flex; flex: none; color: var(--qa-muted); }
+.qa-group-toggle svg { width: 1.05rem; height: 1.05rem; transition: transform .2s ease; }
+.qa-group[open] .qa-group-toggle svg { transform: rotate(0deg); }
+.qa-group:not([open]) .qa-group-toggle svg { transform: rotate(-90deg); }
+.qa-group:not([open]) .qa-list { display: none; }
 
 .qa-list { display: flex; flex-direction: column; gap: .6rem; }
 .qa-item {
@@ -134,6 +152,7 @@
 .qa-item:hover, .qa-item[open] { border-color: var(--accent); }
 .qa-item[open] { background: var(--qa-hover); }
 .qa-summary {
+  position: relative; z-index: 2;
   display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem;
   cursor: pointer; list-style: none; color: var(--fg);
 }
@@ -164,15 +183,20 @@
 .qa-empty { text-align: center; color: var(--qa-muted); padding: 2.5rem 0; }
 .qa-item[hidden], .qa-group[hidden], .qa-empty[hidden] { display: none !important; }
 @media (max-width: 640px) {
+  .qa-hub {
+    max-height: calc(100vh - 8.5rem);
+    max-height: calc(100dvh - 8.5rem);
+    padding-right: .25rem;
+  }
   .qa-group-head { padding: .7rem .85rem; gap: .65rem; }
   .qa-group-title { font-size: .98rem; }
   .qa-summary { padding: .9rem 1rem; }
   .qa-q { font-size: .96rem; }
-  .qa-tools { margin-bottom: .9rem; }
-  .qa-chips { margin-bottom: 1.6rem; }
+  .qa-tools { margin-bottom: .8rem; }
+  .qa-chips { margin-bottom: 1.4rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .qa-item, .qa-plus, .qa-search, .qa-chip, .qa-collapse svg { transition: none; }
+  .qa-item, .qa-plus, .qa-search, .qa-chip, .qa-group-toggle svg { transition: none; }
 }
 </style>
 {{ end }}
