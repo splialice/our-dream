@@ -20,7 +20,7 @@
 
   {{ range $i, $group := site.Data.questions.groups }}
   <details class="qa-group" data-group-index="{{ $i }}" open>
-    <summary class="qa-group-head">
+    <summary class="qa-group-head" title="点击展开或收起这一组">
       <span class="qa-group-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ $group.icon | safeHTML }}</svg>
       </span>
@@ -33,7 +33,7 @@
     <div class="qa-list">
       {{ range $group.items }}
       <details class="qa-item" data-text="{{ printf "%s %s %s" .q .a .detail | lower }}">
-        <summary class="qa-summary">
+        <summary class="qa-summary" title="点击展开答案">
           <span class="qa-item-body">
             <span class="qa-q">{{ .q }}</span>
             <span class="qa-a">{{ .a }}</span>
@@ -137,8 +137,14 @@
   background: var(--qa-hover); border: 1px solid var(--qa-border);
   font-size: .75rem; color: var(--qa-muted); font-variant-numeric: tabular-nums;
 }
-.qa-group-toggle { display: flex; flex: none; color: var(--qa-muted); }
-.qa-group-toggle svg { width: 1.05rem; height: 1.05rem; transition: transform .2s ease; }
+.qa-group-toggle {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  border: 1px solid var(--qa-border); background: var(--qa-hover); color: var(--qa-muted);
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+}
+.qa-group-toggle svg { width: 1rem; height: 1rem; transition: transform .2s ease; }
+.qa-group-head:hover .qa-group-toggle { color: var(--accent); border-color: var(--accent); }
 .qa-group[open] .qa-group-toggle svg { transform: rotate(0deg); }
 .qa-group:not([open]) .qa-group-toggle svg { transform: rotate(-90deg); }
 .qa-group:not([open]) .qa-list { display: none; }
@@ -162,16 +168,20 @@
 .qa-q { font-size: 1.02rem; font-weight: 650; line-height: 1.35; }
 .qa-a { font-size: .87rem; color: var(--qa-muted); line-height: 1.5; }
 .qa-plus {
-  position: relative; flex: none; width: 1.15rem; height: 1.15rem;
-  color: var(--accent); transition: transform .2s ease;
+  position: relative; flex: none; width: 1.65rem; height: 1.65rem;
+  border-radius: 50%; border: 1px solid var(--qa-border);
+  background: var(--qa-hover); color: var(--accent);
+  transition: transform .2s ease, border-color .18s ease, background .18s ease;
 }
 .qa-plus::before, .qa-plus::after {
   content: ""; position: absolute; top: 50%; left: 50%;
   background: currentColor; border-radius: 2px;
   transform: translate(-50%, -50%);
 }
-.qa-plus::before { width: 100%; height: 2px; }
-.qa-plus::after { width: 2px; height: 100%; }
+.qa-plus::before { width: 55%; height: 2px; }
+.qa-plus::after { width: 2px; height: 55%; }
+.qa-summary:hover .qa-plus { border-color: var(--accent); }
+.qa-summary:hover .qa-q { color: var(--accent); }
 .qa-item[open] .qa-plus { transform: rotate(45deg); }
 .qa-detail { padding: .2rem 1.15rem 1.15rem; border-top: 1px solid var(--qa-border); }
 .qa-detail p { margin: .9rem 0 .85rem; font-size: .92rem; line-height: 1.7; color: var(--fg); opacity: .88; }
