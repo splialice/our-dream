@@ -15,6 +15,7 @@
         const hay = (el.getAttribute('data-text') || '').toLowerCase();
         const hit = !q || hay.indexOf(q) !== -1;
         el.hidden = !hit;
+        if (!hit && el.open) el.open = false;
         if (hit) shown++;
       });
       groups.forEach(function (g) {
@@ -28,6 +29,14 @@
     }
 
     input.addEventListener('input', apply);
+    items.forEach(function (el) {
+      el.addEventListener('toggle', function () {
+        if (!el.open) return;
+        items.forEach(function (other) {
+          if (other !== el) other.open = false;
+        });
+      });
+    });
     apply();
   }
 

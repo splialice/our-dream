@@ -12,18 +12,30 @@
     </div>
   </header>
 
-  {{ range site.Data.questions.groups }}
+  {{ range $group := site.Data.questions.groups }}
   <section class="qa-group">
-    <h2 class="qa-group-title"><span>{{ .name }}</span><span class="qa-group-num" data-group-count>0</span></h2>
+    <header class="qa-group-head">
+      <span class="qa-group-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ $group.icon | safeHTML }}</svg>
+      </span>
+      <h2 class="qa-group-title">{{ $group.name }}</h2>
+      <span class="qa-group-num" data-group-count>0</span>
+    </header>
     <div class="qa-list">
-      {{ range .items }}
-      <a class="qa-item" href="{{ .url }}" data-text="{{ printf "%s %s" .q .a | lower }}">
-        <span class="qa-item-body">
-          <span class="qa-q">{{ .q }}</span>
-          <span class="qa-a">{{ .a }}</span>
-        </span>
-        <span class="qa-arrow" aria-hidden="true">&#8594;</span>
-      </a>
+      {{ range $group.items }}
+      <details class="qa-item" data-text="{{ printf "%s %s %s" .q .a .detail | lower }}">
+        <summary class="qa-summary">
+          <span class="qa-item-body">
+            <span class="qa-q">{{ .q }}</span>
+            <span class="qa-a">{{ .a }}</span>
+          </span>
+          <span class="qa-plus" aria-hidden="true"></span>
+        </summary>
+        <div class="qa-detail">
+          <p>{{ .detail }}</p>
+          <a class="qa-full" href="{{ .url }}">Read the full article <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </details>
       {{ end }}
     </div>
   </section>
@@ -63,43 +75,74 @@
 }
 .qa-search input::placeholder { color: var(--qa-muted); opacity: .85; }
 .qa-count { font-size: .82rem; color: var(--qa-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.qa-group { margin-bottom: 2rem; }
-.qa-group-title {
-  display: flex; align-items: center; gap: .6rem; margin: 0 0 .85rem;
-  font-size: .78rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .12em; color: var(--qa-muted);
+
+.qa-group { margin-bottom: 2.2rem; }
+.qa-group-head {
+  display: flex; align-items: center; gap: .8rem; margin: 0 0 .9rem;
+  padding: .8rem 1rem; border: 1px solid var(--qa-border);
+  border-radius: 14px; background: var(--qa-card);
 }
+.qa-group-icon {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  width: 2.3rem; height: 2.3rem; border-radius: 10px;
+  background: var(--accent); color: #fff;
+}
+.qa-group-icon svg { width: 1.2rem; height: 1.2rem; }
+.qa-group-title { flex: 1; min-width: 0; margin: 0; font-size: 1.06rem; font-weight: 650; letter-spacing: -.01em; }
 .qa-group-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 1.4rem; height: 1.4rem; padding: 0 .35rem; border-radius: 999px;
-  background: var(--qa-card); border: 1px solid var(--qa-border);
-  font-size: .72rem; letter-spacing: 0;
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  min-width: 1.6rem; height: 1.6rem; padding: 0 .4rem; border-radius: 999px;
+  background: var(--qa-hover); border: 1px solid var(--qa-border);
+  font-size: .75rem; color: var(--qa-muted); font-variant-numeric: tabular-nums;
 }
-.qa-list { display: flex; flex-direction: column; gap: .65rem; }
+
+.qa-list { display: flex; flex-direction: column; gap: .6rem; }
 .qa-item {
-  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem;
   border: 1px solid var(--qa-border); border-radius: 14px;
-  background: var(--qa-card); color: var(--fg); text-decoration: none;
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  background: var(--qa-card); overflow: hidden;
+  transition: border-color .18s ease, background .18s ease;
 }
-.qa-item:hover, .qa-item:focus-visible {
-  transform: translateY(-2px); border-color: var(--accent); background: var(--qa-hover);
+.qa-item:hover, .qa-item[open] { border-color: var(--accent); }
+.qa-item[open] { background: var(--qa-hover); }
+.qa-summary {
+  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem;
+  cursor: pointer; list-style: none; color: var(--fg);
 }
-.qa-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qa-summary::-webkit-details-marker { display: none; }
+.qa-summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; border-radius: 14px; }
 .qa-item-body { display: flex; flex-direction: column; gap: .3rem; min-width: 0; flex: 1; }
 .qa-q { font-size: 1.02rem; font-weight: 650; line-height: 1.35; }
 .qa-a { font-size: .87rem; color: var(--qa-muted); line-height: 1.5; }
-.qa-arrow { flex: none; font-size: 1.15rem; color: var(--accent); opacity: .65; transition: transform .18s ease, opacity .18s ease; }
-.qa-item:hover .qa-arrow, .qa-item:focus-visible .qa-arrow { transform: translateX(3px); opacity: 1; }
+.qa-plus {
+  position: relative; flex: none; width: 1.15rem; height: 1.15rem;
+  color: var(--accent); transition: transform .2s ease;
+}
+.qa-plus::before, .qa-plus::after {
+  content: ""; position: absolute; top: 50%; left: 50%;
+  background: currentColor; border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+.qa-plus::before { width: 100%; height: 2px; }
+.qa-plus::after { width: 2px; height: 100%; }
+.qa-item[open] .qa-plus { transform: rotate(45deg); }
+.qa-detail { padding: .2rem 1.15rem 1.15rem; border-top: 1px solid var(--qa-border); }
+.qa-detail p { margin: .9rem 0 .85rem; font-size: .92rem; line-height: 1.7; color: var(--fg); opacity: .88; }
+.qa-full {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: .87rem; font-weight: 650; color: var(--accent); text-decoration: none;
+}
+.qa-full:hover, .qa-full:focus-visible { text-decoration: underline; }
 .qa-empty { text-align: center; color: var(--qa-muted); padding: 2.5rem 0; }
 .qa-item[hidden], .qa-group[hidden], .qa-empty[hidden] { display: none !important; }
 @media (max-width: 640px) {
-  .qa-item { padding: .9rem 1rem; }
+  .qa-group-head { padding: .7rem .85rem; gap: .65rem; }
+  .qa-group-title { font-size: .98rem; }
+  .qa-summary { padding: .9rem 1rem; }
   .qa-q { font-size: .96rem; }
   .qa-tools { margin-bottom: 1.6rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .qa-item, .qa-arrow, .qa-search { transition: none; }
+  .qa-item, .qa-plus, .qa-search { transition: none; }
 }
 </style>
 {{ end }}

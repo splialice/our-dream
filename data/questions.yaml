@@ -1,33 +1,62 @@
 groups:
   - name: "Borderlands and the art makeover"
+    icon: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>'
     items:
       - q: "Is Borderlands cel shaded?"
         a: "Gearbox said no in April 2009. Four dated sources, including the CEO's email."
+        detail: >
+          On 9 April 2009 Randy Pitchford answered by email: "No, Borderlands is not cel-shaded — it's a gritty and serious world after all."
+          Five days later Gearbox said it had no settled name for the new look and adopted Concept Art Style for itself, while telling everyone else they could use whatever term they liked.
+          That is a denial of a label, not a technical audit of the shipped renderer.
         url: "/posts/is-borderlands-cel-shaded.html/"
       - q: "What is the Borderlands art style called?"
         a: "The studio named it Concept Art Style, and explicitly let everyone else use their own term."
+        detail: >
+          Concept Art Style is the studio's own name, chosen in April 2009. Cel shading is a rendering technique; Concept Art Style describes an art direction, a decision about how the game should look.
+          Gearbox did not ask anyone to stop using the older label, so the two can coexist: one is an official name, the other a visual shorthand.
         url: "/posts/borderlands-art-style.html/"
       - q: "Who pushed for the new look, and when?"
         a: "Four artists built a prototype in 2009; the CEO changed his mind after seeing it running."
+        detail: >
+          A Kotaku interview of 12 June 2009 says four artists prototyped a new direction because so many games were starting to look alike.
+          Pitchford expected to reject it, changed his mind after seeing the prototype running in real time, and the proposal then won support from Gearbox management and publisher 2K.
         url: "/posts/tf2-borderlands-before-the-makeover.html/"
   - name: "Reading the public record"
+    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/>'
     items:
       - q: "What can a Steam store page actually prove?"
         a: "It is dated metadata, not a development record. Six apps checked against appdetails."
+        detail: >
+          A store page is dated metadata, not a development record. Six Steam apps were checked against the public appdetails endpoint: those fields describe how a product is listed now, not what a team decided while building it.
+          A 2023 date on a Borderlands package says more about the listing than about the 2009 release.
         url: "/posts/what-a-steam-page-cant-tell-you.html/"
       - q: "Did a 28-player demo become Probably Stolen?"
         a: "What the public record connects between the demo and the 2026 launch, and what it does not."
+        detail: >
+          In February 2025 a space-station shopkeeping demo peaked at 28 concurrent players. By late October 2026 Probably Stolen was one of the year's larger indie launches.
+          The public record shows both points in time, but not a documented development decision connecting them: there is one X post and a launch press release full of numbers.
         url: "/posts/probably-stolen-28-player-demo.html/"
   - name: "Building this site"
+    icon: '<path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/>'
     items:
       - q: "What broke while building a Hugo site from zero?"
         a: "Theme setup, Cloudflare Pages, and the five problems that cost the most time."
+        detail: >
+          A two-day build log: theme setup, Cloudflare Pages, converting the interface to English, and the five problems that cost the most time.
+          Each one is written with the actual cause and the fix that worked, rather than the incomplete answer that usually ranks for the error.
         url: "/posts/hugo-site-from-zero-what-broke.html/"
       - q: "Why did git push succeed but nothing shipped?"
         a: "A Cloudflare build died five seconds after clone; the publish job still reported nine successes."
+        detail: >
+          A Cloudflare Pages build died five seconds after a clean git clone. The publish job still reported nine successes, and none of the nine articles were live.
+          A postmortem of how a green deploy can hide a failed build, and what to check before trusting the status.
         url: "/posts/when-git-push-succeeds-and-nothing-ships.html/"
   - name: "AI"
+    icon: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>'
     items:
       - q: "Why did the agent craze start in China?"
         a: "A week-long run cost 16 yuan. The price gap, not enthusiasm, explains the phenomenon."
+        detail: >
+          A week of running an AI agent used 202 million tokens and cost 16 yuan, about two dollars, roughly one fiftieth of the same run on a Western frontier model.
+          That price gap, not enthusiasm, is the simplest explanation for why Chinese users handed their social accounts to a model first.
         url: "/posts/agent-craze-cost-china.html/"
