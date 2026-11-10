@@ -1,6 +1,6 @@
 # 视觉改版史：TF2 / Borderlands — 资料归档
 
-> 归档日期：2026-11-09；审稿修订：2026-11-10
+> 归档日期：2026-11-09；审稿修订：2026-11-10；三篇 Kotaku 原文直连复核：2026-11-10
 > **选它的理由**：接 `probably-stolen-28-player-demo` 里 RPS 提的两个先例，把「改美术」从新闻话术还原成有据可查的开发史。
 > **本稿论点**：改头换面不是新鲜事，差别在**留下的证据**。TF2 有 2007 年会议论文 + 游戏内开发评论；Borderlands 有 2009 年 CEO 同期原话、同期访谈与引擎方技术文章；Probably Stolen 目前只有一句 X 帖 + 一份带数字的新闻稿。
 > **不做**：不写「N 款改过画风的游戏」榜单；不把三例说成同一因果。
@@ -21,14 +21,14 @@
 | 改版理由（弱证据） | 写实风格与「不真实的玩法」无法自洽而放弃 | **Wikipedia 对游戏内开发者评论的转述，二手**；不是 Valve 论文的直接陈述，正文须与论文分开写 |
 | 风格的功能性 | 剪影、边缘光、低视觉噪声，为的是远距离快速识别职业与威胁 | 官方维基转录 Jason Mitchell 原话（一手） |
 | Borderlands 首次公开 | 2007 年，被形容为「Diablo meets Mad Max」；原预期 2008 年圣诞 | Eurogamer 2009-04-14 |
-| Borderlands：4/9 邮件原话 | Pitchford：「Heh! No, Borderlands is not cel-shaded - it's a gritty and serious world after all.」 | **Kotaku 2009-04-09**《Gearbox: "Borderlands Is Not Cel-Shaded"》 |
-| Borderlands：4/14 官方论坛转录 | 「since the game was first unveiled we have made big advancements with the art direction and the technology to support the art, and have produced some pretty impressive, even shocking results」；官方命名 `Concept Art Style`，Pitchford 称「We don't know what to call the result」 | **Kotaku 2009-04-14**《Gearbox Explain Cel-Shaded Borderlands》，转录官方论坛声明 |
+| Borderlands：4/9 邮件原话 | Pitchford：「No, Borderlands is not cel-shaded — it's a gritty and serious world after all.」**旧稿多写了 `Heh!` 且把破折号写成连字符，2026-11-10 核原文后已更正** | **Kotaku 2009-04-09**《Gearbox: "Borderlands Is Not Cel-Shaded"》，Brian Ashcraft；原文直连核实 2026-11-10 |
+| Borderlands：4/14 官方论坛转录 | 「since the game was first unveiled we have made big advancements with the art direction and the technology to support the art, and have produced some pretty impressive, even shocking results」；新技术可实时呈现概念美术；官方命名 `Concept Art Style`，Pitchford 原话「We don't know what to call the result. You can use whatever term you like.」——**Gearbox 只为自己选了称呼，明确允许外界使用其他术语** | **Kotaku 2009-04-14**《Gearbox Explain Cel-Shaded Borderlands》，Luke Plunkett；原文直连核实 2026-11-10。**只核实了 Kotaku 的转录，Gearbox 原始论坛页未独立核对** |
 | Eurogamer 的定位 | 2009-04-14 同期报道同一轮问答 | **二手报道**，不是上述引语的原始出处；用于证「当年否认 cel-shaded + 使用 Concept Art Style」 |
-| Borderlands：6/12 采访 | 一小群艺术家推动新方向（当时游戏看起来越来越像），改版差点没做成 | **Kotaku 2009-06-12**《The New Borderlands Look That Almost Wasn't》；用户审阅时可直接打开并确认细节，本机 403 |
+| Borderlands：6/12 采访 | 四名艺术家因不满游戏视觉趋同，自行做出新风格原型（「So four of them got together and prototyped this new look out.」）；Pitchford 起初预计会否决，看到实时演示后改观，随后带方案去 2K 并获支持；采访还描述明显墨线轮廓、手绘质感，以及为保留一定写实感而调整的阴影与光照 | **Kotaku 2009-06-12**《The New Borderlands Look That Almost Wasn't》，Brian Crecente；原文直连核实 2026-11-10，可直接引用 |
 | Borderlands：改版机会与发起者 | 开发周期延长给美术团队重要机会；Pitchford 原话「From a small group of artists came an initiative to render the concept art style in the game.」 | **Unreal Engine 官网 2009-10-27**《Gearbox Software's Borderlands More Awesome Than Ever with Unreal Engine 3》，第 9 段 + 直接引语 |
 | Borderlands：方案获认可 | 新原型让 Gearbox 管理层与发行商 2K Games 惊艳 | 同上，第 13 段 |
 | Borderlands：技术实现 | Gearbox 工程师扩展 UE3 渲染功能；针对新视觉调整光照与着色；程序员与美术合作增加新渲染技术；保持对 UE3 代码库兼容 | 同上，第 14–16 段 |
-| Borderlands 发售 | **2009-10-20，北美主机版（PS3 / Xbox 360）**；PC 版在当月稍后（10/26、10/30 两说） | 2K 官方页给 10-20；Take-Two/2K 新闻稿转录区分平台与地区 |
+| Borderlands 发售 | **2009-10-20**（2K 官方页只给这一个日期，不区分平台/地区）；PC 版在当月稍后（10/26、10/30 两说，来自新闻稿转录，未直连核实） | 2K 官方 Borderlands 页；**正文已不引用该日期**（2026-11-10 复核后删除孤立段落与 Sources 条目） |
 | Probably Stolen 对照 | 2026-10-28 发售；CEO 10-29 一句 X 帖说改了视觉；新闻稿只给数字，不给设计细节 | tinyBuild 新闻稿 / X 原帖（见 `probably-stolen-01-sources.md`） |
 
 ---
@@ -38,7 +38,7 @@
 | 环节 | 用哪个源 | 能证明 |
 |---|---|---|
 | 官方命名与解释 | Eurogamer 2009-04-14（同期报道，含 Kotaku 4/9、4/14 转录的原话） | Gearbox 当年否认 `cel-shaded`，提出 `Concept Art Style` |
-| 提出方案 / 过程 | Kotaku 2009-06-12 | 一小群艺术家主动推动、改版差点没做成 |
+| 提出方案 / 过程 | Kotaku 2009-06-12（已直连核实） | 四名艺术家做原型、Pitchford 起初预计否决、见实时演示后改观、2K 支持 |
 | 获得认可 / 技术实现 | Unreal Engine 官网 2009-10-27 | 开发周期提供机会、原型打动管理层与 2K、UE3 渲染层面的具体改动 |
 
 链条：提出方案 → 获得认可 → 技术实现 → 官方命名与解释。正文**保留原有结构，只补一段技术说明**，不扩成 Borderlands 开发史章节。
@@ -52,7 +52,7 @@
 | 1 | 「Borderlands 改成 cel-shaded」是流传最广的说法，但 Gearbox 当年否认这个标签 | 语气收弱：写成**常见 shorthand 不反映 Gearbox 自己的描述**。`Concept Art Style` 是官方命名，cel shading 是渲染技术，视觉归类与官方标签分开；不写成「一方错了」。UE 文章**不能单独证明**「完全不属于 cel-shading」，不拿来加强这一结论 |
 | 2 | Steam app 8980 显示 `Borderlands Game of the Year`、发售日 2023-08-31，与 2009 原作不符 | 只用来说明**当前列表的日期字段不必等于原作首发日**；不单独证明重命名、重新打包或改日期（见 `steam-page-01-sources.md`） |
 | 3 | Valve 论文原 PDF 链接 `valvesoftware.com/publications/2007/NPAR07_...pdf` 现在 **404** | 论文仍可由 ACM DOI、dblp、官方维基转录佐证；正文只引用 DOI 与维基转录，把 404 写进「链接会死」一节 |
-| 4 | Kotaku 三篇与 UE 官网文章本机均 403 / 连接关闭 | Kotaku 4/9、4/14 用可检索的标题与引语片段并标注归因链；6/12 与 UE 文章由用户审阅时直接打开核对，正文写明本机 403、只写能核对的部分，不扩写 |
+| 4 | 本机抓取 Kotaku 三篇与 UE 官网文章均 403；但 2026-11-10 已由审阅方直接打开三篇 Kotaku 原文核对 | **三篇 Kotaku 升级为「原文直连核实」**，正文与 Sources 不再写 403/摘要限制；UE 官网文章仍为本机 403 + 审阅时对照原文，保留该限制。4/14 另注明：核实的是 Kotaku 对官方论坛声明的转录，Gearbox 原始论坛页未独立核对 |
 | 5 | ACM DOI 页 403 | 元数据由 dblp / HandWiki / Wikipedia 参考文献交叉，标注未直连 |
 | 6 | 三例时间跨度 1999 / 2009 / 2026，媒体形态不同 | 只比较「留下什么证据」，**不比较成因或成功率** |
 
@@ -69,7 +69,8 @@
 ## 五、未验证 / 不要写进正文
 
 - 未找到 tinyBuild 或 Questing Goose 关于「具体改了哪些设计」的开发者访谈。
-- Kotaku 三篇与 UE 官网文章均未能从本机直连；只写标题、可检索的引语片段与审阅时核对的内容，不扩写场景或数字。
+- Kotaku 三篇与 UE 官网文章均未能从**本机**直连（403）；三篇 Kotaku 已由审阅方直连核对原文，可引用正文；UE 文章仍只写审阅时对照原文能确认的部分，不扩写场景或数字。
+- **4/14 的证据边界**：已核实的是 Kotaku 对 Gearbox 官方论坛声明的转录，不是 Gearbox 原始论坛页；不写「已核对 Gearbox 原始声明」。
 - **UE 文章的证据边界**：它是引擎方发布的开发技术介绍（含 Pitchford 直接引语），**不是 Gearbox 的完整开发访谈**；没有列出具体改动了哪些美术资产，也不能单凭它证明「完全不属于 cel-shading」。正文必须写明这三点限制。
 - IMDb trivia「最后 10 个月改完」等说法不采用。
 - Venus Patrol 2009 把改版称为「mutiny」，只是同期博客转述，未直连核实，不引用。
@@ -85,12 +86,12 @@
 | 官方 TF2 维基：插画渲染视频逐字稿 | https://wiki.teamfortress.com/wiki/Illustrative_Rendering_in_Team_Fortress_2 | 一手转录，已直接抓取 |
 | Wikipedia: Team Fortress 2（Development） | https://en.wikipedia.org/wiki/Team_Fortress_2 | 二手，带完整引文，已直接抓取 |
 | ACM NPAR 2007 论文 DOI | https://doi.org/10.1145/1274871.1274883 | 一手元数据，页面 403 |
-| Kotaku 2009-04-09 | https://kotaku.com/gearbox-borderlands-is-not-cel-shaded-5206042 | Pitchford 邮件原话；本机 403，据检索摘要 |
-| Kotaku 2009-04-14 | https://kotaku.com/gearbox-explain-cel-shaded-borderlands-5210855 | 官方论坛声明转录；本机 403，据检索摘要 |
-| Kotaku 2009-06-12 | https://kotaku.com/the-new-borderlands-look-that-almost-wasnt-5288292/ | 改版过程采访；本机 403，细节由审阅时直接打开确认 |
+| Kotaku 2009-04-09 | https://kotaku.com/gearbox-borderlands-is-not-cel-shaded-5206042 | Brian Ashcraft；Pitchford 邮件原话；**原文直连核实 2026-11-10** |
+| Kotaku 2009-04-14 | https://kotaku.com/gearbox-explain-cel-shaded-borderlands-5210855 | Luke Plunkett；官方论坛声明转录；**原文直连核实 2026-11-10**；Gearbox 原始论坛页未独立核对 |
+| Kotaku 2009-06-12 | https://kotaku.com/the-new-borderlands-look-that-almost-wasnt-5288292/ | Brian Crecente；四名艺术家原型与改版过程采访；**原文直连核实 2026-11-10** |
 | Eurogamer 2009-04-14 | https://www.eurogamer.net/pitchford-borderlands-will-not-be-cel-shaded | 同期报道（非引语原始出处），已直接抓取 |
 | Unreal Engine 2009-10-27 | https://www.unrealengine.com/blog/borderlands?lang=en | **一手技术文章 + Pitchford 直接引语**；本机 403，由审阅时直连核对原文（第 9、13、14–16 段） |
-| 2K 官方 Borderlands 页 | https://borderlands.2k.com/zh-CN/borderlands/ | 一手发售日，北美主机版 |
+| 2K 官方 Borderlands 页 | https://borderlands.2k.com/zh-CN/borderlands/ | 一手发售日 `发行日期：2009年10月20日`；2026-11-10 直连核实，页面不区分平台/地区，正文已不引用 |
 | Steam appdetails API | https://store.steampowered.com/api/appdetails?appids=440 | 一手元数据 |
 | tinyBuild 新闻稿 / X 原帖 | 见 `probably-stolen-01-sources.md` | 一手 |
 
@@ -98,7 +99,7 @@
 
 ## 七、正文口径声明
 
-正文把三例写成「证据量的对照」，不是「成败对照」；所有日期带来源；`cel-shaded` 只作为常见 shorthand 出现，并与官方命名 `Concept Art Style` 区分；跨年代不做因果推断。标题改为 `TF2, Borderlands and the evidence behind an art makeover`，标签精简为 `Team Fortress 2` / `Borderlands` / `Valve` / `Gearbox`，开头互链 `probably-stolen-28-player-demo`，日期段互链 `what-a-steam-page-cant-tell-you`。审稿修订完成前保持 `draft: true`。
+正文把三例写成「证据量的对照」，不是「成败对照」；所有日期带来源；`cel-shaded` 只作为常见 shorthand 出现，并与官方命名 `Concept Art Style` 区分；跨年代不做因果推断。标题改为 `TF2, Borderlands and the evidence behind an art makeover`，标签精简为 `Team Fortress 2` / `Borderlands` / `Valve` / `Gearbox`，开头互链 `probably-stolen-28-player-demo`，日期段互链 `what-a-steam-page-cant-tell-you`，cel-shading 问答段互链直答页 `is-borderlands-cel-shaded`。已于 2026-11-10 发布，两篇均为 `draft: false`。
 
 ---
 
@@ -111,3 +112,13 @@
 - **补 Unreal Engine 官网 2009-10-27 技术文章**：正式加入 Sources 与硬事实表，正文只加一段技术说明；写明它是引擎方技术介绍而非完整访谈，不列举资产改动、不据此强化 cel-shading 结论。
 - 2K 的 2009-10-20 加「北美主机版」限定，PC 版另列。
 - 标题、标签、Sources、两处站内互链同步更新。
+
+### 二轮复核（2026-11-10，三篇 Kotaku 原文直连）
+
+- **逐字引文纠错**：4/9 邮件原话无 `Heh!`，且用破折号 `—` 而非连字符；A 篇引文、B 篇引文、资料卡硬事实表已同步更正。
+- 4/14 补入「We don't know what to call the result. You can use whatever term you like.」：**Gearbox 只给自己选了 `Concept Art Style`，没有禁止外界用其他称呼**；A 篇正文、B 篇出处、正文口径声明同步。
+- 6/12 由「一小群艺术家」升级为可直接引用的具体事实：四名艺术家做原型、Pitchford 起初预计否决、看到实时演示后改观、2K 支持；A 篇第 46 段与 B 篇出处同步。
+- 三篇 Kotaku 状态由「本机 403 / 据检索摘要」改为 `Original article directly verified, 10 November 2026`；UE 官网文章仍保留 403 限制。
+- 补记证据边界：4/14 核实的是 Kotaku 的转录，不是 Gearbox 原始论坛页。
+- 删除 A 篇孤立的 2K 发行日期段与 Sources 条目：2K 官方页只给单一日期 `2009年10月20日`，不区分平台/地区，无法支持「北美主机版 + PC 版随后」的细分。
+- 新增直答页 `is-borderlands-cel-shaded.md`，与 A 篇双向互链；开头采用 `Gearbox said no, but the terminology is more complicated than a simple yes-or-no answer.`，末句保留「否认标签不等于技术审计」边界。

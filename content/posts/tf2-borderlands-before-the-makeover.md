@@ -2,7 +2,7 @@
 title: "TF2, Borderlands and the evidence behind an art makeover"
 slug: tf2-borderlands-before-the-makeover
 date: 2026-11-10T09:40:00+08:00
-lastmod: 2026-11-10T09:40:00+08:00
+lastmod: 2026-11-10T11:55:20+08:00
 draft: false
 author: "Pixel Dango"
 description: "Two older games changed how they looked on the way to release. Both left a paper trail. That is the part missing from the 2026 Probably Stolen story."
@@ -37,17 +37,15 @@ Borderlands was unveiled in 2007 as "Diablo meets Mad Max" and was originally ex
 
 On 9 April, Kotaku published Randy Pitchford's email response under the headline `Gearbox: "Borderlands Is Not Cel-Shaded"`:
 
-> "Heh! No, Borderlands is not cel-shaded - it's a gritty and serious world after all."
+> "No, Borderlands is not cel-shaded — it's a gritty and serious world after all."
 
-On 14 April, Kotaku transcribed a longer statement from the official Gearbox forum, in which Pitchford said that since the game was first unveiled the team had "made big advancements with the art direction and the technology to support the art, and have produced some pretty impressive, even shocking results." Gearbox called the result `Concept Art Style`, a term Pitchford offered because, as he put it, "We don't know what to call the result." Eurogamer covered the same exchange on 14 April; it is contemporaneous reporting of those statements, not the original source for them.
+On 14 April, Kotaku transcribed a longer statement from the official Gearbox forum, in which Pitchford said that since the game was first unveiled the team had "made big advancements with the art direction and the technology to support the art, and have produced some pretty impressive, even shocking results." New techniques and methods let the game render its concept art in real time, but the team had no settled name for the result: "We don't know what to call the result. You can use whatever term you like." Gearbox itself settled on `Concept Art Style`. That is a choice of its own label, not a demand that everyone else stop saying cel-shaded. Eurogamer covered the same exchange on 14 April; it is contemporaneous reporting of those statements, not the original source for them.
 
-This is worth pausing on. "Borderlands went cel-shaded" became a common shorthand, but it does not reflect how Gearbox described the work at the time. `Concept Art Style` is the studio's own name for its art direction; cel shading is a rendering technique, and the family resemblance is a visual classification rather than an official label. Keeping the two apart is more useful than declaring one side wrong.
+This is worth pausing on. "Borderlands went cel-shaded" became a common shorthand, but it does not reflect how Gearbox described the work at the time. `Concept Art Style` is the studio's own name for its art direction; cel shading is a rendering technique, and the family resemblance is a visual classification rather than an official label. Keeping the two apart is more useful than declaring one side wrong. For the short answer to the question itself, with the four dated sources, see [Is Borderlands Cel Shaded?](/posts/is-borderlands-cel-shaded.html/).
 
-A June 2009 Kotaku interview adds detail to how the change happened: a small group of artists pushed for the new direction because games were starting to look alike, and the overhaul nearly did not survive. I could not load that page directly from this machine during research (403); the account here follows its headline and the details confirmed during review, and I have left out anything I could not check.
+A June 2009 Kotaku interview provides a clearer account of how the change happened. Pitchford said that four artists prototyped a new visual direction after growing frustrated that many games looked alike. He initially expected to reject the proposal, but changed his mind after seeing the prototype in motion. The new direction subsequently gained support from Gearbox management and publisher 2K.
 
 A post-launch article on Unreal Engine's own site, dated 27 October 2009, supplies the technical half of the chain. It says the extended development cycle gave Gearbox's art team an important opportunity, and quotes Pitchford directly: "From a small group of artists came an initiative to render the concept art style in the game." The prototype impressed Gearbox's management and publisher 2K, and Gearbox engineers then extended Unreal Engine 3's rendering, adjusted lighting and shading for the new look, added new rendering techniques alongside the artists, and kept the work compatible with the UE3 codebase. That is an engine vendor's technical write-up carrying one direct quote, not a full development interview: it does not list which art assets were changed, and on its own it cannot settle the cel-shading label either way. The page returned 403 from this machine, so the details above were checked against the original during review.
-
-2K's official site gives 20 October 2009 — the North American console release, with PC versions following later that month.
 
 What matters here is not which label is correct. It is that in 2009 the person running the studio was on record explaining the change while it was happening, and explicitly correcting the vocabulary used to describe it.
 
@@ -78,12 +76,11 @@ Checked 9–10 November 2026.
 - [Official TF2 Wiki: Illustrative Rendering in Team Fortress 2](https://wiki.teamfortress.com/wiki/Illustrative_Rendering_in_Team_Fortress_2) — video transcript, 13 Aug 2007; influences and stated gameplay purpose.
 - [Wikipedia: Team Fortress 2, Development](https://en.wikipedia.org/wiki/Team_Fortress_2) — 1998 announcement, E3 1999 realistic look, July 2006 reveal, 10 Oct 2007 release, secondary account of the developer commentary.
 - [NPAR 2007 paper DOI](https://doi.org/10.1145/1274871.1274883) — Mitchell, Francke, Eng, pp. 71–76. The ACM page returned 403 during research; the original Valve-hosted PDF now returns 404.
-- [Kotaku, 9 Apr 2009: Gearbox: "Borderlands Is Not Cel-Shaded"](https://kotaku.com/gearbox-borderlands-is-not-cel-shaded-5206042) — Pitchford's email response; the page returned 403 from this machine, wording checked against indexed excerpts.
-- [Kotaku, 14 Apr 2009: Gearbox Explain Cel-Shaded Borderlands](https://kotaku.com/gearbox-explain-cel-shaded-borderlands-5210855) — transcription of the official forum statement and the `Concept Art Style` naming; 403 from this machine.
+- [Kotaku, 9 Apr 2009: Gearbox: "Borderlands Is Not Cel-Shaded"](https://kotaku.com/gearbox-borderlands-is-not-cel-shaded-5206042) — Brian Ashcraft; Pitchford's email response. Original article directly verified, 10 November 2026.
+- [Kotaku, 14 Apr 2009: Gearbox Explain Cel-Shaded Borderlands](https://kotaku.com/gearbox-explain-cel-shaded-borderlands-5210855) — Luke Plunkett; Kotaku's transcription of the official Gearbox forum statement and the `Concept Art Style` naming. Original article directly verified, 10 November 2026; the Gearbox forum post itself was not independently checked.
 - [Eurogamer, 14 Apr 2009](https://www.eurogamer.net/pitchford-borderlands-will-not-be-cel-shaded) — contemporaneous reporting of the same exchange, not the original source of the quotes.
-- [Kotaku, 12 Jun 2009: The New Borderlands Look That Almost Wasn't](https://kotaku.com/the-new-borderlands-look-that-almost-wasnt-5288292/) — interview on how the change nearly did not happen; 403 from this machine, details confirmed during review.
+- [Kotaku, 12 Jun 2009: The New Borderlands Look That Almost Wasn't](https://kotaku.com/the-new-borderlands-look-that-almost-wasnt-5288292/) — Brian Crecente; interview on the four-artist prototype and how the change nearly did not happen. Original article directly verified, 10 November 2026.
 - [Unreal Engine, 27 Oct 2009: Gearbox Software's Borderlands More Awesome Than Ever with Unreal Engine 3](https://www.unrealengine.com/blog/borderlands?lang=en) — the engine vendor's technical account of the UE3 rendering work, with a direct Pitchford quote; a technical write-up rather than a full studio interview. The page returned 403 from this machine and was checked against the original during review.
-- [2K: Borderlands](https://borderlands.2k.com/zh-CN/borderlands/) — 20 Oct 2009, the North American console release; PC versions followed later that month.
 - [tinyBuild launch press release, 28 Oct 2026](https://www.gamespress.com/ja-JP/TINYBUILD-SMUGGLES-PROBABLY-STOLEN-THE-GRITTY-PIXEL-ART-CYBERPUNK-SHOP) and [Alex Nichiporchik on X, 29 Oct 2026](https://x.com/aNichiporchik/status/2115777936527901098) — the 2026 comparison.
 - [Rock Paper Shotgun, 4 Nov 2026](https://www.rockpapershotgun.com/smash-hit-cyberpunk-storekeeper-probably-stolen-was-originally-a-different-non-cyberpunk-game-that-seemed-destined-to-sink-without-trace/) — the two precedents and its caveat.
 
