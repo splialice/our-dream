@@ -60,14 +60,17 @@
   --qa-muted: rgba(15, 23, 42, .64);
   --qa-hover: rgba(0, 102, 204, .06);
   --qa-sticky: rgba(255, 255, 255, .80);
-  /* 纵向长度上限：列表在中间这栏内部滚动，页面本身不再无限往下拉 */
-  max-height: calc(100vh - 7rem);
-  max-height: calc(100dvh - 7rem);
+  /* 纵向长度上限：列表在中间这栏内部滚动，页面本身不再无限往下拉。
+     滚动条本身隐藏，避免和浏览器右边那条重复、显得杂乱；滚轮依然可以滚。 */
+  max-height: calc(100vh - 3rem);
+  max-height: calc(100dvh - 3rem);
   overflow-y: auto;
   overscroll-behavior: contain;
-  scrollbar-gutter: stable;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: .5rem .5rem 2.5rem 0;
 }
+.qa-hub::-webkit-scrollbar { width: 0; height: 0; display: none; }
 [data-theme="dark"] .qa-hub {
   --qa-card: rgba(255, 255, 255, .045);
   --qa-border: rgba(255, 255, 255, .12);
@@ -194,8 +197,8 @@
 .qa-item[hidden], .qa-group[hidden], .qa-empty[hidden] { display: none !important; }
 @media (max-width: 640px) {
   .qa-hub {
-    max-height: calc(100vh - 8.5rem);
-    max-height: calc(100dvh - 8.5rem);
+    max-height: calc(100vh - 5rem);
+    max-height: calc(100dvh - 5rem);
     padding-right: .25rem;
   }
   .qa-group-head { padding: .7rem .85rem; gap: .65rem; }
