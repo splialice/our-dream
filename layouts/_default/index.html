@@ -1,11 +1,13 @@
 {{ define "content" }}
+  {{ $total := 0 }}
+  {{ range site.Data.questions.groups }}{{ $total = add $total (len .items) }}{{ end }}
   <a class="answers-banner" href="/questions/">
     <span class="answers-banner-icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a3 3 0 1 1 4 2.8c-.7.3-1.2 1-1.2 1.7v.4"/><path d="M12 17h.01"/></svg>
     </span>
     <span class="answers-banner-text">
       <strong>Looking for one specific answer?</strong>
-      <span>Eight questions, sorted by topic. Tap one and read it right there.</span>
+      <span>{{ $total }} questions, sorted by topic. Tap one and read it right there.</span>
     </span>
     <span class="answers-banner-cta">Browse answers <span aria-hidden="true">&#8594;</span></span>
   </a>
