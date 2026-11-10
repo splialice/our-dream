@@ -2,7 +2,7 @@
 title: "What Is the Borderlands Art Style Called?"
 slug: borderlands-art-style
 date: 2026-11-10T16:57:17+08:00
-lastmod: 2026-11-10T17:05:23+08:00
+lastmod: 2026-11-10T17:10:22+08:00
 draft: false
 author: "Pixel Dango"
 description: "Gearbox called Borderlands' visual direction Concept Art Style in April 2009, while Randy Pitchford publicly rejected the cel-shaded label. Here's what the studio actually said, how the look developed, and which term to use."
@@ -56,4 +56,4 @@ Checked 10 November 2026. The three Kotaku articles were read in full that day; 
 
 ---
 
-*Cover illustration: a three-panel comparison of realistic and comic-book rendering styles, used here to illustrate the art-direction change discussed above.*
+*Cover illustration: AI-generated. The three-panel comparison of realistic and comic-book rendering styles illustrates the art-direction change discussed above.*
