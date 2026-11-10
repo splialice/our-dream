@@ -617,7 +617,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
     # 目录组件配置
     [params.aside.toc]
-      enableBackground = true             # 是否启用背景图片/颜色
+      enableBackground = false            # 关闭背景图：/img/bg.jpg 的云朵/棕榈树会盖在目录文字上
       backgroundImage = "/img/bg.jpg"                 # 背景图片URL（留空则不显示背景图）
       backgroundColor = ""                 # 背景色（留空则不显示背景色，支持渐变，例如："linear-gradient(135deg, #667eea 0%, #764ba2 100%)"）
       backgroundSize = "cover"             # 背景图片尺寸：cover（覆盖）| contain（包含）| auto（自动）

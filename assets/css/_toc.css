@@ -2,6 +2,10 @@
 .toc-card {
   position: relative;
   overflow: hidden;
+  /* 站点背景与侧栏装饰不得盖住目录：整体抬到装饰层之上，并建立独立层叠上下文，
+     使 overlay(1) / content(2) 只在卡片内部比较，不与外部装饰层互相穿插。 */
+  z-index: 2;
+  isolation: isolate;
 }
 
 /* 背景图片/颜色模式 */

@@ -233,9 +233,12 @@
   
   .post-title {
     flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    min-width: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
     margin-right: 0.5rem;
     font-size: 0.75rem; /* 进一步减小标题字体大小 */
     color: #1e90ff; /* 道奇蓝 - 改为蓝色 */
