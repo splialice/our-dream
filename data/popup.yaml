@@ -27,11 +27,12 @@
     - "all"
 
 # 弹窗2示例（Toast提示框）
+# 2026-11-10：原内容为「Demius主题版本 已更新」，属主题作者示例，已停用
 - id: "popup-2"
-  enable: true                     # 默认禁用，需要时启用
-  title: "通知"
+  enable: false                    # 默认禁用，需要时启用
+  title: "Notice"
   content: |
-    <p>Demius主题版本 已更新</p>
+    <p></p>
   mode: "toast"
   position: "top-right"
   width: "300px"

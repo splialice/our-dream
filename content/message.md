@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 slug: message
-date: 2025-10-28T18:00:00+08:00
+date: 2026-11-06T19:00:00+08:00
 lastmod: 2026-11-07T10:35:00+08:00
 type: message
 layout: message

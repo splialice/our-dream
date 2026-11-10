@@ -10,8 +10,11 @@ function initRunningTime() {
   const startDateStr = container.dataset.startDate;
   if (!startDateStr) return;
   
-  // 解析开始日期
-  const startDate = new Date(startDateStr);
+  // 按本地时区的当天 00:00 解析，避免 new Date("YYYY-MM-DD") 被当作 UTC 午夜，
+  // 导致 UTC+8 等东八区访问者的小时数偏 8 小时。
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(startDateStr.trim());
+  if (!match) return;
+  const startDate = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
   if (isNaN(startDate.getTime())) {
     return;
   }
@@ -30,7 +33,7 @@ function initRunningTime() {
     // 更新显示
     const timeEl = container.querySelector('.running-time-value');
     if (timeEl) {
-      timeEl.innerHTML = `<span class="time-unit">${days}</span> 天 <span class="time-unit">${hours}</span> 时 <span class="time-unit">${minutes}</span> 分 <span class="time-unit">${seconds}</span> 秒`;
+      timeEl.innerHTML = `<span class="time-unit">${days}</span>d <span class="time-unit">${hours}</span>h <span class="time-unit">${minutes}</span>m <span class="time-unit">${seconds}</span>s`;
     }
   }
   

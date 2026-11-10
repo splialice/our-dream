@@ -486,8 +486,8 @@
           // 无刷新切换配置（如果第一次定义中已存在，这里会覆盖）
           pjaxEnabled: '{{ .Site.Params.pjax | default "false" }}',
           // Artalk评论系统配置（如果第一次定义中已存在，这里会覆盖）
-          artalkServer: '{{ .Site.Params.comment.artalk.server | default "https://site.demius.tech" }}',
-          artalkSite: '{{ .Site.Params.comment.artalk.site | default "demius" }}',
+          artalkServer: '{{ .Site.Params.comment.artalk.server | default "" }}',
+          artalkSite: '{{ .Site.Params.comment.artalk.site | default "" }}',
           // Umami统计配置（文章浏览量）
           umamiApiUrl: '{{ .Site.Params.analytics.umami.apiUrl | default "" }}',
           umamiUseForPostViews: {{ if .Site.Params.analytics.umami.useForPostViews }}{{ .Site.Params.analytics.umami.useForPostViews }}{{ else }}true{{ end }},

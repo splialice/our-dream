@@ -216,13 +216,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [menu.main.params]
       icon = "/img/icons/guanyu.svg"
 
-  [[menu.main]]
-    name = "Supporters"
-    url = "/supporters/"
-    weight = 2
-    parent = "about"
-    [menu.main.params]
-      icon = "/img/icons/zhichi.svg"
+  # 2026-11-10：Supporters 菜单已移除。目标页 content/supporters.md 设为 render: never，
+  # 且 data/supporters.yaml 是主题自带的虚构名单（¥3680 / 15 人），保留菜单只会产生死链。
 
 
 # ===== 主题参数配置 =====
@@ -279,12 +274,14 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     redirectUrl = "/"                      # 当onDevToolsOpen为redirect时，跳转的URL
   
   # ===== 打赏按钮配置 =====
+  # 2026-11-10：主题自带的 weixin.webp / zhifubao.jpg 不是本站收款码，已停用整块功能。
+  # 换成自己的收款码图片后，再把 enable 改回 true 并填下面两项。
   [params.reward]
-    enable = true                          # 是否启用打赏按钮
+    enable = false                         # 是否启用打赏按钮
     buttonText = "☕ Support this"              # 按钮显示文字
     title = "Found this useful? You can buy me a coffee."  # 打赏提示文字
-    wechat = "/img/weixin.webp"    # 微信收款码图片URL
-    alipay = "/img/zhifubao.jpg"    # 支付宝收款码图片URL
+    # wechat = "/img/..."                  # 本站微信收款码（待提供）
+    # alipay = "/img/..."                  # 本站支付宝收款码（待提供）
   
   # ===== 文章互动功能配置 =====
   [params.postActions]
@@ -784,24 +781,17 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # ===== 社交链接配置 =====
   [params.social]
-    # 关注我们的链接
+    # 关注我们的链接（2026-11-10：移除主题示例的 your-account，本站未配置 GitHub 账号）
     links = [
-      { name = "GitHub", icon = "fab fa-github", url = "https://github.com/your-account", color = "#333333" },
       { name = "Email", icon = "fas fa-envelope", url = "mailto:hello@pixeldango.com", color = "#333333" },
       { name = "RSS", icon = "fas fa-rss", url = "/index.xml", color = "#333333" }
     ]
 
-    # 自定义内容区域
+    # 自定义内容区域（2026-11-10：原为主题示例的 example.com 链接 + 背景图冒充二维码，已停用）
     [params.social.custom]
-      enable = true                        # 是否启用自定义内容
-      title = "Recommended"                   # 自定义内容标题
-      content = """
-      <div class="custom-share-content">
-        <a href="https://example.com" target="_blank">
-          <img src="/img/bj.jpg" alt="Recommended" class="share-qrcode" style="margin-top: 0.5rem;">
-        </a>
-      </div>
-      """
+      enable = false                       # 是否启用自定义内容
+      title = ""                              # 自定义内容标题
+      content = ""
 
   # ===== 背景图配置 =====
   [params.background]
@@ -836,8 +826,8 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     mode = "mode2"                         # 大图模式：mode1（中间栏大图）或 mode2（全屏大图）
     
     # 共用配置
-    title = "Alex书"                     # 大图标题
-    subtitle = "时间就是生命，Life is money，Money is life"  # 大图副标题
+    title = "Pixel Dango"                # 大图标题（原为主题作者署名 Alex书）
+    subtitle = "Game history and technical notes."  # 大图副标题
     
     # 模式一专属配置（中间栏大图）
     [params.homeBigImage.mode1]
@@ -906,8 +896,9 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
 # Artalk 配置（https://artalk.js.org）
 [params.comment.artalk]
-  server = "https://artalk.example.com"      # Artalk 后端地址
-  site = "demo-site"                          # 站点名称（与 Artalk 后台一致）
+  # 评论系统未启用（params.comment.enable = false），不再保留主题示例域名
+  server = ""                                # Artalk 后端地址（如有自建服务再填）
+  site = ""                                   # 站点名称（与 Artalk 后台一致）
   placeholder = "说点什么吧~"               # 输入框提示语
   darkMode = true                          # 是否启用暗色模式适配
   locale = "zh-CN"                         # 语言
@@ -1074,9 +1065,11 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   """
 
   # 运行时间显示配置
+  # 2026-11-10：主题默认值 2024-01-01 会让页脚显示「1044 天」并连带把版权写成 2024-2026。
+  # 真实开站日为 2026-11-06（正式域名接入、首篇文章与公告「Just started」均为该日）。
   [params.footer.runningTime]
     enable = true                          # 是否启用运行时间显示
-    startDate = "2024-01-01"               # 网站建站日期（格式：YYYY-MM-DD）
+    startDate = "2026-11-06"               # 网站建站日期（格式：YYYY-MM-DD）
     prefix = "Running for"                   # 前缀文字
 
 # ===== 弹窗公告配置 =====

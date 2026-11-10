@@ -1,128 +1,15 @@
 # 支持者清单数据
-# 记录那些支持本站和主题的朋友们
+#
+# 2026-11-10：原内容为 Demius 主题自带的虚构示例（¥3680 / 15 人，姓名为张小明、
+# 诸葛亮、曹操等占位），并非本站真实赞助记录，已全部清空。
+# 打赏功能（params.reward）与 Supporters 菜单也已停用；如需恢复，请填入真实数据后，
+# 再把 content/supporters.md 的 render: never 与菜单配置一并恢复。
 
 # 总统计
 statistics:
-  totalAmount: 3680      # 总打赏金额
-  totalCount: 15         # 总支持人数
-  updateDate: "2025-10-29"  # 最后更新日期
+  totalAmount: 0
+  totalCount: 0
+  updateDate: ""
 
 # 支持者分组
-groups:
-  - name: "主题赞助者"
-    description: "感谢这些朋友对 Demius 主题的喜爱和支持"
-    supporters:
-      - name: "张小明"
-        avatar: "https://via.placeholder.com/100?text=ZXM"
-        amount: 520
-        date: "2025-10-15"
-        message: "主题太棒了！简洁又美观，非常喜欢！"
-        level: "gold"  # gold(金牌) | silver(银牌) | bronze(铜牌) | normal(普通)
-        
-      - name: "李华"
-        avatar: "https://via.placeholder.com/100?text=LH"
-        amount: 200
-        date: "2025-10-20"
-        message: "感谢作者的辛苦付出，继续加油！"
-        level: "silver"
-        
-      - name: "王小美"
-        avatar: "https://via.placeholder.com/100?text=WXM"
-        amount: 100
-        date: "2025-10-22"
-        message: "主题很好用，支持一下~"
-        level: "bronze"
-        
-      - name: "陈大力"
-        avatar: "https://via.placeholder.com/100?text=CDL"
-        amount: 66
-        date: "2025-10-25"
-        message: "666，很流畅的使用体验"
-        level: "normal"
-
-  - name: "内容创作支持"
-    description: "感谢这些朋友对博客内容的认可"
-    supporters:
-      - name: "赵子龙"
-        avatar: "https://via.placeholder.com/100?text=ZZL"
-        amount: 300
-        date: "2025-09-10"
-        message: "文章写得很好，干货满满！"
-        level: "silver"
-        
-      - name: "刘备"
-        avatar: "https://via.placeholder.com/100?text=LB"
-        amount: 188
-        date: "2025-09-15"
-        message: "学到了很多，感谢分享"
-        level: "bronze"
-        
-      - name: "关羽"
-        avatar: "https://via.placeholder.com/100?text=GY"
-        amount: 88
-        date: "2025-09-20"
-        message: "内容很实用👍"
-        level: "normal"
-
-  - name: "技术交流支持"
-    description: "感谢这些朋友在技术上的交流和帮助"
-    supporters:
-      - name: "诸葛亮"
-        avatar: "https://via.placeholder.com/100?text=ZGL"
-        amount: 666
-        date: "2025-08-01"
-        message: "一起进步，共同成长！"
-        level: "gold"
-        
-      - name: "周瑜"
-        avatar: "https://via.placeholder.com/100?text=ZY"
-        amount: 250
-        date: "2025-08-15"
-        message: "代码质量很高，学习了"
-        level: "silver"
-        
-      - name: "孙权"
-        avatar: "https://via.placeholder.com/100?text=SQ"
-        amount: 128
-        date: "2025-08-20"
-        message: "感谢解答技术问题"
-        level: "bronze"
-
-  - name: "其他支持者"
-    description: "感谢所有支持本站的朋友"
-    supporters:
-      - name: "曹操"
-        avatar: "https://via.placeholder.com/100?text=CC"
-        amount: 520
-        date: "2025-07-10"
-        message: "网站设计很棒！"
-        level: "gold"
-        
-      - name: "吕布"
-        avatar: "https://via.placeholder.com/100?text=LB2"
-        amount: 99
-        date: "2025-07-20"
-        message: "支持一下站长"
-        level: "normal"
-        
-      - name: "貂蝉"
-        avatar: "https://via.placeholder.com/100?text=DC"
-        amount: 200
-        date: "2025-07-25"
-        message: "界面很美观♥"
-        level: "silver"
-        
-      - name: "司马懿"
-        avatar: "https://via.placeholder.com/100?text=SMY"
-        amount: 188
-        date: "2025-08-05"
-        message: "功能很强大"
-        level: "bronze"
-        
-      - name: "黄忠"
-        avatar: "https://via.placeholder.com/100?text=HZ"
-        amount: 88
-        date: "2025-08-25"
-        message: "加油！"
-        level: "normal"
-
+groups: []
