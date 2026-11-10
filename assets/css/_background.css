@@ -184,3 +184,11 @@
 .home-cover {
   transition: opacity 0.5s ease;
 }
+
+/* 深色模式：保持纯色深底，不铺整站背景图。
+   浅色模式不受影响，仍显示 /img/haibian.jpg。
+   优先级高于 .background-enabled .site-background，且不受
+   _background.js 的 brightness 滤镜影响（该脚本只改 filter）。 */
+html[data-theme="dark"] .site-background {
+  display: none;
+}
