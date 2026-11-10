@@ -1,0 +1,105 @@
+{{ define "content" }}
+<article class="qa-hub">
+  <header class="qa-head">
+    <h1 class="qa-title">{{ .Title }}</h1>
+    <p class="qa-intro">{{ .Params.intro }}</p>
+    <div class="qa-tools">
+      <label class="qa-search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+        <input id="qa-filter" type="search" placeholder="Type a word to narrow the list..." autocomplete="off" aria-label="Filter questions">
+      </label>
+      <span class="qa-count" id="qa-count" aria-live="polite"></span>
+    </div>
+  </header>
+
+  {{ range site.Data.questions.groups }}
+  <section class="qa-group">
+    <h2 class="qa-group-title"><span>{{ .name }}</span><span class="qa-group-num" data-group-count>0</span></h2>
+    <div class="qa-list">
+      {{ range .items }}
+      <a class="qa-item" href="{{ .url }}" data-text="{{ printf "%s %s" .q .a | lower }}">
+        <span class="qa-item-body">
+          <span class="qa-q">{{ .q }}</span>
+          <span class="qa-a">{{ .a }}</span>
+        </span>
+        <span class="qa-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <p class="qa-empty" id="qa-empty" hidden>Nothing matches that yet. Try a shorter word.</p>
+</article>
+
+<style>
+.qa-hub {
+  --qa-card: rgba(255, 255, 255, .74);
+  --qa-border: rgba(15, 23, 42, .10);
+  --qa-muted: rgba(15, 23, 42, .64);
+  --qa-hover: rgba(0, 102, 204, .06);
+  padding: .5rem 0 2.5rem;
+}
+[data-theme="dark"] .qa-hub {
+  --qa-card: rgba(255, 255, 255, .045);
+  --qa-border: rgba(255, 255, 255, .12);
+  --qa-muted: rgba(229, 229, 229, .62);
+  --qa-hover: rgba(77, 171, 247, .09);
+}
+.qa-title { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0 0 .55rem; letter-spacing: -.02em; }
+.qa-intro { color: var(--qa-muted); margin: 0; line-height: 1.7; }
+.qa-tools { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; margin: 1.6rem 0 2.2rem; }
+.qa-search {
+  display: flex; align-items: center; gap: .6rem; flex: 1 1 300px; min-width: 0;
+  padding: .72rem 1.05rem; border: 1px solid var(--qa-border); border-radius: 999px;
+  background: var(--qa-card); transition: border-color .2s ease, box-shadow .2s ease;
+}
+.qa-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0, 102, 204, .12); }
+[data-theme="dark"] .qa-search:focus-within { box-shadow: 0 0 0 3px rgba(77, 171, 247, .16); }
+.qa-search svg { flex: none; opacity: .6; }
+.qa-search input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  color: var(--fg); font: inherit; font-size: .95rem;
+}
+.qa-search input::placeholder { color: var(--qa-muted); opacity: .85; }
+.qa-count { font-size: .82rem; color: var(--qa-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.qa-group { margin-bottom: 2rem; }
+.qa-group-title {
+  display: flex; align-items: center; gap: .6rem; margin: 0 0 .85rem;
+  font-size: .78rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .12em; color: var(--qa-muted);
+}
+.qa-group-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 1.4rem; height: 1.4rem; padding: 0 .35rem; border-radius: 999px;
+  background: var(--qa-card); border: 1px solid var(--qa-border);
+  font-size: .72rem; letter-spacing: 0;
+}
+.qa-list { display: flex; flex-direction: column; gap: .65rem; }
+.qa-item {
+  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem;
+  border: 1px solid var(--qa-border); border-radius: 14px;
+  background: var(--qa-card); color: var(--fg); text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.qa-item:hover, .qa-item:focus-visible {
+  transform: translateY(-2px); border-color: var(--accent); background: var(--qa-hover);
+}
+.qa-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.qa-item-body { display: flex; flex-direction: column; gap: .3rem; min-width: 0; flex: 1; }
+.qa-q { font-size: 1.02rem; font-weight: 650; line-height: 1.35; }
+.qa-a { font-size: .87rem; color: var(--qa-muted); line-height: 1.5; }
+.qa-arrow { flex: none; font-size: 1.15rem; color: var(--accent); opacity: .65; transition: transform .18s ease, opacity .18s ease; }
+.qa-item:hover .qa-arrow, .qa-item:focus-visible .qa-arrow { transform: translateX(3px); opacity: 1; }
+.qa-empty { text-align: center; color: var(--qa-muted); padding: 2.5rem 0; }
+.qa-item[hidden], .qa-group[hidden], .qa-empty[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .qa-item { padding: .9rem 1rem; }
+  .qa-q { font-size: .96rem; }
+  .qa-tools { margin-bottom: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qa-item, .qa-arrow, .qa-search { transition: none; }
+}
+</style>
+{{ end }}

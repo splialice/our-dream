@@ -50,6 +50,14 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [menu.main.params]
       icon = "/img/icons/shouye.svg"         # 菜单图标路径
 
+  # 问题合集页（按问题找答案）
+  [[menu.main]]
+    name = "Answers"
+    url = "/questions/"
+    weight = 2
+    [menu.main.params]
+      icon = "/img/icons/shuju.svg"
+
   # 统计菜单（一级菜单，包含二级菜单）
   [[menu.main]]
     name = "Stats"

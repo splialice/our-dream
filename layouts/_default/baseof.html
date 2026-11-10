@@ -404,6 +404,11 @@
     <script defer src="{{ .RelPermalink }}"></script>
   {{ end }}
   {{ end }}
+
+  {{/* 合集页筛选：全局加载，只在存在筛选框的页面生效 */}}
+  {{ with resources.Get "js/_questions.js" | js.Build | minify | fingerprint }}
+    <script defer src="{{ .RelPermalink }}"></script>
+  {{ end }}
   
   {{/* 网友圈脚本（全局加载，确保PJAX切换时可调用） */}}
   {{ with resources.Get "js/_friends-circle.js" | js.Build | minify | fingerprint }}

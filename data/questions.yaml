@@ -1,0 +1,33 @@
+groups:
+  - name: "Borderlands and the art makeover"
+    items:
+      - q: "Is Borderlands cel shaded?"
+        a: "Gearbox said no in April 2009. Four dated sources, including the CEO's email."
+        url: "/posts/is-borderlands-cel-shaded.html/"
+      - q: "What is the Borderlands art style called?"
+        a: "The studio named it Concept Art Style, and explicitly let everyone else use their own term."
+        url: "/posts/borderlands-art-style.html/"
+      - q: "Who pushed for the new look, and when?"
+        a: "Four artists built a prototype in 2009; the CEO changed his mind after seeing it running."
+        url: "/posts/tf2-borderlands-before-the-makeover.html/"
+  - name: "Reading the public record"
+    items:
+      - q: "What can a Steam store page actually prove?"
+        a: "It is dated metadata, not a development record. Six apps checked against appdetails."
+        url: "/posts/what-a-steam-page-cant-tell-you.html/"
+      - q: "Did a 28-player demo become Probably Stolen?"
+        a: "What the public record connects between the demo and the 2026 launch, and what it does not."
+        url: "/posts/probably-stolen-28-player-demo.html/"
+  - name: "Building this site"
+    items:
+      - q: "What broke while building a Hugo site from zero?"
+        a: "Theme setup, Cloudflare Pages, and the five problems that cost the most time."
+        url: "/posts/hugo-site-from-zero-what-broke.html/"
+      - q: "Why did git push succeed but nothing shipped?"
+        a: "A Cloudflare build died five seconds after clone; the publish job still reported nine successes."
+        url: "/posts/when-git-push-succeeds-and-nothing-ships.html/"
+  - name: "AI"
+    items:
+      - q: "Why did the agent craze start in China?"
+        a: "A week-long run cost 16 yuan. The price gap, not enthusiasm, explains the phenomenon."
+        url: "/posts/agent-craze-cost-china.html/"
