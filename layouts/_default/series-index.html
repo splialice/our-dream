@@ -1,0 +1,83 @@
+{{ define "content" }}
+{{- $section := site.GetPage "series" -}}
+<article class="series-hub">
+  <header class="series-head">
+    <p class="series-kicker">Reading paths</p>
+    <h1 class="series-title">{{ .Title }}</h1>
+    <div class="series-intro">{{ .Content }}</div>
+  </header>
+
+  <div class="series-list">
+    {{ range $section.Pages }}
+    {{ $count := len (where site.RegularPages "Params.series" .Params.seriesKey) }}
+    <a class="series-item" href="{{ .RelPermalink }}">
+      <span class="series-step" aria-hidden="true">&#8594;</span>
+      <span class="series-body">
+        <span class="series-item-title">{{ .Title }}</span>
+        {{ with .Params.card_intro }}<span class="series-note">{{ . }}</span>{{ end }}
+        <span class="series-meta">{{ $count }} articles · start with the first one</span>
+      </span>
+    </a>
+    {{ end }}
+  </div>
+
+  <footer class="series-footer">
+    <p>After a single short answer instead? Head to <a href="/questions/">Answers</a>.</p>
+  </footer>
+</article>
+
+<style>
+.series-hub {
+  --s-card: rgba(255, 255, 255, .92);
+  --s-border: rgba(15, 23, 42, .10);
+  --s-muted: rgba(15, 23, 42, .64);
+}
+[data-theme="dark"] .series-hub {
+  --s-card: rgba(26, 26, 26, .92);
+  --s-border: rgba(255, 255, 255, .12);
+  --s-muted: rgba(229, 229, 229, .66);
+}
+.series-head {
+  margin: 0 0 1.2rem; padding: 1.1rem 1.2rem;
+  border: 1px solid var(--s-border); border-radius: 14px; background: var(--s-card);
+}
+.series-kicker {
+  margin: 0 0 .5rem; font-size: .78rem; font-weight: 650; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--accent);
+}
+.series-title { font-size: clamp(1.6rem, 3.4vw, 2.1rem); margin: 0 0 .8rem; letter-spacing: -.02em; }
+.series-intro { color: var(--s-muted); line-height: 1.75; font-size: .98rem; }
+.series-intro p { margin: 0 0 .7rem; }
+.series-list { display: flex; flex-direction: column; gap: .8rem; }
+.series-item {
+  /* 主题侧栏组件也有一个 .series-item（默认 display:none / opacity:0），这里必须显式覆盖 */
+  display: flex; align-items: flex-start; gap: 1rem;
+  opacity: 1; transform: none;
+  padding: 1.1rem 1.2rem; border: 1px solid var(--s-border);
+  border-radius: 14px; background: var(--s-card);
+  color: var(--fg); text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease;
+}
+.series-item:hover, .series-item:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+.series-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.series-step {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 10px;
+  background: var(--accent); color: #fff; font-size: 1rem;
+}
+.series-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: .35rem; }
+.series-item-title { font-size: 1.08rem; font-weight: 650; line-height: 1.4; }
+.series-note { font-size: .92rem; line-height: 1.65; color: var(--s-muted); }
+.series-meta { font-size: .8rem; color: var(--s-muted); }
+.series-footer {
+  margin-top: 1.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--s-border); border-radius: 14px;
+  background: var(--s-card); font-size: .9rem; color: var(--s-muted);
+}
+.series-footer p { margin: 0; line-height: 1.7; }
+.series-footer a { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .series-item { transition: none; }
+}
+</style>
+{{ end }}

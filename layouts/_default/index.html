@@ -1,30 +1,35 @@
 {{ define "content" }}
-  {{ $total := 0 }}
-  {{ range site.Data.questions.groups }}{{ $total = add $total (len .items) }}{{ end }}
-  <a class="answers-banner" href="/questions/">
-    <span class="answers-banner-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a3 3 0 1 1 4 2.8c-.7.3-1.2 1-1.2 1.7v.4"/><path d="M12 17h.01"/></svg>
-    </span>
-    <span class="answers-banner-text">
-      <strong>Looking for one specific answer?</strong>
-      <span>{{ $total }} questions, sorted by topic. Tap one and read it right there.</span>
-    </span>
-    <span class="answers-banner-cta">Browse answers <span aria-hidden="true">&#8594;</span></span>
+  <a class="answers-link" href="/questions/">
+    Looking for one specific answer? <strong>Browse Answers</strong> <span aria-hidden="true">&#8594;</span>
   </a>
+
+  {{ with site.GetPage "/series/borderlands-art-style" }}
+  {{ $count := len (where site.RegularPages "Params.series" .Params.seriesKey) }}
+  <a class="series-card" href="{{ .RelPermalink }}">
+    <span class="series-card-image">
+      <img src="{{ .Params.cover | relURL }}" alt="" loading="lazy">
+    </span>
+    <span class="series-card-body">
+      <span class="series-card-kicker">Series · {{ $count }} articles</span>
+      <strong class="series-card-title">{{ .Title }}</strong>
+      <span class="series-card-desc">{{ .Params.card_intro }}</span>
+      <span class="series-card-cta">Start reading <span aria-hidden="true">&#8594;</span></span>
+    </span>
+  </a>
+  {{ end }}
+
+  <h2 class="home-section-title">Latest writing</h2>
 
   {{ if .Site.Params.homeBigImage.enable }}
     {{ if eq .Site.Params.homeBigImage.mode "mode1" }}
       <!-- 模式一：中间栏大图点击切换效果 -->
       <div class="home-big-image-mode1-container">
-        <!-- 大图区域（初始显示） -->
         <section class="home-big-image-mode1 active" id="homeBigImageMode1">
           <div class="home-big-image-content">
             <h1 class="home-big-image-title">{{ .Site.Params.homeBigImage.title | default .Site.Title }}</h1>
             <p class="home-big-image-subtitle">{{ .Site.Params.homeBigImage.subtitle | default .Site.Params.description }}</p>
           </div>
         </section>
-
-        <!-- 内容区域（初始隐藏） -->
         <section class="home-content-mode1" id="homeContentMode1">
           {{ $engine := .Site.Params.homeColumns | default 1 }}
           {{ if or (lt $engine 1) (gt $engine 3) }}{{ $engine = 1 }}{{ end }}
@@ -43,8 +48,6 @@
           <i class="fas fa-chevron-down"></i>
         </div>
       </section>
-
-      <!-- 正常显示的三栏布局内容 -->
       <div class="home-content-mode2" id="homeContentMode2">
         {{ $engine := .Site.Params.homeColumns | default 1 }}
         {{ if or (lt $engine 1) (gt $engine 3) }}{{ $engine = 1 }}{{ end }}
@@ -59,44 +62,92 @@
   {{ end }}
 
 <style>
-.answers-banner {
-  --a-card: rgba(255, 255, 255, .74);
+/* 小入口：只指路，不再拿问答数量当主卖点 */
+.answers-link {
+  --a-card: rgba(255, 255, 255, .82);
   --a-border: rgba(15, 23, 42, .10);
   --a-muted: rgba(15, 23, 42, .64);
-  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-  margin: 0 0 1.6rem; padding: 1.05rem 1.2rem;
-  border: 1px solid var(--a-border); border-radius: 16px;
-  background: var(--a-card); color: var(--fg); text-decoration: none;
-  transition: transform .18s ease, border-color .18s ease;
+  display: inline-flex; align-items: center; gap: .4rem; flex-wrap: wrap;
+  margin: 0 0 1.3rem; padding: .42rem .9rem;
+  border: 1px solid var(--a-border); border-radius: 999px;
+  background: var(--a-card); color: var(--a-muted);
+  font-size: .84rem; text-decoration: none;
+  transition: border-color .18s ease, color .18s ease;
 }
-[data-theme="dark"] .answers-banner {
-  --a-card: rgba(255, 255, 255, .045);
+[data-theme="dark"] .answers-link {
+  --a-card: rgba(255, 255, 255, .05);
   --a-border: rgba(255, 255, 255, .12);
-  --a-muted: rgba(229, 229, 229, .62);
+  --a-muted: rgba(229, 229, 229, .66);
 }
-.answers-banner:hover, .answers-banner:focus-visible {
-  transform: translateY(-2px); border-color: var(--accent);
+.answers-link strong { color: var(--accent); font-weight: 650; }
+.answers-link:hover, .answers-link:focus-visible { border-color: var(--accent); }
+.answers-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* 专题卡：只放一个内容够厚的专题 */
+.series-card {
+  --s-card: rgba(255, 255, 255, .90);
+  --s-border: rgba(15, 23, 42, .10);
+  --s-muted: rgba(15, 23, 42, .64);
+  display: flex; align-items: stretch; gap: 1.1rem; flex-wrap: wrap;
+  margin: 0 0 2rem; padding: .8rem;
+  border: 1px solid var(--s-border); border-radius: 18px;
+  background: var(--s-card); color: var(--fg); text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease;
 }
-.answers-banner:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.answers-banner-icon {
-  display: flex; align-items: center; justify-content: center; flex: none;
-  width: 2.5rem; height: 2.5rem; border-radius: 12px;
-  background: var(--accent); color: #fff;
+[data-theme="dark"] .series-card {
+  --s-card: rgba(26, 26, 26, .92);
+  --s-border: rgba(255, 255, 255, .12);
+  --s-muted: rgba(229, 229, 229, .66);
 }
-.answers-banner-icon svg { width: 1.35rem; height: 1.35rem; }
-.answers-banner-text { display: flex; flex-direction: column; gap: .25rem; flex: 1; min-width: 0; }
-.answers-banner-text strong { font-size: 1.02rem; font-weight: 650; }
-.answers-banner-text > span { font-size: .87rem; color: var(--a-muted); line-height: 1.5; }
-.answers-banner-cta {
-  flex: none; font-size: .87rem; font-weight: 650; color: var(--accent);
-  white-space: nowrap;
+.series-card:hover, .series-card:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+.series-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.series-card-image { flex: 0 0 210px; min-height: 150px; border-radius: 12px; overflow: hidden; }
+.series-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.series-card-body {
+  flex: 1 1 260px; min-width: 0;
+  display: flex; flex-direction: column; gap: .38rem; padding: .35rem .3rem;
 }
+.series-card-kicker {
+  font-size: .74rem; font-weight: 650; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--accent);
+}
+.series-card-title { font-size: 1.14rem; font-weight: 650; line-height: 1.35; letter-spacing: -.01em; }
+.series-card-desc { font-size: .89rem; line-height: 1.6; color: var(--s-muted); }
+.series-card-cta { margin-top: auto; padding-top: .3rem; font-size: .86rem; font-weight: 650; color: var(--accent); }
+
+.home-section-title {
+  margin: 0 0 1.1rem; font-size: 1.12rem; font-weight: 650; letter-spacing: -.01em;
+}
+
+/* 首页卡片少展示标签，让标题和摘要更容易扫读 */
+.home-posts .post-tags { display: none; }
+
+/* 桌面双列限高：分页(pagerSize)管住篇数，这里管住每张卡片，
+   避免两列时首页被拉得过长、右侧滚动条/阅读进度走得太久。
+   移动端仍交给主题自己的响应式规则。 */
+@media (min-width: 900px) {
+  .home-posts { margin: 1.4rem auto; }
+  .home-posts[data-columns="2"] .post-grid { gap: 1.1rem !important; }
+  .home-posts[data-columns="2"] .post-cover { height: 140px !important; }
+  .home-posts[data-columns="2"] .post-title {
+    font-size: 1.22rem !important; line-height: 1.4 !important;
+    min-height: 0 !important; max-height: none !important;
+    -webkit-line-clamp: 2 !important; line-clamp: 2 !important;
+    margin-bottom: .4rem !important;
+  }
+  .home-posts[data-columns="2"] .post-summary {
+    -webkit-line-clamp: 2 !important; line-clamp: 2 !important;
+    max-height: 3.1em !important; margin-bottom: .5rem !important;
+  }
+  .home-posts[data-columns="2"] .post-info { padding: 1rem 1.2rem !important; }
+}
+
 @media (max-width: 640px) {
-  .answers-banner { padding: .9rem 1rem; gap: .8rem; }
-  .answers-banner-cta { width: 100%; }
+  .series-card-image { flex: 1 1 100%; min-height: 150px; max-height: 200px; }
+  .series-card-body { flex: 1 1 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .answers-banner { transition: none; }
+  .series-card, .answers-link { transition: none; }
 }
 </style>
 {{ end }}

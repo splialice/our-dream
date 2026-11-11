@@ -1,0 +1,88 @@
+{{ define "content" }}
+{{- $key := .Params.seriesKey -}}
+{{- $members := where site.RegularPages "Params.series" $key -}}
+{{- $members = sort $members "Params.series_order" "asc" -}}
+<article class="series-hub">
+  <header class="series-head">
+    <p class="series-kicker">Series · {{ len $members }} articles</p>
+    <h1 class="series-title">{{ .Title }}</h1>
+    <div class="series-intro">{{ .Content }}</div>
+  </header>
+
+  <ol class="series-list">
+    {{ range $i, $p := $members }}
+    <li class="series-item">
+      <span class="series-step" aria-hidden="true">{{ add $i 1 }}</span>
+      <div class="series-body">
+        <h2 class="series-item-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h2>
+        {{ with $p.Params.series_note }}<p class="series-note">{{ . }}</p>{{ end }}
+        <p class="series-meta">{{ $p.Date.Format "2006-01-02" }} · {{ $p.ReadingTime }} min read</p>
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+
+  <footer class="series-footer">
+    <p>Looking for a short answer to one specific question instead? The <a href="/questions/">Answers</a> page collects those.</p>
+  </footer>
+</article>
+
+<style>
+.series-hub {
+  --s-card: rgba(255, 255, 255, .92);
+  --s-border: rgba(15, 23, 42, .10);
+  --s-muted: rgba(15, 23, 42, .64);
+  max-width: 100%;
+}
+[data-theme="dark"] .series-hub {
+  --s-card: rgba(26, 26, 26, .92);
+  --s-border: rgba(255, 255, 255, .12);
+  --s-muted: rgba(229, 229, 229, .66);
+}
+.series-head {
+  margin: 0 0 1.2rem; padding: 1.1rem 1.2rem;
+  border: 1px solid var(--s-border); border-radius: 14px; background: var(--s-card);
+}
+.series-kicker {
+  margin: 0 0 .5rem; font-size: .78rem; font-weight: 650; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--accent);
+}
+.series-title { font-size: clamp(1.6rem, 3.4vw, 2.1rem); margin: 0 0 .8rem; letter-spacing: -.02em; line-height: 1.25; }
+.series-intro { color: var(--s-muted); line-height: 1.75; font-size: .98rem; }
+.series-intro p { margin: 0 0 .7rem; }
+.series-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .8rem; counter-reset: none; }
+.series-item {
+  /* 主题侧栏组件也有一个 .series-item（默认 display:none / opacity:0），这里必须显式覆盖 */
+  display: flex; align-items: flex-start; gap: 1rem;
+  opacity: 1; transform: none;
+  padding: 1.1rem 1.2rem; border: 1px solid var(--s-border);
+  border-radius: 14px; background: var(--s-card);
+  transition: border-color .18s ease, transform .18s ease;
+}
+.series-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+.series-step {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 10px;
+  background: var(--accent); color: #fff; font-size: .9rem; font-weight: 700;
+}
+.series-body { min-width: 0; flex: 1; }
+.series-item-title { margin: 0 0 .4rem; font-size: 1.08rem; font-weight: 650; line-height: 1.4; }
+.series-item-title a { color: var(--fg); text-decoration: none; }
+.series-item-title a:hover { color: var(--accent); text-decoration: underline; }
+.series-note { margin: 0 0 .45rem; font-size: .92rem; line-height: 1.65; color: var(--s-muted); }
+.series-meta { margin: 0; font-size: .8rem; color: var(--s-muted); font-variant-numeric: tabular-nums; }
+.series-footer {
+  margin-top: 1.2rem; padding: 1rem 1.2rem;
+  border: 1px solid var(--s-border); border-radius: 14px;
+  background: var(--s-card); font-size: .9rem; color: var(--s-muted);
+}
+.series-footer p { margin: 0; line-height: 1.7; }
+.series-footer a { color: var(--accent); }
+@media (max-width: 640px) {
+  .series-item { padding: .95rem 1rem; gap: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .series-item { transition: none; }
+}
+</style>
+{{ end }}

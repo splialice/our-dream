@@ -2,6 +2,9 @@ groups:
   - name: "Borderlands and the art makeover"
     short: "Borderlands"
     icon: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>'
+    series:
+      label: "Read the full Borderlands series"
+      url: "/series/borderlands-art-style/"
     items:
       - q: "Is Borderlands cel shaded?"
         a: "Gearbox said no in April 2009. Four dated sources, including the CEO's email."

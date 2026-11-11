@@ -11,6 +11,9 @@ tags: ["Team Fortress 2", "Borderlands", "Valve", "Gearbox"]
 categories: ["Game history"]
 cover: "/img/covers/tf2-borderlands-before-the-makeover.webp"
 comments: true
+series: "borderlands-art-style"
+series_order: 4
+series_note: "A wider look at what an art-makeover claim needs as evidence, set beside TF2 and Probably Stolen."
 ---
 
 When Rock Paper Shotgun wrote about [`Probably Stolen`](/posts/probably-stolen-28-player-demo.html/) in November 2026, it reached for two precedents: Team Fortress 2 and Borderlands. Both, the argument went, had looked radically different before release. Both are real cases. What is less often noticed is how differently they are documented.

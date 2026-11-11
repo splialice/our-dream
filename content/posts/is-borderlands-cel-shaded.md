@@ -11,6 +11,9 @@ tags: ["Borderlands", "Gearbox", "Cel shading"]
 categories: ["Game history"]
 cover: "/img/covers/is-borderlands-cel-shaded.webp"
 comments: true
+series: "borderlands-art-style"
+series_order: 1
+series_note: "A short yes-or-no answer, with the four dated 2009 sources and the limits of that denial."
 ---
 
 Gearbox said no, but the terminology is more complicated than a simple yes-or-no answer. In April 2009, before the game shipped, Randy Pitchford explicitly rejected the cel-shaded label and described the visual direction as `Concept Art Style`. That is strong evidence of how the studio understood and named its art direction at the time. It is not, by itself, a technical audit of every rendering technique used in the finished game.

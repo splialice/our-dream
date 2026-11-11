@@ -35,8 +35,8 @@
 }
 </script>
 {{- else -}}
-{{- /* 内页：Article 只给内容页；tag / category / section 归档页不是文章，只保留面包屑 */ -}}
-{{- if .IsPage -}}
+{{- /* 内页：Article 只给 posts 文章；tag / category / section 归档页与独立页、专题合集页都不是文章，只保留面包屑 */ -}}
+{{- if and .IsPage (eq .Type "posts") -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

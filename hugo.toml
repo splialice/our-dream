@@ -235,10 +235,10 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   
   # ===== 基础信息配置 =====
   author = "Pixel Dango"                      # 网站作者/所有者
-  description = "Game history and technical notes. Why consoles, formats and studios ended the way they did."  # 网站描述，用于SEO
+  description = "Game history research, the visual style of games, and technical notes from building this site."  # 网站描述，用于SEO
   
   # ===== 布局显示配置 =====
-  homeColumns = 3                # 首页中间栏引擎：1=单列|2=双列|3=瀑布流
+  homeColumns = 2                # 首页中间栏引擎：1=单列|2=双列|3=瀑布流
   mainSections = ["posts"]                 # 首页主内容来源的 Section 列表（驱动卡片列表）
   summaryLength = 120                      # 文章摘要截取长度(字符数)，用于列表摘要
   
@@ -397,7 +397,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     showRelatedPosts = false                # 相关文章
     showSocialMedia = true                # 社交媒体
     showAdvertisement = false              # 广告位
-    showAnnouncement = true                # 公告栏
+    showAnnouncement = false               # 公告栏（2026-11-11 撤下「刚起步/搬旧文」公告）
     showLifeTime = false                    # 逆行人生时间倒计时组件
     showDataStats = false                   # 数据统计组件
     showHitokoto = true                   # 一言组件
@@ -774,7 +774,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
 
   # ===== 公告配置 =====
   [params.announcement]
-    enable = true                          # 是否启用公告栏
+    enable = false                         # 是否启用公告栏
     important = false                      # 是否为重要公告（影响显示样式）
     title = "Just started"                 # 公告标题
     content = "New site. Migrating older writing in, one piece at a time. Game history first."  # 公告内容

@@ -11,6 +11,9 @@ tags: ["Borderlands", "Gearbox", "Concept Art Style", "Cel shading"]
 categories: ["Game history"]
 cover: "/img/covers/borderlands-art-style.webp"
 comments: true
+series: "borderlands-art-style"
+series_order: 2
+series_note: "What Gearbox actually called the look, and why it did not ask anyone else to stop saying cel-shaded."
 ---
 
 Gearbox called it `Concept Art Style`. That was the studio's own name for Borderlands' art direction, settled on in April 2009, a few months before release. The term widely used by media and players — cel-shaded — is one its CEO explicitly rejected that same month. Both statements are on the record, which is why the question keeps coming back.
