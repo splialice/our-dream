@@ -3,14 +3,14 @@
     Looking for one specific answer? <strong>Browse Answers</strong> <span aria-hidden="true">&#8594;</span>
   </a>
 
-  {{ with site.GetPage "/series/borderlands-art-style" }}
+  {{ with site.GetPage "/series/art-direction-changes" }}
   {{ $count := len (where site.RegularPages "Params.series" .Params.seriesKey) }}
   <a class="series-card" href="{{ .RelPermalink }}">
     <span class="series-card-image">
       <img src="{{ .Params.cover | relURL }}" alt="" loading="lazy">
     </span>
     <span class="series-card-body">
-      <span class="series-card-kicker">Series · {{ $count }} articles</span>
+      <span class="series-card-kicker">Case files · {{ $count }} articles</span>
       <strong class="series-card-title">{{ .Title }}</strong>
       <span class="series-card-desc">{{ .Params.card_intro }}</span>
       <span class="series-card-cta">Start reading <span aria-hidden="true">&#8594;</span></span>

@@ -11,7 +11,8 @@ tags: ["Borderlands", "Gearbox", "Concept Art Style", "Cel shading"]
 categories: ["Game history"]
 cover: "/img/covers/borderlands-art-style.webp"
 comments: true
-series: "borderlands-art-style"
+series: "art-direction-changes"
+series_group: "Borderlands"
 series_order: 2
 series_note: "What Gearbox actually called the look, and why it did not ask anyone else to stop saying cel-shaded."
 ---

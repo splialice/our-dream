@@ -11,7 +11,8 @@ tags: ["Borderlands", "Gearbox", "Cel shading"]
 categories: ["Game history"]
 cover: "/img/covers/is-borderlands-cel-shaded.webp"
 comments: true
-series: "borderlands-art-style"
+series: "art-direction-changes"
+series_group: "Borderlands"
 series_order: 1
 series_note: "A short yes-or-no answer, with the four dated 2009 sources and the limits of that denial."
 ---

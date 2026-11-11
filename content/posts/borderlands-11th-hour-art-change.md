@@ -11,7 +11,8 @@ tags: ["Borderlands", "Gearbox", "Concept Art Style"]
 categories: ["Game history"]
 cover: "/img/covers/borderlands-11th-hour-art-change.webp"
 comments: true
-series: "borderlands-art-style"
+series: "art-direction-changes"
+series_group: "Borderlands"
 series_order: 3
 series_note: "How the change happened: the secret prototype, the decision at 75 percent, and the rebuild that followed."
 ---
