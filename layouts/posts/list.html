@@ -33,5 +33,26 @@
     </div>
   {{ end }}
 </section>
+
+<style>
+/* 归档时间线：原先文字直接压在海景背景上，给内容区一层实底 */
+.archive-timeline {
+  --arc-card: rgba(255, 255, 255, .94);
+  --arc-border: rgba(15, 23, 42, .10);
+  background: var(--arc-card);
+  border: 1px solid var(--arc-border);
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+}
+[data-theme="dark"] .archive-timeline {
+  --arc-card: rgba(26, 26, 26, .92);
+  --arc-border: rgba(255, 255, 255, .12);
+  box-shadow: none;
+}
+.archive-timeline .archive-sub { opacity: .85; }
+.archive-timeline .archive-month-title { opacity: 1; }
+.archive-timeline .archive-post-item .date { opacity: .8; }
+</style>
 {{ end }}
 

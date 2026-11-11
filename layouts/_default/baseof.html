@@ -295,11 +295,30 @@
     {{/* 2026-11-07 补：Open Graph / Twitter Card（主题原本没有） */}}
     {{ partial "seo/opengraph.html" . }}
 
-    {{/* 2026-11-07 补：Open Graph / Twitter Card（主题原本没有） */}}
-    {{ partial "seo/opengraph.html" . }}
-
     {{/* 2026-11-06 补：结构化数据（主题原本没有） */}}
     {{ partial "seo/schema.html" . }}
+
+    {{/* 2026-11-11 补：与 /posts/、Answers 同一处理，
+         给文字区一层实底，避免海景背景穿透小字。只作用于这三类容器。 */}}
+    <style>
+      .links-page, .message-page, .categories-page {
+        --pg-card: rgba(255, 255, 255, .94);
+        --pg-border: rgba(15, 23, 42, .10);
+        background: var(--pg-card);
+        border: 1px solid var(--pg-border);
+        border-radius: 18px;
+        box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+      }
+      /* 标签/分类页原本强制 60vh 高，内容少时会出现一大块空卡片 */
+      main.site-main > .categories-page { min-height: 0; }
+      [data-theme="dark"] .links-page,
+      [data-theme="dark"] .message-page,
+      [data-theme="dark"] .categories-page {
+        --pg-card: rgba(26, 26, 26, .92);
+        --pg-border: rgba(255, 255, 255, .12);
+        box-shadow: none;
+      }
+    </style>
   </head>
   
 <body{{ if .IsHome }} class="home"{{ else if .IsPage }}{{ if eq .Type "posts" }} class="single-post"{{ end }}{{ end }}>

@@ -2,7 +2,7 @@
 title: "TF2, Borderlands and the evidence behind an art makeover"
 slug: tf2-borderlands-before-the-makeover
 date: 2026-11-10T09:40:00+08:00
-lastmod: 2026-11-11T11:28:00+08:00
+lastmod: 2026-11-11T15:20:00+08:00
 draft: false
 author: "Pixel Dango"
 description: "Two older games changed how they looked on the way to release. Both left conference material and dated accounts. That is the part missing from the 2026 Probably Stolen story."
@@ -11,7 +11,8 @@ tags: ["Team Fortress 2", "Borderlands", "Valve", "Gearbox"]
 categories: ["Game history"]
 cover: "/img/covers/tf2-borderlands-before-the-makeover.webp"
 comments: true
-series: "borderlands-art-style"
+series: "art-direction-changes"
+series_group: "Borderlands"
 series_order: 4
 series_note: "A wider look at what an art-makeover claim needs as evidence, set beside TF2 and Probably Stolen."
 ---
@@ -32,7 +33,7 @@ The official TF2 wiki preserves the accompanying video's transcript, released on
 
 Wikipedia's account of the game's developer commentary offers another explanation for abandoning the realistic look: it was hard to reconcile with deliberately unrealistic gameplay, in which two teams maintain elaborate bases next to each other. That is a secondary account of an in-game commentary track, not a statement in the paper above, so it sits one step further from the source.
 
-So for TF2 there is a published design rationale, a technical paper describing how it was implemented, and a date for each. The original Valve-hosted PDF is now a 404 (checked 9 November 2026); the paper survives through its DOI and the official transcript. That is a separate lesson about links, but the documentary chain itself is intact.
+So for TF2 there is a published design rationale, a technical paper describing how it was implemented, and a date for each. The ACM page for the paper returned 403 during research on 9 November 2026, and the older Valve-hosted address returned 404 — but the primary documents were not lost: the Official TF2 Wiki's Resources section still links to Valve's own copies on its Steam CDN, and both the six-page paper and the 57-slide deck were downloaded and read in full on 11 November 2026. The documentary chain is intact; only the addresses had moved.
 
 ## The quotes, and the talk behind them
 
@@ -78,11 +79,12 @@ Even the dates need the same caution: [Steam's own metadata](/posts/what-a-steam
 
 ### Sources
 
-Checked 9–11 November 2026. The GDC 2010 slide deck was downloaded and read in full on 11 November 2026; the GameSpot report and the 2025 Game Informer interview were read in full the same day.
+Checked 9–11 November 2026. The GDC 2010 slide deck was downloaded and read in full on 11 November 2026; the GameSpot report and the 2025 Game Informer interview were read in full the same day. The NPAR 2007 TF2 paper and slide deck were also downloaded from Valve's CDN and read in full on 11 November.
 
-- [Official TF2 Wiki: Illustrative Rendering in Team Fortress 2](https://wiki.teamfortress.com/wiki/Illustrative_Rendering_in_Team_Fortress_2) — video transcript, 13 Aug 2007; influences and stated gameplay purpose.
+- [Official TF2 Wiki: Illustrative Rendering in Team Fortress 2](https://wiki.teamfortress.com/wiki/Illustrative_Rendering_in_Team_Fortress_2) — video transcript, 13 Aug 2007; influences and stated gameplay purpose; Resources links to Valve's original files.
 - [Wikipedia: Team Fortress 2, Development](https://en.wikipedia.org/wiki/Team_Fortress_2) — 1998 announcement, E3 1999 realistic look, July 2006 reveal, 10 Oct 2007 release, secondary account of the developer commentary.
-- [NPAR 2007 paper DOI](https://doi.org/10.1145/1274871.1274883) — Mitchell, Francke, Eng, pp. 71–76. The ACM page returned 403 during research; the original Valve-hosted PDF now returns 404.
+- [NPAR 2007 paper (Valve CDN PDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/NPAR07_IllustrativeRenderingInTeamFortress2.pdf) and [accompanying slides](https://steamcdn-a.akamaihd.net/apps/valve/2007/NPAR07_IllustrativeRenderingInTeamFortress2_Slides.pdf) — Mitchell, Francke, Eng; six pages and 57 slides, read in full 11 November 2026.
+- [NPAR 2007 paper DOI](https://doi.org/10.1145/1274871.1274883) — bibliographic record. The ACM page returned 403 during research; the older Valve-hosted address returned 404. The documents themselves are available at the CDN links above.
 - [Kotaku, 9 Apr 2009: Gearbox: "Borderlands Is Not Cel-Shaded"](https://kotaku.com/gearbox-borderlands-is-not-cel-shaded-5206042) — Brian Ashcraft; Pitchford's email response. Original article directly verified, 10 November 2026.
 - [Kotaku, 14 Apr 2009: Gearbox Explain Cel-Shaded Borderlands](https://kotaku.com/gearbox-explain-cel-shaded-borderlands-5210855) — Luke Plunkett; Kotaku's transcription of the official Gearbox forum statement and the `Concept Art Style` naming. Original article directly verified, 10 November 2026; the Gearbox forum post itself was not independently checked.
 - [Eurogamer, 14 Apr 2009](https://www.eurogamer.net/pitchford-borderlands-will-not-be-cel-shaded) — contemporaneous reporting of the same exchange, not the original source of the quotes.
