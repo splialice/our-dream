@@ -35,7 +35,8 @@
 }
 </script>
 {{- else -}}
-{{- /* 内页：Article + BreadcrumbList */ -}}
+{{- /* 内页：Article 只给内容页；tag / category / section 归档页不是文章，只保留面包屑 */ -}}
+{{- if .IsPage -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,6 +66,7 @@
   }
 }
 </script>
+{{- end -}}
 
 <script type="application/ld+json">
 {
