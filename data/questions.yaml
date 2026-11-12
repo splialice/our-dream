@@ -67,3 +67,13 @@ groups:
           A week of running an AI agent used 202 million tokens and cost 16 yuan, about two dollars, roughly one fiftieth of the same run on a Western frontier model.
           That price gap, not enthusiasm, is the simplest explanation for why Chinese users handed their social accounts to a model first.
         url: "/posts/agent-craze-cost-china.html/"
+  - name: "Rendering terms"
+    short: "Rendering"
+    icon: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18"/>'
+    items:
+      - q: "What is cel shading?"
+        a: "A rendering technique, not an art style — and a label Gearbox publicly rejected in 2009."
+        detail: >
+          Cel shading quantizes smooth lighting into a few discrete shades, so shadows become blocks of colour. The black ink outline is a separate step, and the word has drifted to cover both.
+          On 9 April 2009 Randy Pitchford wrote "No, Borderlands is not cel-shaded — it's a gritty and serious world after all." Gearbox later adopted Concept Art Style for itself while telling everyone else they could use whatever term they liked.
+        url: "/posts/what-is-cel-shading.html/"
