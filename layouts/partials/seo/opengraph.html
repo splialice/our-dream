@@ -1,40 +1,39 @@
-{{/* Open Graph + Twitter Card
-   2026-11-07 新增：Demius 主题完全没有 og/twitter 标签，社媒分享时不显示标题、描述和图片。
-
-   规则来源：
-   - og:image 必须是绝对 URL，且是 PNG/JPG（SVG 社媒不渲染）
-   - 建议 1200x630，文件尽量小于 300KB
-   - Twitter 用 summary_large_image 才有大图
+{{/* Meta description + Open Graph + Twitter Card
+   2026-11-07 新增，2026-11-12 升级：
+   - name=description / og:description / twitter:description 统一由本文件生成，
+     baseof.html 不再单独输出，避免三处分叉
+   - tag / category / section 等节点页不再共用站点默认 description，
+     每页按标题和条目数生成自己的描述
+   - SVG 不作为 og:image（社媒不渲染），无可用图时 twitter 降级为小卡
+   - 不再写死 1200x630：实际封面是 1080x606，给错尺寸不如让平台自己探测
 */}}
 
-{{- $ogImage := "" -}}
-{{- with .Params.cover -}}
-  {{- $ogImage = . | absURL -}}
+{{- $desc := "" -}}
+{{- if .Description -}}
+  {{- $desc = .Description -}}
+{{- else if and (ne .Kind "page") (not .IsHome) -}}
+  {{- $desc = printf "%s on Pixel Dango: %d entries on game history, art direction and rendering, sourced from developer statements." .Title (len .Pages) -}}
 {{- else -}}
-  {{- with site.Params.images.defaultCover -}}
+  {{- $desc = site.Params.description -}}
+{{- end -}}
+
+{{- $ogImage := "" -}}
+{{- with (or .Params.cover site.Params.images.defaultCover) -}}
+  {{- if not (strings.HasSuffix (lower .) ".svg") -}}
     {{- $ogImage = . | absURL -}}
   {{- end -}}
 {{- end -}}
 
-{{- $desc := "" -}}
-{{- with .Description -}}
-  {{- $desc = . -}}
-{{- else -}}
-  {{- with site.Params.description -}}
-    {{- $desc = . -}}
-  {{- end -}}
-{{- end -}}
-
+<meta name="description" content="{{ $desc }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
-<meta property="og:locale" content="{{ site.Language.LanguageCode | default "en_US" }}">
+<meta property="og:locale" content="{{ replace (site.Language.LanguageCode | default "en_US") "-" "_" }}">
 {{- with $ogImage }}
 <meta property="og:image" content="{{ . }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ $.Title }}">
 {{- end }}
 {{- if .IsPage }}
 {{- with .Date }}
@@ -55,7 +54,7 @@
 {{- end }}
 {{- end }}
 
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ $desc }}">
 {{- with $ogImage }}

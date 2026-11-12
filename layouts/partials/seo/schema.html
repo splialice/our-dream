@@ -40,10 +40,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": {{ .Title | jsonify | safeJS }},
   "description": {{ (or .Description site.Params.description) | jsonify | safeJS }},
   "url": {{ .Permalink | jsonify | safeJS }},
+  {{- with .Params.cover }}
+  "image": {{ . | absURL | jsonify | safeJS }},
+  {{- end }}
   {{- with .Date }}
   "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | jsonify | safeJS }},
   {{- end }}
@@ -76,7 +79,7 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "首页",
+      "name": "Home",
       "item": {{ site.BaseURL | jsonify | safeJS }}
     }
     {{- if .Parent }}

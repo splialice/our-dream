@@ -33,7 +33,9 @@
     <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="{{ .Site.Params.author }}">
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{/* meta description 改由 partials/seo/opengraph.html 统一输出：
+         那里同时生成 og:description / twitter:description，并为 tag / category /
+         section 等节点页生成各自独立的描述，避免全站共用同一句。 */}}
     
     {{ with .Site.Params.images.favicon }}
     <link rel="icon" href="{{ . | relURL }}" type="image/x-icon">
