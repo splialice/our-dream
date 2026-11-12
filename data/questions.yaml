@@ -87,3 +87,9 @@ groups:
           InterfaceX's own definition says the simulated device must be a major gameplay mechanic, and its footnote lists four other names that are "equally valid".
           The April 2026 press release describes making Fake OS an official Steam tag as a goal, and the tag helper still asks players to add it as a user-defined tag. Checked 12 November 2026.
         url: "/posts/what-are-fake-os-games-called.html/"
+      - q: "Why was The Roottrees are Dead's original search so simple?"
+        a: "A Game Jam deadline and a technical shortcut, not a plan to recreate 1998 — the developer later listed better search as something to fix."
+        detail: >
+          Jeremy Johnston said he had to build something quickly, and that the pre-matched search database came directly from his technical limitations.
+          A devlog of 1 March 2024 lists "better search abilities for names on the family tree" among the UI/UX fixes; Robin Ward's 2025 technical post documents the two-way linked notebook that followed.
+        url: "/posts/why-roottrees-search-was-simple.html/"
