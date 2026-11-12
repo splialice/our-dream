@@ -192,3 +192,10 @@
 html[data-theme="dark"] .site-background {
   display: none;
 }
+/* Shared readable navigation over the original scenic background. */
+body[class] .site-header.site-header{background:#f0f8ff!important;border-bottom:1px solid #d5e5f1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+[data-theme="dark"] body[class] .site-header.site-header{background:#1a222b!important;border-bottom-color:#364553!important}
+body[class] .site-header.site-header .logo,body[class] .site-header.site-header .logo a{color:var(--accent)!important}
+body[class] .site-header.site-header .nav-link-main,body[class] .site-header.site-header .nav-dropdown-link{color:var(--fg)!important}
+body[class] .site-header.site-header .nav-link-main:hover,body[class] .site-header.site-header .nav-link-main.nav-active{color:var(--accent)!important}
+body[class] .site-header.site-header .mobile-nav-button span{background:var(--fg)!important}

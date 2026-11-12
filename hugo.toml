@@ -382,16 +382,17 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     # 侧栏组件宽度模式
     wideMode = "false"                   # 侧栏宽度模式：false或"normal"=260px（默认），"medium"=332px（中宽），true或"wide"=415px（超宽）
     
-    # 左右栏模块顺序配置
-    left  = ["author","announcement"]
-    right = ["toc","series-posts","related-Posts"]
+    # 左右栏模块顺序配置（2026-11-12：分类/标签/最新文章改放两侧，
+    # 不再全挤在顶部横向菜单里，避免横条下滑时压住正文）
+    left  = ["author","categories"]
+    right = ["tags","recent-posts","toc","series-posts","related-Posts"]
 
     # 各组件显示开关（默认true表示不配置时默认显示）
     showAuthor = true                      # 作者信息卡片
     showToc = true                         # 目录组件
-    showTags = false                        # 标签云
-    showRecent = false                      # 最新文章
-    showCategories = false                  # 分类组件
+    showTags = true                         # 标签云
+    showRecent = true                       # 最新文章
+    showCategories = true                   # 分类组件
     showArchive = false                     # 归档组件
     showPopularPosts = false                # 热门文章
     showRelatedPosts = false                # 相关文章
@@ -812,11 +813,11 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       image = "/img/haibian.jpg"  # 背景图URL
       blur = 0                             # 背景模糊程度(px)
       brightness = 100                     # 背景亮度(%)
-      opacity = 45                         # 背景透明度(%)：调淡海景，避免压住导航与小字
+      opacity = 100                        # 原图清晰显示；文字使用实底卡片保证可读性
   
   # ===== 背景粒子特效配置 =====
   [params.particleEffect]
-    enable = true                         # 是否启用背景粒子特效（true=启用，false=禁用）
+    enable = false                         # 是否启用背景粒子特效（true=启用，false=禁用）
     count = 150                             # 粒子数量（建议范围：50-150，数量越多性能消耗越大）
     color = ""                             # 粒子颜色（留空则根据主题自动适配：暗色模式白色，亮色模式黑色）
                                           # 格式：rgba(255, 255, 255, 0.5) 或 #ffffff

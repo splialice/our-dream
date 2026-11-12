@@ -1,228 +1,65 @@
 {{ define "content" }}
-<article class="qa-hub">
+{{ $groups := site.Data.questions.groups }}
+{{ $total := 0 }}
+{{ range $groups }}{{ $total = add $total (len .items) }}{{ end }}
+{{ with resources.Get "css/_answers.css" }}<style>{{ .Content | safeCSS }}</style>{{ end }}
+<article class="qa-hub" aria-labelledby="qa-title">
   <header class="qa-head">
-    <h1 class="qa-title">{{ .Title }}</h1>
-    <p class="qa-intro">{{ .Params.intro }}</p>
-    <div class="qa-tools">
-      <label class="qa-search">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
-        <input id="qa-filter" type="search" placeholder="Type a word to narrow the list..." autocomplete="off" aria-label="Filter questions">
-      </label>
-      <span class="qa-count" id="qa-count" aria-live="polite"></span>
+    <div class="qa-eyebrow"><span class="qa-spark" aria-hidden="true">✳</span> THE ANSWER INDEX</div>
+    <div class="qa-heading-row">
+      <div><h1 id="qa-title" class="qa-title">{{ .Title }}<span aria-hidden="true">.</span></h1>
+      <p class="qa-intro">Good questions. Short answers.<br>The sources behind the story.</p></div>
+      <p class="qa-head-note">Game history, visual styles, and the things we learned building this site.<span>{{ $total }} curated answers <span aria-hidden="true">/</span> {{ len $groups }} topics</span></p>
     </div>
-    <div class="qa-chips" id="qa-chips" role="group" aria-label="Filter by topic">
-      <button type="button" class="qa-chip is-active" data-group="all">All</button>
-      {{ range $i, $group := site.Data.questions.groups }}
-      <button type="button" class="qa-chip" data-group="{{ $i }}">{{ $group.short }}</button>
-      {{ end }}
+    <div class="qa-tools" data-qa-controls hidden>
+      <label class="qa-search" for="qa-filter">
+        <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <input id="qa-filter" type="search" placeholder="Search a question, game, or topic…" autocomplete="off" aria-label="Search answers" aria-controls="answers-list">
+      </label>
+      <button type="button" class="qa-reset" data-qa-reset hidden>Clear filters <span aria-hidden="true">↗</span></button>
     </div>
   </header>
 
-  {{ range $i, $group := site.Data.questions.groups }}
-  <details class="qa-group" data-group-index="{{ $i }}" open>
-    <summary class="qa-group-head" title="点击展开或收起这一组">
-      <span class="qa-group-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ $group.icon | safeHTML }}</svg>
-      </span>
-      <h2 class="qa-group-title">{{ $group.name }}</h2>
-      <span class="qa-group-num" data-group-count>0</span>
-      <span class="qa-group-toggle" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </span>
-    </summary>
-    <div class="qa-list">
-      {{ range $group.items }}
-      <details class="qa-item" data-text="{{ printf "%s %s %s" .q .a .detail | lower }}">
-        <summary class="qa-summary" title="点击展开答案">
-          <span class="qa-item-body">
-            <span class="qa-q">{{ .q }}</span>
-            <span class="qa-a">{{ .a }}</span>
-          </span>
-          <span class="qa-plus" aria-hidden="true"></span>
-        </summary>
-        <div class="qa-detail">
-          <p>{{ .detail }}</p>
-          <a class="qa-full" href="{{ .url }}">Read the full article <span aria-hidden="true">&#8594;</span></a>
+  <div class="qa-layout">
+    <nav class="qa-topics" aria-label="Answer topics">
+      <p class="qa-nav-label">BROWSE BY TOPIC</p>
+      <div class="qa-chips" id="qa-chips">
+        <a class="qa-chip is-active" href="#answers-list" data-group="all" aria-current="true"><span>All answers</span><span class="qa-nav-count">{{ $total }}</span></a>
+        {{ range $i, $group := $groups }}
+        <a class="qa-chip" href="#topic-{{ $i }}" data-group="{{ $i }}"><span>{{ $group.short }}</span><span class="qa-nav-count">{{ len $group.items }}</span></a>
+        {{ end }}
+      </div>
+      <p class="qa-nav-note">Start with the short answer.<br>Open a question for context and the full article.</p>
+      <a class="qa-all-posts" href="/posts/">Browse all articles <span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="qa-results" id="answers-list">
+      <div class="qa-results-bar"><span id="qa-view-label">All answers</span><span class="qa-count" id="qa-count" role="status" aria-live="polite" aria-atomic="true">{{ $total }} answers</span></div>
+      {{ range $i, $group := $groups }}
+      <section class="qa-group" id="topic-{{ $i }}" data-group-index="{{ $i }}" aria-labelledby="topic-title-{{ $i }}">
+        <header class="qa-group-head">
+          <span class="qa-group-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{{ $group.icon | safeHTML }}</svg></span>
+          <h2 class="qa-group-title" id="topic-title-{{ $i }}">{{ $group.name }}</h2>
+          <span class="qa-group-num" data-group-count>{{ len $group.items }}</span>
+        </header>
+        <div class="qa-list">
+          {{ range $n, $item := $group.items }}
+          <details class="qa-item" data-text="{{ printf "%s %s %s %s" $group.name .q .a .detail | lower }}">
+            <summary class="qa-summary">
+              <span class="qa-item-num" aria-hidden="true">{{ printf "%02d" (add $n 1) }}</span>
+              <span class="qa-item-body"><span class="qa-q">{{ .q }}</span><span class="qa-a">{{ .a }}</span></span>
+              <span class="qa-plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m8 4 8 8-8 8"/></svg></span>
+            </summary>
+            <div class="qa-detail"><p>{{ .detail }}</p><a class="qa-full" href="{{ .url }}">Read the full article <span aria-hidden="true">↗</span></a></div>
+          </details>
+          {{ end }}
         </div>
-      </details>
+        {{ with $group.series }}<a class="qa-series" href="{{ .url }}"><span class="qa-series-label">GO DEEPER</span>{{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}
+      </section>
       {{ end }}
-      {{ with $group.series }}
-      <a class="qa-series" href="{{ .url }}">{{ .label }} <span aria-hidden="true">&#8594;</span></a>
-      {{ end }}
+      <div class="qa-empty" id="qa-empty" hidden><span class="qa-empty-icon" aria-hidden="true">?</span><h2>No answers found.</h2><p>Try a shorter search, or clear the filters to see every question.</p><button type="button" class="qa-clear" data-qa-reset>Show all answers <span aria-hidden="true">↗</span></button></div>
+      <footer class="qa-bottom"><span>Still exploring?</span><a href="/posts/">Read the latest articles <span aria-hidden="true">↗</span></a></footer>
     </div>
-  </details>
-  {{ end }}
-
-  <p class="qa-empty" id="qa-empty" hidden>Nothing matches that yet. Try a shorter word.</p>
+  </div>
 </article>
-
-<style>
-.qa-hub {
-  --qa-card: rgba(255, 255, 255, .94);
-  --qa-border: rgba(15, 23, 42, .10);
-  --qa-muted: rgba(15, 23, 42, .64);
-  --qa-hover: rgba(0, 102, 204, .06);
-  --qa-sticky: rgba(255, 255, 255, .94);
-  /* 纵向长度上限：列表在中间这栏内部滚动，页面本身不再无限往下拉。
-     滚动条本身隐藏，避免和浏览器右边那条重复、显得杂乱；滚轮依然可以滚。 */
-  max-height: calc(100vh - 3rem);
-  max-height: calc(100dvh - 3rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: .5rem .5rem 2.5rem 0;
-}
-.qa-hub::-webkit-scrollbar { width: 0; height: 0; display: none; }
-[data-theme="dark"] .qa-hub {
-  --qa-card: rgba(26, 26, 26, .92);
-  --qa-border: rgba(255, 255, 255, .12);
-  --qa-muted: rgba(229, 229, 229, .66);
-  --qa-hover: rgba(77, 171, 247, .09);
-  --qa-sticky: rgba(26, 26, 26, .96);
-}
-.qa-head {
-  position: sticky; top: 0; z-index: 5;
-  margin: -.5rem -.5rem 0 0; padding: .5rem .5rem 0 0;
-  background: var(--qa-sticky);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-.qa-title { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0 0 .55rem; letter-spacing: -.02em; }
-.qa-intro { color: var(--qa-muted); margin: 0; line-height: 1.7; }
-.qa-tools { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; margin: 1.4rem 0 .9rem; }
-.qa-search {
-  display: flex; align-items: center; gap: .6rem; flex: 1 1 300px; min-width: 0;
-  padding: .72rem 1.05rem; border: 1px solid var(--qa-border); border-radius: 999px;
-  background: var(--qa-card); transition: border-color .2s ease, box-shadow .2s ease;
-}
-.qa-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0, 102, 204, .12); }
-[data-theme="dark"] .qa-search:focus-within { box-shadow: 0 0 0 3px rgba(77, 171, 247, .16); }
-.qa-search svg { flex: none; opacity: .6; }
-.qa-search input {
-  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
-  color: var(--fg); font: inherit; font-size: .95rem;
-}
-.qa-search input::placeholder { color: var(--qa-muted); opacity: .85; }
-.qa-count { font-size: .82rem; color: var(--qa-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.qa-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.6rem; }
-.qa-chip {
-  position: relative; z-index: 2;
-  padding: .42rem .9rem; border: 1px solid var(--qa-border); border-radius: 999px;
-  background: var(--qa-card); color: var(--qa-muted);
-  font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer;
-  transition: border-color .18s ease, color .18s ease, background .18s ease, transform .1s ease;
-}
-.qa-chip:hover { border-color: var(--accent); color: var(--accent); }
-.qa-chip:active { transform: translateY(1px); }
-.qa-chip.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
-.qa-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-/* 分组：原生 details，点标题即折叠，不依赖脚本 */
-.qa-group { margin-bottom: 1.6rem; }
-.qa-group-head {
-  position: relative; z-index: 2;
-  display: flex; align-items: center; gap: .8rem; margin: 0 0 .9rem;
-  padding: .8rem 1rem; border: 1px solid var(--qa-border);
-  border-radius: 14px; background: var(--qa-card);
-  cursor: pointer; list-style: none;
-}
-.qa-group-head::-webkit-details-marker { display: none; }
-.qa-group-head:hover { border-color: var(--accent); }
-.qa-group-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.qa-group-icon {
-  display: flex; align-items: center; justify-content: center; flex: none;
-  width: 2.3rem; height: 2.3rem; border-radius: 10px;
-  background: var(--accent); color: #fff;
-}
-.qa-group-icon svg { width: 1.2rem; height: 1.2rem; }
-.qa-group-title { flex: 1; min-width: 0; margin: 0; font-size: 1.06rem; font-weight: 650; letter-spacing: -.01em; }
-.qa-group-num {
-  display: inline-flex; align-items: center; justify-content: center; flex: none;
-  min-width: 1.6rem; height: 1.6rem; padding: 0 .4rem; border-radius: 999px;
-  background: var(--qa-hover); border: 1px solid var(--qa-border);
-  font-size: .75rem; color: var(--qa-muted); font-variant-numeric: tabular-nums;
-}
-.qa-group-toggle {
-  display: flex; align-items: center; justify-content: center; flex: none;
-  width: 1.8rem; height: 1.8rem; border-radius: 50%;
-  border: 1px solid var(--qa-border); background: var(--qa-hover); color: var(--qa-muted);
-  transition: color .18s ease, border-color .18s ease, background .18s ease;
-}
-.qa-group-toggle svg { width: 1rem; height: 1rem; transition: transform .2s ease; }
-.qa-group-head:hover .qa-group-toggle { color: var(--accent); border-color: var(--accent); }
-.qa-group[open] .qa-group-toggle svg { transform: rotate(0deg); }
-.qa-group:not([open]) .qa-group-toggle svg { transform: rotate(-90deg); }
-.qa-group:not([open]) .qa-list { display: none; }
-
-.qa-list { display: flex; flex-direction: column; gap: .6rem; }
-.qa-item {
-  border: 1px solid var(--qa-border); border-radius: 14px;
-  background: var(--qa-card); overflow: hidden;
-  transition: border-color .18s ease, background .18s ease;
-}
-.qa-item:hover, .qa-item[open] { border-color: var(--accent); }
-.qa-item[open] { background: var(--qa-card); }
-.qa-summary {
-  position: relative; z-index: 2;
-  display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem;
-  cursor: pointer; list-style: none; color: var(--fg);
-}
-.qa-summary::-webkit-details-marker { display: none; }
-.qa-summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; border-radius: 14px; }
-.qa-item-body { display: flex; flex-direction: column; gap: .3rem; min-width: 0; flex: 1; }
-.qa-q { font-size: 1.02rem; font-weight: 650; line-height: 1.35; }
-.qa-a { font-size: .87rem; color: var(--qa-muted); line-height: 1.5; }
-.qa-plus {
-  position: relative; flex: none; width: 1.65rem; height: 1.65rem;
-  border-radius: 50%; border: 1px solid var(--qa-border);
-  background: var(--qa-hover); color: var(--accent);
-  transition: transform .2s ease, border-color .18s ease, background .18s ease;
-}
-.qa-plus::before, .qa-plus::after {
-  content: ""; position: absolute; top: 50%; left: 50%;
-  background: currentColor; border-radius: 2px;
-  transform: translate(-50%, -50%);
-}
-.qa-plus::before { width: 55%; height: 2px; }
-.qa-plus::after { width: 2px; height: 55%; }
-.qa-summary:hover .qa-plus { border-color: var(--accent); }
-.qa-summary:hover .qa-q { color: var(--accent); }
-.qa-item[open] .qa-plus { transform: rotate(45deg); }
-.qa-detail { padding: .2rem 1.15rem 1.15rem; border-top: 1px solid var(--qa-border); }
-.qa-detail p { margin: .9rem 0 .85rem; font-size: .92rem; line-height: 1.7; color: var(--fg); opacity: .88; }
-.qa-full {
-  display: inline-flex; align-items: center; gap: .35rem;
-  font-size: .87rem; font-weight: 650; color: var(--accent); text-decoration: none;
-}
-.qa-full:hover, .qa-full:focus-visible { text-decoration: underline; }
-.qa-series {
-  display: flex; align-items: center; gap: .4rem;
-  width: 100%; box-sizing: border-box;
-  padding: .65rem .95rem; border: 1px dashed var(--qa-border); border-radius: 12px;
-  background: var(--qa-card); font-size: .87rem; font-weight: 650;
-  color: var(--accent); text-decoration: none;
-  transition: border-color .18s ease;
-}
-.qa-series:hover, .qa-series:focus-visible { border-color: var(--accent); border-style: solid; }
-.qa-series:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.qa-empty { text-align: center; color: var(--qa-muted); padding: 2.5rem 0; }
-.qa-item[hidden], .qa-group[hidden], .qa-empty[hidden] { display: none !important; }
-@media (max-width: 640px) {
-  .qa-hub {
-    max-height: calc(100vh - 5rem);
-    max-height: calc(100dvh - 5rem);
-    padding-right: .25rem;
-  }
-  .qa-group-head { padding: .7rem .85rem; gap: .65rem; }
-  .qa-group-title { font-size: .98rem; }
-  .qa-summary { padding: .9rem 1rem; }
-  .qa-q { font-size: .96rem; }
-  .qa-tools { margin-bottom: .8rem; }
-  .qa-chips { margin-bottom: 1.4rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .qa-item, .qa-plus, .qa-search, .qa-chip, .qa-group-toggle svg { transition: none; }
-}
-</style>
 {{ end }}
