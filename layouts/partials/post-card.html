@@ -36,8 +36,14 @@
     {{ end }}
   {{ end }}
   
+  {{/* 全站第一篇（即首页第一张卡）是 LCP 候选：不懒加载 + 高优先级，其余保持 lazy */}}
+  {{ $eager := false }}
+  {{ $homePages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ with index $homePages 0 }}
+    {{ if eq .RelPermalink $.RelPermalink }}{{ $eager = true }}{{ end }}
+  {{ end }}
   <div class="post-cover">
-    <img src="{{ $cover | relURL }}" alt="{{ .Title }}" loading="lazy" onerror="this.src='{{ $defaultCover }}'">
+    <img src="{{ $cover | relURL }}" alt="{{ .Title }}" {{ if $eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }} onerror="this.src='{{ $defaultCover }}'">
   </div>
   <div class="post-info">
     <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

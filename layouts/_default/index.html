@@ -7,7 +7,7 @@
   {{ $count := len (where site.RegularPages "Params.series" .Params.seriesKey) }}
   <a class="series-card" href="{{ .RelPermalink }}">
     <span class="series-card-image">
-      <img src="{{ .Params.cover | relURL }}" alt="" loading="lazy">
+      <img src="{{ .Params.cover | relURL }}" alt="" loading="eager">
     </span>
     <span class="series-card-body">
       <span class="series-card-kicker">Case files · {{ $count }} articles</span>

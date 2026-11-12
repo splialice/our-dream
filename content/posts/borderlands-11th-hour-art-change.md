@@ -57,7 +57,7 @@ The 2009 interview tells the same turn without the elapsed time. Pitchford said 
 
 The slides confirm the secrecy. Slide 49: "That is why we hid in a closet and did a secret prototype." Slide 54 lists the stages of the `SECRET PROJECT` — getting buy-in, creating interest, fuelling passions, a snowball effect, "Getting Caught," and "Taking it to 2k!"
 
-![Slide 49 of Brian Martel's GDC 2010 presentation, headed Becoming the Borderlands Art Director, ending with the line about hiding in a closet to build a secret prototype.](/img/gdc2010/gdc-slide-49-secret-prototype.png)
+![Slide 49 of Brian Martel's GDC 2010 presentation, headed Becoming the Borderlands Art Director, ending with the line about hiding in a closet to build a secret prototype.](/img/gdc2010/gdc-slide-49-secret-prototype.webp)
 
 *Slide 49, GDC 2010. The "I" on this slide is Martel, a Gearbox co-founder — the deck frames the secret prototype as a decision taken inside senior creative leadership, not as a rebellion from below.*
 
@@ -81,7 +81,7 @@ Slide 7 of the deck sets the change inside the project's own timeline:
 | Development 2 | Sep 07 – Oct 08 |
 | Final Push | Oct 08 – Oct 09 — "doubled team size, art style change, story and design finalized" |
 
-![Slide 7 of Brian Martel's GDC 2010 presentation: the Borderlands development timeline, with art style change listed under Final Push.](/img/gdc2010/gdc-slide-07-timeline.png)
+![Slide 7 of Brian Martel's GDC 2010 presentation: the Borderlands development timeline, with art style change listed under Final Push.](/img/gdc2010/gdc-slide-07-timeline.webp)
 
 *Slide 7, GDC 2010. Reproduced from the [GDC Vault PDF](https://media.gdcvault.com/gdc10/slides/Martel_Brian_Borderlands_and_the_11th_Hour_Art_Change.pdf).*
 
@@ -121,7 +121,7 @@ A word on the label, since it keeps attaching itself to this story.
 
 Slide 53 of the GDC deck sets two things side by side: `FAKE CEL SHADING` and `BORDERLANDS SHADING (Concept Art Style)`. Gearbox was drawing a line between the technique most people were naming and what it had built. That is a studio's own classification in its own conference slides — good evidence for what Gearbox called the work, not a technical audit of every rendering path in the shipped game.
 
-![Slide 53 of Brian Martel's GDC 2010 presentation: two versions of the same character model labelled FAKE CEL SHADING and BORDERLANDS SHADING (Concept Art Style).](/img/gdc2010/gdc-slide-53-naming.png)
+![Slide 53 of Brian Martel's GDC 2010 presentation: two versions of the same character model labelled FAKE CEL SHADING and BORDERLANDS SHADING (Concept Art Style).](/img/gdc2010/gdc-slide-53-naming.webp)
 
 *Slide 53, GDC 2010. Reproduced from the [GDC Vault PDF](https://media.gdcvault.com/gdc10/slides/Martel_Brian_Borderlands_and_the_11th_Hour_Art_Change.pdf).*
 
