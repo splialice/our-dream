@@ -812,7 +812,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       image = "/img/haibian.jpg"  # 背景图URL
       blur = 0                             # 背景模糊程度(px)
       brightness = 100                     # 背景亮度(%)
-      opacity = 70                         # 背景透明度(%)
+      opacity = 45                         # 背景透明度(%)：调淡海景，避免压住导航与小字
   
   # ===== 背景粒子特效配置 =====
   [params.particleEffect]
