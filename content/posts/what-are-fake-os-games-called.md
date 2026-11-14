@@ -2,7 +2,7 @@
 title: "What Are Fake OS Games Called?"
 slug: what-are-fake-os-games-called
 date: 2026-11-12T14:35:00+08:00
-lastmod: 2026-11-12T18:20:00+08:00
+lastmod: 2026-11-14T08:00:00+08:00
 draft: false
 author: "Pixel Dango"
 description: "'Fake OS' is the name 150+ developers agreed on in 2026. It is not a verified Valve-established Steam tag, and the organisers say every other name is equally valid."
@@ -27,7 +27,7 @@ The same footnote names the alternatives — "Interface Sims, Interface Dramas, 
 
 "We agreed" is the answer to the question in the title. No platform, publication or standards body handed down a name; a group picked one so that a scattered set of games could be found in one place. The words "as a major gameplay mechanic" do the rest of the work. A game does not qualify simply because it contains a fictional phone or computer. The simulated device must play a major role in how the game works — it needs to be a core gameplay mechanic, not just a decorative interface.
 
-*The Roottrees Are Dead* is a useful example: its fictional computer provides the environment for the game's central research and deduction mechanics. Its [search and notebook system](/posts/why-roottrees-search-was-simple.html/) is documented as development history, not as a genre classification.
+*The Roottrees Are Dead* is a useful example: its fictional computer provides the environment for the game's central research and deduction mechanics. Its [search and notebook system](/posts/why-roottrees-search-was-simple.html/) is documented as development history, not as a genre classification. Another is [*Hypnospace Outlaw*](/posts/why-hypnospace-outlaw-needed-zones.html/): finding pages inside its fictional web is the task itself, so the simulated browser had to be made navigable before the game could be played.
 
 ## Is Fake OS an official Steam tag?
 
@@ -59,6 +59,6 @@ A studio can name its own work, and a platform can add a category. Gearbox did t
 
 Checked 12 November 2026. The definition, timeline and "has wrapped" notice are from [interfacex.net](https://interfacex.net/); the tagging instructions and the Valve wording are from [interfacex.net/tag](https://interfacex.net/tag); the 14 April quotations are from the unedited Games Press release reproduced by Game Developer. No Valve announcement adding a Fake OS tag was found, so the wording above is deliberately limited to what the reproducible checks show — not a statement about Valve's internal tag database. The organiser's site says 31 game and trailer reveals while the April release says 32, so no single showcase count is used here. A Kotaku report listed in earlier research returned 403 and was not used.
 
-See also [The Roottrees Are Dead: How a Game Jam Shortcut Became a Research Tool](/posts/why-roottrees-search-was-simple.html/) — how one game in this emerging category was actually built — and [What Is Cel Shading?](/posts/what-is-cel-shading.html/), another term where the technical meaning and the label people use are not the same thing.
+See also [The Roottrees Are Dead: How a Game Jam Shortcut Became a Research Tool](/posts/why-roottrees-search-was-simple.html/) and [Hypnospace Outlaw: Why a Fake Internet Needed Zones](/posts/why-hypnospace-outlaw-needed-zones.html/) — two documented cases of how a fictional computer was made usable — and [What Is Cel Shading?](/posts/what-is-cel-shading.html/), another term where the technical meaning and the label people use are not the same thing.
 
 *Cover illustration: AI-generated. Several overlapping, unbranded desktop windows with one blank tag attached to the frontmost; no text, logos or game characters.*

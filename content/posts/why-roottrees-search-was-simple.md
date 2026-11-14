@@ -2,7 +2,7 @@
 title: "The Roottrees Are Dead: How a Game Jam Shortcut Became a Research Tool"
 slug: why-roottrees-search-was-simple
 date: 2026-11-12T16:10:00+08:00
-lastmod: 2026-11-12T18:20:00+08:00
+lastmod: 2026-11-14T08:00:00+08:00
 draft: false
 author: "Pixel Dango"
 description: "A Game Jam deadline, a technical shortcut and a trivia habit: what Jeremy Johnston and Robin Ward actually said about the search system, and how the remake turned it into a research tool."
@@ -58,6 +58,8 @@ In a 2025 interview Ward said the original's art and interface were what most ne
 
 By [InterfaceX's definition](/posts/what-are-fake-os-games-called.html/), the remake also shows why *The Roottrees Are Dead* fits the emerging Fake OS category: its fictional computer is not merely a visual framing device, but the environment through which players search, browse and organize evidence. That is an editorial reading of the definition, not a classification the developers claimed.
 
+Finding things inside a simulated computer was solved differently in [*Hypnospace Outlaw*](/posts/why-hypnospace-outlaw-needed-zones.html/): after playtesters could not read a directory sorted by its fictional users, the team replaced it with corporate zones.
+
 ## What the reviews add
 
 The three research databases and their limits are described by [PC Gamer's review](https://www.pcgamer.com/games/puzzle/the-roottrees-are-dead-review/), not by a developer document: SpiderSearch mainly surfaces "the more famous Roottrees" and major events, the public library database needs a title and author before it will lend, and the periodical archive only offers magazines you have already encountered elsewhere. [Thinky Games](https://thinkygames.com/reviews/the-roottrees-are-dead-review/) adds the wider pattern — clues lead out into local newspaper archives, old magazines, diaries and family photographs.
@@ -72,6 +74,6 @@ Checked 12 November 2026. Sources, in order of weight: the [itch.io launch post]
 
 Not used here: the line "Her Story meets Return of the Obra Dinn meets The Case of the Golden Idol" — no first-party source for the three-game phrasing was found, and it is not attributed to Robin Ward. The idea that the developers restricted search to recreate a 1998 internet is not supported by the material above. Precise Steam review counts, "50 family members" and a 20-hour playtime are omitted as unverified or inconsistent.
 
-See also [What Are Fake OS Games Called?](/posts/what-are-fake-os-games-called.html/) — the naming question this case belongs to — and [What Is Cel Shading?](/posts/what-is-cel-shading.html/).
+See also [What Are Fake OS Games Called?](/posts/what-are-fake-os-games-called.html/) — the naming question this case belongs to — [Hypnospace Outlaw: Why a Fake Internet Needed Zones](/posts/why-hypnospace-outlaw-needed-zones.html/), and [What Is Cel Shading?](/posts/what-is-cel-shading.html/).
 
 *Cover illustration: AI-generated. A simple search list on the left becomes a two-way linked notebook on the right; no text, logos or game characters.*

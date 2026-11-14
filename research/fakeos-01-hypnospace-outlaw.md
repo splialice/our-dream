@@ -39,11 +39,16 @@
 
 **处理建议**：写"两百多个页面"并注明是媒体描述，或者干脆写"分成数个 zone，每个 zone 里几十个页面"，不去碰精确总数。
 
-**另一个可用的硬数字**：官方 mod 站 indexgg 记录 **131 个 mod**，最新更新 2026-10-15。
-→ 这说明游戏发售后 7 年仍有社区在做内容，**比页面总数更有说服力**。
+**社区数字：2026-11-14 复核，口径有问题，正文不采用**
 
-**wiki 规模**：hypnospace.wiki.gg 目前维护 **292 篇文章**（专门记录这个虚构网络里的页面、角色、事件）。
-→ 这个数字很关键：**一个虚构的互联网，需要 292 篇百科条目来描述它。**
+| 数字 | 实际口径 | 来源 |
+|---|---|---|
+| 292 articles | 整个 Trennisverse Wiki 的文章数，含 Hypnospace Outlaw / Slayers X / Dreamsettler，**不是本作独立条目数**；搜索索引显示 292，直接打开旧缓存为 290（页面标注最后编辑 2024-12-17） | https://hypnospace.wiki.gg/wiki/Hypnospace_Outlaw_Wiki |
+| 131 / 3 / 134 | 131 是 mod.io 收录数、3 是 GameBanana、134 是第三方目录跨平台合计；**非官方公布的 Mod 总数**，也不保证条目仍可下载 | https://slashkeys.com/mods/hypnospace-outlaw 、https://mod.io/g/hypnospace |
+
+→ 归档原先写的「官方 mod 站 131 个」「292 篇专门记录本作」两句都是错的，已更正。
+→ 两个数字都是第三方口径且 wiki 缓存不一致，**不写进正文核心论证**；若要写必须带检查日期与口径说明。
+→ Mod 数量只能说明可见创作条目规模，**不能证明活跃玩家数量**。
 
 ---
 
@@ -126,6 +131,12 @@ Tholen 说除了动态分辨率支持和下载管理器的网格视图，几乎�
 
 ## 五、玩家/媒体的真实评价（这些是可以引用的原话）
 
+⭐ 2026-11-14 补：**可直接引用的英文原句**（层级分开；媒体/玩家评价只能证明反响，不能替代开发者解释设计决策）
+- PC Gamer，Andy Kelly，2019-03-12，81/100：> "A satisfying detective adventure based around a weird and wonderfully imaginative retro internet." — https://www.pcgamer.com/hypnospace-outlaw-review/
+- Slant Magazine，Steven Scaife，2019-03-14：> "The game is a monumental achievement, not just for its detailed rendering of another place and time" — https://www.slantmagazine.com/games/review-hypnospace-outlaw-is-a-lament-for-the-wild-west-of-the-early-net/ （可放延伸阅读，正文不必用）
+- Steam 用户评论 Foymic，2019-03-14：> "The Internet isn't dumb. It's just full of human beings, and human beings are beautiful." — https://steamcommunity.com/app/844590/reviews/?browsefilter=toprated
+  ❗ **必须标为 Steam 玩家评论，不可写成开发者或媒体评价**
+
 **Nintendo Life**：
 > "这是一个你会在一张 eerily accurate 的早期网络复制品里翻找的游戏"
 
@@ -174,7 +185,21 @@ Tholen 说除了动态分辨率支持和下载管理器的网格视图，几乎�
 ⚠️ Steam 评价 5,542 —— 口径不明，写"五千余条"
 ⚠️ 售价 $19.99 —— 是 2019 年原价，现在可能有调整
 ❌ 不要写"这是这个类型的开创者" —— Her Story 是 2015，比它早
+❌ 不要把 2025 年续作取消时的解释，反推成 2019 年 Hypnospace 分区设计的证据
+❌ Wiki 292 / Mod 131 不写进正文核心论证 —— 第三方口径，见第二节
 ```
+
+✅ **2026-11-14 已解决，不要再列为待补**：
+- ✅ Kickstarter 原始页面与宣传语（一手）：https://www.kickstarter.com/projects/jaytholen/hypnospace-outlaw
+  创建者 Jay Tholen，众筹 2016-09-07 → 10-04，1,664 名支持者 / $35,994。
+  原文："Police the internet of the future via an arcane operating system. Pursue outlaws on the Hypnospace Highway. Feed adorable virtual pets."
+  → "Pursue outlaws on the Hypnospace Highway" 是项目原始文案，**不是 RPS 改写、不是玩家总结**。
+- ✅ 媒体 / 玩家评价英文原句：见第五节，注意层级
+- ✅ Dreamsettler 取消（第一方）：Tholen 本人视频《Dreamsettler is canceled》 https://www.youtube.com/watch?v=uH3UbgEWBxg （2025-06）＋ 个人项目页 "cancelled June 2025" https://www.jaytholen.net/jt-games.html
+  PC Gamer 2025-06-22 报道摘录 "We just way overscoped" / "I have to improvise, like in Hypnospace" —— 属于 2025 年续作解释，仅作背景。
+- ⚠️ Wiki / Mod 数字：口径见第二节，正文不采用
+
+**最有价值的证据链仍是**：2014 Hypnospace Enforcer → 2016 Kickstarter → 2019 目录设计与 playtest 调整 → 2023 Tholen 回顾。Dreamsettler 是后续项目历史，不混入这条主线。
 
 ---
 
@@ -182,10 +207,17 @@ Tholen 说除了动态分辨率支持和下载管理器的网格视图，几乎�
 
 | 类型 | 链接 |
 |---|---|
-| 官方站 | https://hypnospace.net/ |
+| 官方站 | https://www.hypnospace.net/ （不带 www 会重定向） |
 | 官方创作工具页 | https://hypnospace.net/create.html |
+| 原始众筹页（一手，2016） | https://www.kickstarter.com/projects/jaytholen/hypnospace-outlaw |
 | 开发者一手访谈（RPS，2019-10-09） | https://www.rockpapershotgun.com/2019/10/09/how-hypnospace-outlaws-1990s-internet-was-made |
-| 开发者一手访谈（RPS，起源与影响） | https://www.rockpapershotgun.com/the-influences-and-surprising-origins-of-hypnospace-outlaw |
+| 开发者一手访谈（RPS，2023-09-25 邮件问答） | https://www.rockpapershotgun.com/the-influences-and-surprising-origins-of-hypnospace-outlaw |
 | 2018 年早期访谈（含通灵师客户故事） | https://blog.aivanet.com/2018/04/page/36/ |
-| Wiki（292 篇） | http://hypnospace.wiki.gg/ |
-| Mod 索引（131 个） | https://indexgg.com/game/hypnospace/mods |
+| 第一方取消公告（视频，2025-06） | https://www.youtube.com/watch?v=uH3UbgEWBxg |
+| 第一方项目状态（个人站） | https://www.jaytholen.net/jt-games.html |
+| Steam 商店（app 844590，发售 2019-03-12） | https://store.steampowered.com/app/844590/Hypnospace_Outlaw/ |
+| PC Gamer 评测（Andy Kelly，2019-03-12） | https://www.pcgamer.com/hypnospace-outlaw-review/ |
+| Slant Magazine 评测（Steven Scaife，2019-03-14） | https://www.slantmagazine.com/games/review-hypnospace-outlaw-is-a-lament-for-the-wild-west-of-the-early-net/ |
+| Steam 玩家评论（Foymic，2019-03-14） | https://steamcommunity.com/app/844590/reviews/?browsefilter=toprated |
+| Wiki（口径见第二节） | https://hypnospace.wiki.gg/wiki/Hypnospace_Outlaw_Wiki |
+| Mod 第三方目录（口径见第二节） | https://slashkeys.com/mods/hypnospace-outlaw ／ https://mod.io/g/hypnospace |

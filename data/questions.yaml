@@ -93,3 +93,9 @@ groups:
           Jeremy Johnston said he had to build something quickly, and that the pre-matched search database came directly from his technical limitations.
           A devlog of 1 March 2024 lists "better search abilities for names on the family tree" among the UI/UX fixes; Robin Ward's 2025 technical post documents the two-way linked notebook that followed.
         url: "/posts/why-roottrees-search-was-simple.html/"
+      - q: "Why does Hypnospace Outlaw divide its web into zones?"
+        a: "Playtesters could not read a directory sorted by the in-game characters, so MerchantSoft's corporate zones replaced it — and that change produced the hidden-page puzzles."
+        detail: >
+          Jay Tholen told Rock Paper Shotgun in 2019 that user-defined categories "loosened the rules on what players can expect to find in any given place".
+          A 2023 interview explains how the unfinished Hypnospace Highway was repurposed as an in-game joke instead of being cut. Checked 14 November 2026.
+        url: "/posts/why-hypnospace-outlaw-needed-zones.html/"
