@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "submit-urls": "python submit_urls_to_search_engine.py",
-    "build": "hugo --cleanDestinationDir",
-    "build:submit": "hugo --cleanDestinationDir && python submit_urls_to_search_engine.py"
+    "build": "hugo --cleanDestinationDir && python scripts/check_site.py --public public --record .seo-check/latest",
+    "build:submit": "npm run build && python submit_urls_to_search_engine.py",
+    "check:site": "python scripts/check_site.py --build",
+    "check:live": "python scripts/check_site.py --build --live"
   },
   "keywords": [],
   "author": "",

@@ -30,7 +30,7 @@
     </script>
     {{ end }}
 
-    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}{{ $seo := partial "seo/page.html" . }}{{ if gt $seo.number 1 }} | Page {{ $seo.number }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="{{ .Site.Params.author }}">
     {{/* meta description 改由 partials/seo/opengraph.html 统一输出：

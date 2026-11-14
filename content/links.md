@@ -1,5 +1,6 @@
 ---
 title: "Resources"
+description: "Sources used at Pixel Dango to verify game credits, release dates, developer statements and technical details, with notes on how each resource is checked."
 date: 2026-11-06T19:00:00+08:00
 lastmod: 2026-11-07T10:00:00+08:00
 type: "links"

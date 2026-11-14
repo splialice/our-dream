@@ -16,3 +16,6 @@ build_err*.txt
 
 # Hugo 运行时锁文件
 .hugo_build.lock
+
+# SEO audit snapshots and isolated test builds
+/.seo-check/

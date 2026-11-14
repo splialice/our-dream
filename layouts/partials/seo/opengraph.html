@@ -8,8 +8,11 @@
    - 不再写死 1200x630：实际封面是 1080x606，给错尺寸不如让平台自己探测
 */}}
 
+{{- $seo := partial "seo/page.html" . -}}
 {{- $desc := "" -}}
-{{- if .Description -}}
+{{- if gt $seo.number 1 -}}
+  {{- $desc = printf "%s, page %d of %d: %d articles on this page. Browse game history, visual styles and site-building notes with links to the full stories." (cond .IsHome "Pixel Dango articles" .Title) $seo.number $seo.total $seo.count -}}
+{{- else if .Description -}}
   {{- $desc = .Description -}}
 {{- else if and (ne .Kind "page") (not .IsHome) -}}
   {{- $desc = printf "%s on Pixel Dango: %d entries on game history, art direction and rendering, sourced from developer statements." .Title (len .Pages) -}}
@@ -26,9 +29,9 @@
 
 <meta name="description" content="{{ $desc }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-<meta property="og:title" content="{{ .Title }}">
+<meta property="og:title" content="{{ $seo.title }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ $seo.url }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="{{ replace (site.Language.LanguageCode | default "en_US") "-" "_" }}">
 {{- with $ogImage }}
@@ -55,7 +58,7 @@
 {{- end }}
 
 <meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
-<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:title" content="{{ $seo.title }}">
 <meta name="twitter:description" content="{{ $desc }}">
 {{- with $ogImage }}
 <meta name="twitter:image" content="{{ . }}">
