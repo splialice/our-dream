@@ -33,7 +33,7 @@ One boundary worth keeping: the 14 April wording comes from Kotaku's transcripti
 
 Two things make the confusion durable. First, the game did not look like this at the start. Borderlands was unveiled in 2007 as "Diablo meets Mad Max", with a gritty realistic look. By the 2009 previews it had heavy ink outlines and a hand-painted feel. A visible change invites a name, and cel-shaded was the nearest one to hand.
 
-Second, the two terms are not the same kind of thing. Cel shading is a rendering technique. `Concept Art Style` is an art direction — a decision about what the game should look like, not a claim about which shader produced it. Calling the game cel-shaded is a visual classification; `Concept Art Style` is a label its maker chose. One can be a reasonable description while the other remains the official name. That is also why a denial of the label is not a technical audit of the shipped renderer.
+Second, the two terms are not the same kind of thing. Cel shading is a rendering technique. `Concept Art Style` is an art direction — a decision about what the game should look like, not a claim about which shader produced it. Calling the game cel-shaded is a visual classification; `Concept Art Style` is a label its maker chose. One can be a reasonable description while the other remains the official name. That is also why a denial of the label is not a technical audit of the shipped renderer. [What Is Cel Shading?](/posts/what-is-cel-shading.html/) explains the technique and that boundary in more detail.
 
 ## Where the look came from
 

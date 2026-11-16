@@ -19,7 +19,7 @@ series_note: "A short yes-or-no answer, with the four dated 2009 sources and the
 
 Gearbox said no, but the terminology is more complicated than a simple yes-or-no answer. In April 2009, before the game shipped, Randy Pitchford explicitly rejected the cel-shaded label and described the visual direction as `Concept Art Style`. That is strong evidence of how the studio understood and named its art direction at the time. It is not, by itself, a technical audit of every rendering technique used in the finished game.
 
-Asked directly on 9 April 2009, he answered by email: "No, Borderlands is not cel-shaded — it's a gritty and serious world after all." Cel shading is a rendering technique; `Concept Art Style` is an art direction. The confusion is easy to understand: the 2007 reveal was gritty, the 2009 release had heavy outlines.
+Asked directly on 9 April 2009, he answered by email: "No, Borderlands is not cel-shaded — it's a gritty and serious world after all." Cel shading is a rendering technique; `Concept Art Style` is an art direction. The confusion is easy to understand: the 2007 reveal was gritty, the 2009 release had heavy outlines. For the wider explanation of what the shader does and why outlines are a separate step, see [What Is Cel Shading?](/posts/what-is-cel-shading.html/).
 
 ## Four dated sources
 
