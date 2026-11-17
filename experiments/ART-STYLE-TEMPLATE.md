@@ -70,8 +70,16 @@ last_verified: YYYY-MM-DD
 | 1 | `## Short answer` | 叫什么？怎么做？ | 2–4 句、不超过 100 英文词，只用来源支持的话；给出最重要的区分点 |
 | 2 | `## What it looks like` | 可观察特征是什么？ | 至少 3 个具体特征，配开发者原话或同期材料 |
 | 3 | `## What the developers said` | 开发者自己怎么描述？ | 原话 + 日期 + 直达原文链接；区分「来源里没找到命名」与「证明不存在命名」 |
-| 4 | `## How it was made` | 制作流程和技术证据 | 顺序、工具、手工/数字环节；至少 1 个反直觉细节作为信息增量 |
+| 4 | 流程标题（见下） | 制作流程、开发决策或参考来源 | 按证据类型选标题，至少 1 个反直觉细节作为信息增量 |
 | 5 | `## Sources and evidence limits` | 引文来自哪里、哪些不能确定 | 按日期列来源，标一手/二手、原话/转述；写清证据边界 |
+
+流程标题按证据类型选，不强行统一：
+
+- `## How it was made` — 有具体制作流程和技术资料（Cuphead）
+- `## How the look was developed` — 资料主要是开发决策、时间线、回顾性访谈（Wind Waker）
+- `## How the visual direction was developed` — 资料主要是参考来源与概念设计，没有单一技术（Dishonored）
+
+不要为了填这个章节编写没有来源的渲染细节。材料里有什么就写什么，标题跟材料走。
 
 **可选模块**（有证据才加，不为填空而写）：`Common confusions`、`Timeline`、`Visual comparison`、`Who designed it`。
 
@@ -98,16 +106,36 @@ last_verified: YYYY-MM-DD
 
 不要把模板套成「X art style → 灵感来自 Y 年代 → 手绘 → 影响了很多游戏」的填空题。Cuphead 样稿站得住，因为有具体的人（Chad / Jared）、具体的片子（*Swing You Sinners*）、具体的制作顺序（boss 先于动画）、具体的物理证据（扫描的灰尘和毛发），并明确告诉读者它与 cel shading 的关系。
 
-## 六、可自动化的检查（复用 `check_site.py` 思路）
+## 六、质量检查分两层
 
-- 构建时检查 front matter 必填字段、`evidence_status` 合法取值。
-- 每条来源必须有 `id`、`published`、`url`、合法 `source_type`。
-- 普通 `claims` 的 `source_id` 必须存在于 `primary_sources`。
-- `claim_usage` 为 `direct_quote` / `paraphrase` / `reporter_paraphrase_plus_direct_quote` / `developer_written_description` 时，`supporting_quote` 必填，且必须能在对应来源原文中定位到。**不要假设 `statement` 是逐字引语**——它是事实概括，逐字原文在 `supporting_quote`。
-- `claim_usage: absence_in_reviewed_sources` 不挂单一 `source_id`，改用 `reviewed_source_ids`，其中每个 id 必须存在于 `primary_sources`；正文必须写出调查范围。
-- 正文必须包含五个核心区块标题；`## Short answer` 是标题而非加粗段落；末节标题必须是 `## Sources and evidence limits`。
-- `Short answer` 非空，2–4 句且不超过 100 个英文词。
-- canonical / og:url / description 唯一性（直接复用主站检查器）。
+### 第一层：自动结构校验（`validate_article.py`）
+
+运行：`pip install -r requirements.txt` 然后 `python validate_article.py --all`。
+
+脚本内置 schema，**不读取模板文字**——改模板措辞不会意外改变校验规则。它检查：
+
+- front matter 必填字段、`evidence_status` 合法取值、日期格式。
+- 每条来源的 `id` / `title` / `author` / `published` / `source_type` / `url` 齐全，URL 格式合法，日期已排序，id 不重复。
+- `claim_usage` 必须是允许枚举中的值；不允许的值会被拒绝。
+- 普通 claim 的 `source_id` 必须存在；`claim_usage` 需要引语时，`supporting_quote` 必须是非空字符串。
+- `absence_in_reviewed_sources` 用 `reviewed_source_ids`，不挂单一 `source_id`。
+- 正文五个核心区块：`## Short answer` / `## What it looks like` / `## What the developers said` / 一个流程标题（`How it was made` 或 `How the look was developed` 或 `How the visual direction was developed`）/ `## Sources and evidence limits`。
+- `Short answer` 2–4 句、不超过 100 英文词；`answer` 字段不超过 100 词。
+
+**脚本只查结构，不证明引语是真的。** 它无法知道 `supporting_quote` 是否真的出现在来源里、归属是否正确、回顾性访谈是否被当成同期记录。
+
+### 第二层：人工史实核查
+
+每篇发布前必须人工做：
+
+1. 打开每条来源原文，确认 `supporting_quote` 确实存在且归属正确。
+2. 确认 `statement` 没有超出引语能支持的范围。
+3. 确认回顾性 / 同期 / 发行前的证据类型没有混用。
+4. 确认 `absence_in_reviewed_sources` 的调查范围与正文陈述一致。
+
+### 生成页面检查（`check_site.py`，复用主站检查器）
+
+canonical / og:url / description 唯一性、内链、404、sitemap——在站点构建后运行，与上面的文章级校验分开。
 
 **来源重复不是硬性拒绝条件**。同一 GDC 演讲支持画风名称、技术实现、设计决策多个不同问题是正常的。要检测的是「同一证据被重复包装为没有独立信息增量的页面」，不是 URL 重复本身。
 
