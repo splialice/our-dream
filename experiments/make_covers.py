@@ -38,6 +38,30 @@ COVERS = [
         "title": "DISHONORED",
         "sub": "How Dunwall's visual identity was built",
     },
+    {
+        "file": "journey-art-style.webp",
+        "bg": (196, 138, 92),
+        "accent": (105, 44, 42),
+        "eyebrow": "ART STYLE / 04",
+        "title": "JOURNEY",
+        "sub": "A colour script in red, white and blue",
+    },
+    {
+        "file": "firewatch-art-style.webp",
+        "bg": (28, 70, 62),
+        "accent": (232, 116, 74),
+        "eyebrow": "ART STYLE / 05",
+        "title": "FIREWATCH",
+        "sub": "Bold shapes, real places, story colours",
+    },
+    {
+        "file": "gris-art-style.webp",
+        "bg": (232, 228, 218),
+        "accent": (128, 92, 118),
+        "eyebrow": "ART STYLE / 06",
+        "title": "GRIS",
+        "sub": "An illustrated world built through colour",
+    },
 ]
 
 

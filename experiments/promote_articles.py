@@ -6,6 +6,7 @@ evidence fields used by validate_article.py.
 
 import pathlib
 import re
+import sys
 
 BASE = pathlib.Path(r"D:\web\our-dream-preview")
 SRC = BASE / "experiments"
@@ -28,6 +29,24 @@ SPECS = {
         "description": "What is the Dishonored art style? How Arkane built Dunwall from London, Edinburgh, maritime costume, 1940s illustration and deliberate stylization.",
         "summary": "No single technique name: a city assembled from real research, illustration and anti-photorealistic choices.",
         "tags": ["Dishonored", "Game art direction", "Concept art", "Dunwall"],
+        "categories": ["Game history"],
+    },
+    "journey-art-style.md": {
+        "description": "What is the Journey art style? How colour, minimal shapes and hand-painted shadows carry an emotional arc, according to Jenova Chen and Matt Nava.",
+        "summary": "A colour script, a red silhouette, and a blue sky saved for the ending.",
+        "tags": ["Journey", "Game art direction", "Colour script", "thatgamecompany"],
+        "categories": ["Game history"],
+    },
+    "firewatch-art-style.md": {
+        "description": "What is the Firewatch art style? Bold shapes, distinct colour layers, real-world references and a small set of hand-made trees, explained from Jane Ng's talks and interviews.",
+        "summary": "A poster as the goal, a colour script as the structure, and 23 trees for the whole forest.",
+        "tags": ["Firewatch", "Game art direction", "Colour script", "Campo Santo"],
+        "categories": ["Game history"],
+    },
+    "gris-art-style.md": {
+        "description": "What is the GRIS art style? Nomada Studio on colour scripts, mutable character design, and references from Journey, Shadow of the Colossus, Ghibli and Moebius.",
+        "summary": "A story carried by colour, statues and a deliberately simple silhouette.",
+        "tags": ["GRIS", "Game art direction", "Nomada Studio", "2D animation"],
         "categories": ["Game history"],
     },
 }
@@ -72,5 +91,7 @@ def promote(name, spec):
     print("wrote", out, out.stat().st_size)
 
 
-for filename, data in SPECS.items():
-    promote(filename, data)
+if __name__ == "__main__":
+    names = sys.argv[1:] or list(SPECS)
+    for filename in names:
+        promote(filename, SPECS[filename])
