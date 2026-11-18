@@ -49,12 +49,24 @@ SPECS = {
         "tags": ["GRIS", "Game art direction", "Nomada Studio", "2D animation"],
         "categories": ["Game history"],
     },
+    "tf2-art-style.md": {
+        "description": "What is the Team Fortress 2 art style? Valve's 2007 paper on illustrative rendering, early 20th-century illustrators, rim highlights and why it is not cel shading.",
+        "summary": "An illustrative rendering system built for class readability, not a stepped-lighting shader.",
+        "tags": ["Team Fortress 2", "Game art direction", "Illustrative rendering", "Valve"],
+        "categories": ["Game history"],
+    },
+    "how-gris-tells-story-without-dialogue.md": {
+        "description": "How does GRIS tell a story without dialogue? Nomada Studio on colour scripts, statues, camera cues and character simplification as narrative tools.",
+        "summary": "Colour tracks progression; statues carry exposition; camera cues keep it readable.",
+        "tags": ["GRIS", "Visual storytelling", "Game art direction", "Nomada Studio"],
+        "categories": ["Game history"],
+    },
 }
 
 FIELDS = [
     "draft: false",
     'author: "Pixel Dango"',
-    "lastmod: 2026-11-18T09:00:00+08:00",
+    "lastmod: 2026-11-18T10:30:00+08:00",
 ]
 
 

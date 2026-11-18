@@ -2,11 +2,11 @@
 title: "What Is Cel Shading? A Guide to the Technique, Its Limits, and Borderlands"
 slug: what-is-cel-shading
 date: 2026-11-12T11:38:25+08:00
-lastmod: 2026-11-16T11:10:00+08:00
+lastmod: 2026-11-18T10:00:00+08:00
 draft: false
 author: "Pixel Dango"
-description: "Cel shading is a rendering technique, not an art style. Learn how it works, why outlines are separate, and why Gearbox called Borderlands' look Concept Art Style."
-summary: "A technique with two meanings, four dated games, and one studio that argued about the word on the record."
+description: "Cel shading is a rendering technique, not an art style. Learn how it works, why outlines are separate, and why Gearbox and Valve rejected the label."
+summary: "A technique with two meanings, five dated reference points, and two studios that argued about the word on the record."
 tags: ["Cel shading", "Toon shading", "Borderlands", "Non-photorealistic rendering", "Game art direction"]
 categories: ["Game history"]
 cover: "/img/covers/what-is-cel-shading.webp"
@@ -46,7 +46,7 @@ No. Stepped lighting works without any outline pass at all, and outline passes c
 
 This is why a visual classification and a technical audit can disagree. A game can look like the popular idea of cel shading while its renderer does something else, and a renderer can use stepped lighting as one ingredient in a look the studio names differently.
 
-## A short history in four games
+## A short history in five reference points
 
 | Game | Year | Why it matters | Source |
 | :--- | :--- | :--- | :--- |
@@ -54,6 +54,7 @@ This is why a visual classification and a technical audit can disagree. A game c
 | Cel Damage | 2001 | Comic-book visuals applied to a competitive driving game | [Wikipedia](https://en.wikipedia.org/wiki/Cel_Damage) |
 | The Wind Waker | 2002 | Linked stylized rendering to how clearly game information reads | [Iwata Asks](https://iwataasks.nintendo.com/interviews/wiiu/wind-waker/0/0/) (retrospective) |
 | Ōkami | 2006 | Brought Japanese ink-painting traditions into real-time 3D | [Wikipedia](https://en.wikipedia.org/wiki/%C5%8Ckami) |
+| Team Fortress 2 | 2007 | Valve called the approach illustrative rendering, used rim highlights instead of dark outlines, and rejected the cel-shaded route | [NPAR 2007 paper](https://steamcdn-a.akamaihd.net/apps/valve/2007/NPAR07_IllustrativeRenderingInTeamFortress2.pdf) |
 
 Jet Set Radio was shown at the 1999 Tokyo Game Show and released for the Dreamcast in 2000; the reveal and the release are not the same date. Both appear in [Sega Retro's record](https://segaretro.org/Jet_Set_Radio). It is often called the first cel-shaded game, and that claim is not made here.
 
@@ -79,6 +80,12 @@ The boundary that matters: the 9 April quote is a denial of a **label**, not a t
 
 For the short yes-or-no answer with all four dated 2009 sources, see [Is Borderlands Cel Shaded?](/posts/is-borderlands-cel-shaded.html/). For what the studio actually called the look, see [What Is the Borderlands Art Style Called?](/posts/borderlands-art-style.html/). For the wider evidence comparison with Team Fortress 2, see [TF2, Borderlands and the evidence behind an art makeover](/posts/tf2-borderlands-before-the-makeover.html/).
 
+## Team Fortress 2: the other false friend
+
+TF2 is often pulled into the same argument because it has bold shapes and readable shadows, but Valve's own account points in a different direction. The 2007 NPAR paper calls the approach *Illustrative Rendering in Team Fortress 2*, names early 20th-century commercial illustrators as references, and records the rule: "Silhouettes are often emphasized with rim highlights rather than dark outlines." A 2008 report of Moby Francke's Gamefest talk is blunter: "We didn't want to go the cel-shaded route, we wanted to go more true to the way that lighting occurs."
+
+That is the same distinction as Borderlands, with different evidence. Gearbox described hand-drawn textures plus graphic-novel outlines and chose `Concept Art Style`; Valve described illustrative shading with rim highlights and warm-to-cool hue shifts. Neither statement is a technical audit of every shader in the game. Both tell you what the studios said they were building. The dedicated [Team Fortress 2 art style](/posts/tf2-art-style.html/) article lays out the full paper trail.
+
 ## Frequently asked questions
 
 **What is cel shading in simple terms?**
@@ -96,6 +103,9 @@ It is a rendering technique. An art style or art direction is the broader decisi
 **Why is Borderlands called cel shaded if Gearbox said no?**
 The look reads as cel shaded to many viewers, but Gearbox used a different name, `Concept Art Style`, and described a multi-part pipeline. The visual shorthand and the studio's own label answer different questions. Both are documented in the section above.
 
+**Is Team Fortress 2 cel shaded?**
+Not by Valve's own account. The 2007 paper calls the approach illustrative rendering, and Moby Francke said in 2008 that the team did not want the cel-shaded route. Players still use the term as visual shorthand because the result reads as cartoon-like; the studio-level answer and the visual shorthand are different claims.
+
 **Why does cel shading matter for readability?**
 Flat bands of colour can separate interactive objects from the background more clearly than realistic lighting. Nintendo's *Iwata Asks* interview on The Wind Waker gives a concrete example: puzzle mechanisms became harder to read under photorealistic rendering.
 
@@ -103,12 +113,12 @@ Flat bands of colour can separate interactive objects from the background more c
 
 If you are describing the renderer, cel shading is a legitimate technical term. If you are quoting the studio, use `Concept Art Style` and attribute it to Gearbox in April 2009. One names a technique; the other names a decision about how a game should look. Keep them apart and the apparent contradiction disappears.
 
-For a related art-direction question, see [Why Game Characters Need Distinct Silhouettes](/posts/why-game-characters-need-distinct-silhouettes.html/) and [Why Team Fortress 2 Stopped Looking Realistic](/posts/why-team-fortress-2-stopped-looking-realistic.html/).
+For related art-direction questions, see [What Is the Team Fortress 2 Art Style?](/posts/tf2-art-style.html/), [Why Game Characters Need Distinct Silhouettes](/posts/why-game-characters-need-distinct-silhouettes.html/) and [Why Team Fortress 2 Stopped Looking Realistic](/posts/why-team-fortress-2-stopped-looking-realistic.html/).
 
 ---
 
-Checked 12 November 2026; guide expanded 16 November 2026. The 9 and 14 April quotations were verified against the original Kotaku articles on 10 November 2026; the 14 April item verifies Kotaku's transcription of a Gearbox forum statement, not the original forum page. The 16 April description is quoted from James Stephanie Sterling's Destructoid report of 16 April 2009; Gearbox's original release was not independently checked. The 1999 Tokyo Game Show reveal (TGS '99 Autumn ran 17–19 September 1999, per Sega Retro) and the 2000 release are separate events. The GDC slide is reproduced in [How Borderlands Changed Its Art Style at 75 Percent Complete](/posts/borderlands-11th-hour-art-change.html/).
+Checked 12 November 2026; guide expanded 16 November and 18 November 2026. The 9 and 14 April quotations were verified against the original Kotaku articles on 10 November 2026; the 14 April item verifies Kotaku's transcription of a Gearbox forum statement, not the original forum page. The 16 April description is quoted from James Stephanie Sterling's Destructoid report of 16 April 2009; Gearbox's original release was not independently checked. The 1999 Tokyo Game Show reveal (TGS '99 Autumn ran 17–19 September 1999, per Sega Retro) and the 2000 release are separate events. The GDC slide is reproduced in [How Borderlands Changed Its Art Style at 75 Percent Complete](/posts/borderlands-11th-hour-art-change.html/).
 
 Further reading: [Wikipedia, "Cel shading"](https://en.wikipedia.org/wiki/Cel_shading) — used here only for the term's drift, not as the technical definition.
 
-*Cover illustration: AI-generated with Doubao. The three panels show the same object under smooth lighting, quantized shading without outlines, and quantized shading with ink outlines.*
+*Cover: programmatically generated editorial graphic, 18 November 2026. The three stepped bands are a schematic motif, not a shader screenshot.*
