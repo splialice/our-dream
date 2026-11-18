@@ -9,11 +9,11 @@ answer: "Journey's look is not presented in the two sources reviewed here as a s
 evidence_status: "verified"
 primary_sources:
   - id: "source-1"
-    title: "Game Designer Jenova Chen On The Art Behind His 'Journey'"
-    author: "Kelly Ohannessian, interviewing Jenova Chen"
+    title: "Game Designer Jenova Chen On The Art Behind His Journey"
+    author: "Kevin Ohannessian"
     published: "2012-03-12"
     source_type: "developer_interview"
-    url: "http://www.kellyohannessian.com?p=22/"
+    url: "https://www.fastcompany.com/1680062/game-designer-jenova-chen-on-the-art-behind-his-journey"
   - id: "source-2"
     title: "Journey 10th Anniversary Behind the Scenes Retrospective"
     author: "Matt Nava"
@@ -64,7 +64,7 @@ claims:
     source_id: "source-2"
     claim_usage: "developer_written_description"
     supporting_quote: "Later in the game you climb a ceremonial tower. My concepts were tinted with cool colors. Later in development I switched it to warm colors, to improve the bigger picture color script of the game. There needed to be a sense of warmth before you head to the cold mountain."
-last_verified: 2026-11-17
+last_verified: 2026-11-18
 ---
 
 ## Short answer
@@ -79,9 +79,11 @@ That quietness was designed, not merely left out. Chen said the team kept the op
 
 ## What the developers said
 
-In a [2012 interview](http://www.kellyohannessian.com?p=22/), Chen placed the visual choices inside an emotional brief: "When you direct a film or game, visuals are one of the elements that are very useful to help communicate an arc of emotion." He said the team also worked with art director Matt Nava when choosing the architectural language, and avoided a strictly Western or Eastern ancient-ruins look: "So trying to find somewhere in between became the Middle East."
+In a [2012 interview with Fast Company](https://www.fastcompany.com/1680062/game-designer-jenova-chen-on-the-art-behind-his-journey), Chen placed the visual choices inside an emotional brief: "When you direct a film or game, visuals are one of the elements that are very useful to help communicate an arc of emotion." He said the team also worked with art director Matt Nava when choosing the architectural language, and avoided a strictly Western or Eastern ancient-ruins look: "So trying to find somewhere in between became the Middle East."
 
 Chen also gave a personal reason for the character's colour: "And for me, growing up in China, when I think about pilgrimage I always think about the monks in Tibet. I think that is a big influence on why the player's character is red."
+
+Journey's minimalist visual language later appeared among the references cited by Nomada Studio when discussing GRIS; that relationship is covered in our [GRIS art style](/posts/gris-art-style.html/) article.
 
 Neither this interview nor Nava's later retrospective presents a unique, studio-coined name for the look. These sources show how the two developers described the method, the references and the colour decisions. They do not prove that no name was ever used elsewhere; that would need a wider survey.
 
@@ -91,7 +93,7 @@ Nava's [10th-anniversary retrospective](https://mattnava.com/Journey-10th-Annive
 
 Two details are easy to miss in a surface-level description of Journey as "minimalist". First, the shadows were not simulated automatically. Nava wrote: "Journey had no automatic shadows. I painted them all by hand. The shadow texture was not hi res. To get the iconic sunset columns to cast sharp shadows, I made sure that they aligned with the pixel grid of the texture." The crisp graphic shadows in a sunset scene are therefore a texture and alignment decision, not an incidental renderer effect.
 
-Second, the colour script was revised in development. Nava said a ceremonial tower concept was initially "tinted with cool colors", then switched "to warm colors, to improve the bigger picture color script of the game. There needed to be a sense of warmth before you head to the cold mountain." He also said he put a green sky into an early desert scene because he wanted to "save bright blue skies for the ending of the game as a reward." The final blue ending was planned backwards from an emotional payoff.
+Second, the colour script was revised in development. Nava said a ceremonial tower concept was initially "tinted with cool colors", then switched "to warm colors, to improve the bigger picture color script of the game. There needed to be a sense of warmth before you head to the cold mountain." He also said he put a green sky into an early desert scene because he wanted to "save bright blue skies for the ending of the game as a reward." Nava deliberately reserved bright blue skies for the ending, so their appearance would feel like a visual reward.
 
 ## Common confusions
 
@@ -101,11 +103,11 @@ Second, the colour script was revised in development. Nava said a ceremonial tow
 
 ## Sources and evidence limits
 
-- **12 Mar 2012** — Kelly Ohannessian, "Game Designer Jenova Chen On The Art Behind His 'Journey'" (originally published by Fast Company). Interview with Jenova Chen. [Original article](http://www.kellyohannessian.com?p=22/). Colour and architecture statements are Chen's words; the page is hosted on the interviewer's site.
+- **12 Mar 2012** — Kevin Ohannessian, "Game Designer Jenova Chen On The Art Behind His Journey," Fast Company. Interview with Jenova Chen. [Original article](https://www.fastcompany.com/1680062/game-designer-jenova-chen-on-the-art-behind-his-journey). Colour, architecture and character-colour statements are Chen's words.
 - **13 Mar 2022** — Matt Nava, "Journey 10th Anniversary Behind the Scenes Retrospective." First-person retrospective by Journey's art director. [Original article](https://mattnava.com/Journey-10th-Anniversary-Behind-the-Scenes-Retrospective). The page does not print a calendar date; it says "10 years ago today thatgamecompany released Journey," so the date is taken from Journey's 13 March 2012 North American release.
 
 Evidence limits: the "no single name" statement reflects only these two sources. Nava's retrospective was written roughly a decade after release, so it is a designer's memory of process, not a contemporaneous development log. The article does not claim that every visual decision in Journey is covered by these two sources.
 
-Checked 17 November 2026. Both sources were read in full for this article.
+Checked 18 November 2026. Both sources were read in full for this article.
 
-See also [What Is Cel Shading?](/posts/what-is-cel-shading.html/) and [Why Game Characters Need Distinct Silhouettes](/posts/why-game-characters-need-distinct-silhouettes.html/).
+See also [GRIS art style](/posts/gris-art-style.html/), [What Is Cel Shading?](/posts/what-is-cel-shading.html/) and [Why Game Characters Need Distinct Silhouettes](/posts/why-game-characters-need-distinct-silhouettes.html/).

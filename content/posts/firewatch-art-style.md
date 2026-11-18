@@ -10,10 +10,10 @@ tags: ["Firewatch", "Game art direction", "Colour script", "Campo Santo"]
 categories: ["Game history"]
 cover: "/img/covers/firewatch-art-style.webp"
 comments: true
-lastmod: 2026-11-17T12:00:00+08:00
+lastmod: 2026-11-18T09:00:00+08:00
 primary_keyword: "firewatch art style"
 primary_question: "What is the Firewatch art style, and how was its look built?"
-answer: "Firewatch's style is not presented in these sources as a single official name. Lead artist Jane Ng described bold, flat shapes and distinct colour layers, then argued that the world still had to feel real enough for the player to care about Henry. The team treated Olly Moss's key art as the goal, used a colour script tied to story beats, and built the forest from a small set of hand-made trees."
+answer: "Firewatch's style is not presented in these sources as a single official name. Lead artist Jane Ng described bold, flat shapes and distinct colour layers, then said the world had to feel real so the player could feel physically connected to Henry. The team treated Olly Moss's key art as the goal, used a colour script tied to story beats, and built the forest from a small set of hand-made trees."
 evidence_status: "verified"
 primary_sources:
   - id: "source-1"
@@ -54,6 +54,18 @@ claims:
     source_id: "source-1"
     claim_usage: "paraphrase"
     supporting_quote: "The colours are not just there to look beautiful. They really do drive the mood of the scene... Since Firewatch is a narrative game we were pretty clear on what mood we were trying to tailor for each story moment."
+  - statement: "The outdoor sky took up a large share of the screen and determined much of the palette."
+    source_id: "source-1"
+    claim_usage: "paraphrase"
+    supporting_quote: "Since Firewatch takes place in the outdoors the biggest chunk of colour is actually determined by the sky. Sometimes it takes up half of the screen."
+  - statement: "Dynamic lighting let the team change colours as the player moved."
+    source_id: "source-1"
+    claim_usage: "paraphrase"
+    supporting_quote: "The upside of having a dynamic solution for lighting is that if you build an information manager on top of it you can change your colours on the fly as the player moves around."
+  - statement: "Fog was used to create depth and distance."
+    source_id: "source-1"
+    claim_usage: "paraphrase"
+    supporting_quote: "The lighting is supplemented with the use of fog to create depth and distance. A variety of tools were used to achieve the effect Ng desired."
   - statement: "Objects with more texture detail were used as story cues."
     source_id: "source-1"
     claim_usage: "paraphrase"
@@ -62,7 +74,7 @@ claims:
     source_id: "source-2"
     claim_usage: "paraphrase"
     supporting_quote: "I'm like the builder that comes in and says, 'I can actually build your building,'"
-  - statement: "Only 23 unique trees were made for the entire game."
+  - statement: "Jane Ng reportedly created 23 unique tree models for Firewatch."
     source_id: "source-3"
     claim_usage: "reporter_paraphrase"
     supporting_quote: "she only created 23 unique trees for the entire game."
@@ -74,12 +86,12 @@ claims:
     source_id: "source-1"
     claim_usage: "direct_quote"
     supporting_quote: "Embrace your limitations. A lot art and process decisions we made in developing Firewatch are defined by the people and technology we have available to us. Knowing what your limitations are and working within them can be very empowering."
-last_verified: 2026-11-17
+last_verified: 2026-11-18
 ---
 
 ## Short answer
 
-Firewatch's style is not presented in these sources as a single official name. Lead artist Jane Ng described bold, flat shapes and distinct colour layers, then argued that the world still had to feel real enough for the player to care about Henry. The team treated Olly Moss's key art as the goal, used a colour script tied to story beats, and built the forest from a small set of hand-made trees.
+Firewatch's style is not presented in these sources as a single official name. Lead artist Jane Ng described bold, flat shapes and distinct colour layers, then said the world had to feel real so the player could feel physically connected to Henry. The team treated Olly Moss's key art as the goal, used a colour script tied to story beats, and built the forest from a small set of hand-made trees.
 
 ## What it looks like
 
@@ -97,11 +109,11 @@ None of these sources presents an official, studio-coined label. They describe a
 
 ## How the visual direction was developed
 
-The interesting part of Firewatch's look is not that it came from a poster, but how the team kept that poster's logic inside a 3D game. Ng's GDC talk noted that the style would have translated easily into 2D, but not into three dimensions. The team used a dynamic sky and lighting setup so colours could change as the player moved, and fog to create depth and distance.
+The interesting part of Firewatch's look is not that it came from a poster, but how the team kept that poster's logic inside a 3D game. Ng's GDC talk noted that the style would have translated easily into 2D, but not into three dimensions. She said the sky "sometimes takes up half of the screen" and determined much of the palette. A dynamic lighting setup let the team "change your colours on the fly as the player moves around", while fog was used "to create depth and distance."
 
 Color was also structured around the story. Ng's talk describes a colour script aligned to key narrative moments, so a spooky scene would not accidentally get what she called a "crazy parade, birthday party colour scheme." Detail was rationed too: "any object with a certain level of texture detail is something that adds to your story, or is something to talk to Delilah about."
 
-The environment shows the same economy. A [2017 Game Developer report](https://www.gamedeveloper.com/design/environmental-artist-jane-ng-only-made-23-unique-trees-for-i-firewatch-i-) says Ng "only created 23 unique trees for the entire game", made by hand because Speedtree was not integrated into Unity at the time. She explained the difficulty directly: "It can be done but you also realize that very few games have pine trees, because of all trees in the world pine trees are the worst in terms of being made 3D." Her conclusion from the talk was: "Embrace your limitations. A lot art and process decisions we made in developing Firewatch are defined by the people and technology we have available to us. Knowing what your limitations are and working within them can be very empowering."
+The environment shows the same economy. A [2017 Game Developer report](https://www.gamedeveloper.com/design/environmental-artist-jane-ng-only-made-23-unique-trees-for-i-firewatch-i-) reports that Ng made only 23 unique tree models for the entire game — 23 unique models, not 23 trees visible in the world — by hand because SpeedTree was not integrated into Unity at the time. She explained the difficulty directly: "It can be done but you also realize that very few games have pine trees, because of all trees in the world pine trees are the worst in terms of being made 3D." Her conclusion from the talk was: "Embrace your limitations. A lot art and process decisions we made in developing Firewatch are defined by the people and technology we have available to us. Knowing what your limitations are and working within them can be very empowering."
 
 ## Common confusions
 
@@ -115,8 +127,10 @@ The environment shows the same economy. A [2017 Game Developer report](https://w
 - **22 Jun 2016** — Caty McCarthy, "How Jane Ng turned the real world into Firewatch," Kill Screen. Interview with lead artist Jane Ng. [Original article](https://www.killscreen.com/previously/articles/jane-ng-turned-real-world-firewatch/). Only the quoted line was available in the accessible page text.
 - **8 Dec 2017** — Game Developer Staff, "Environmental artist Jane Ng only made 23 unique trees for Firewatch." Report on Ng's NYU Game Center lecture. [Original article](https://www.gamedeveloper.com/design/environmental-artist-jane-ng-only-made-23-unique-trees-for-i-firewatch-i-).
 
-Evidence limits: the "no single name" statement is limited to these three sources. The 23-tree figure is the reporter's summary of a lecture, not a developer-written specification; it means 23 unique tree assets, not 23 trees visible in the world. The Kill Screen page was partly inaccessible, so only its visible direct quote is used here.
+A separate [official GDC Vault listing](https://www.gdcvault.com/play/1022295/The-Art-of) identifies Jane Ng as the speaker and describes the talk as translating a bold 2D graphic style into an explorable 3D environment. It is a session listing rather than a transcript, so no claim above rests on it.
 
-Checked 17 November 2026. The GDC report, interview page and Game Developer report were read for this article.
+Evidence limits: the "no single name" statement is limited to these three sources. The 23 unique tree models figure is a media report of an NYU lecture, not Jane Ng's verbatim wording; it means 23 unique models, not 23 trees visible in the world. The Kill Screen page was partly inaccessible, so only its visible direct quote is used here.
+
+Checked 18 November 2026. The GDC report, interview page, Game Developer report and GDC Vault listing were read for this article.
 
 See also [Borderlands art style](/posts/borderlands-art-style.html/) and [why Team Fortress 2 stopped looking realistic](/posts/why-team-fortress-2-stopped-looking-realistic.html/).

@@ -54,7 +54,7 @@ SPECS = {
 FIELDS = [
     "draft: false",
     'author: "Pixel Dango"',
-    "lastmod: 2026-11-17T12:00:00+08:00",
+    "lastmod: 2026-11-18T09:00:00+08:00",
 ]
 
 
