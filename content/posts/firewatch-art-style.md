@@ -10,7 +10,7 @@ tags: ["Firewatch", "Game art direction", "Colour script", "Campo Santo"]
 categories: ["Game history"]
 cover: "/img/covers/firewatch-art-style.webp"
 comments: true
-lastmod: 2026-11-18T09:00:00+08:00
+lastmod: 2026-11-18T11:45:00+08:00
 primary_keyword: "firewatch art style"
 primary_question: "What is the Firewatch art style, and how was its look built?"
 answer: "Firewatch's style is not presented in these sources as a single official name. Lead artist Jane Ng described bold, flat shapes and distinct colour layers, then said the world had to feel real so the player could feel physically connected to Henry. The team treated Olly Moss's key art as the goal, used a colour script tied to story beats, and built the forest from a small set of hand-made trees."
@@ -120,6 +120,14 @@ The environment shows the same economy. A [2017 Game Developer report](https://w
 **Stylized does not mean quick.** The flat look was a constraint system: colour script, texture-detail hierarchy, dynamic sky, fog and a very small tree library. Compare [Borderlands' art style](/posts/borderlands-art-style.html/) for a different solution to the same 3D problem, or [why Team Fortress 2 stopped looking realistic](/posts/why-team-fortress-2-stopped-looking-realistic.html/) for another deliberate move away from detail.
 
 **Not just a post-process filter.** The sources describe choices about shape, silhouette, colour layers, texture detail and asset count. A filter could imitate the palette, but it would not explain those decisions.
+
+## Frequently asked questions
+
+**What is the name of the Firewatch art style?**  
+No single official name appears in the three sources reviewed here. Jane Ng described the world as "visually very stylised" while arguing it still had to feel real, and the GDC report describes bold flat shapes, distinct colour layers and a colour script tied to story moments. A short descriptive answer would be **stylized, illustration-led 3D environment art built around flat shapes and layered colour** — not a named shader or an official brand term.
+
+**Is Firewatch cel shaded?**  
+The sources reviewed here do not describe a cel-shading pipeline. Ng's account centres on bold 2D graphic references, dynamic lighting, fog and texture-detail rules. That is different from stepped lighting on 3D models; see [What Is Cel Shading?](/posts/what-is-cel-shading.html/) for the technical distinction.
 
 ## Sources and evidence limits
 

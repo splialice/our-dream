@@ -10,7 +10,7 @@ tags: ["Cuphead", "Cel animation", "Game art direction", "1930s animation"]
 categories: ["Game history"]
 cover: "/img/covers/cuphead-art-style.webp"
 comments: true
-lastmod: 2026-11-17T12:00:00+08:00
+lastmod: 2026-11-18T11:45:00+08:00
 primary_keyword: "cuphead art style"
 primary_question: "What is the Cuphead art style called, and how was it made?"
 answer: "Studio MDHR describes Cuphead's visuals as traditional hand-drawn cel animation inspired by 1930s cartoons. In the developer interviews reviewed here, the team discusses rubber-hose animation and specific artistic influences rather than presenting a unique, studio-coined name for the look."
@@ -100,6 +100,14 @@ The visual language had rules too. "We could basically do anything we wanted, as
 **A filter versus a production method.** The period look was reconstructed element by element — changing line weight, scanned film dust, custom lettering, watercolour backgrounds. A post-process filter can imitate some of the surface; it cannot explain the production order described above. This is an editorial comparison, not a community claim documented in the sources.
 
 **Fleischer as the only influence.** *Swing You Sinners* is named as the closest match, but Mickey Mouse and Popeye also appear in the developers' account of the early experiments. Treating one studio as the sole influence goes beyond the record.
+
+## Frequently asked questions
+
+**What is the name of the Cuphead art style?**  
+The source-backed answer is **traditional hand-drawn cel animation**. Studio MDHR's store page uses that phrase and adds watercolour backgrounds and original jazz recordings; the developer interviews reviewed here describe rubber-hose animation and 1930s cartoon references. They do not present a unique, studio-coined style name, so "traditional hand-drawn cel animation" is the clearest answer — not "cel shading."
+
+**Is Cuphead cel shaded?**  
+Not for the character animation: it was drawn and inked on paper, then coloured digitally. Cel shading normally means quantising lighting on a 3D model. The two terms share "cel" but describe different production methods.
 
 ## Sources and evidence limits
 

@@ -93,6 +93,14 @@ The visual language had rules too. "We could basically do anything we wanted, as
 
 **Fleischer as the only influence.** *Swing You Sinners* is named as the closest match, but Mickey Mouse and Popeye also appear in the developers' account of the early experiments. Treating one studio as the sole influence goes beyond the record.
 
+## Frequently asked questions
+
+**What is the name of the Cuphead art style?**  
+The source-backed answer is **traditional hand-drawn cel animation**. Studio MDHR's store page uses that phrase and adds watercolour backgrounds and original jazz recordings; the developer interviews reviewed here describe rubber-hose animation and 1930s cartoon references. They do not present a unique, studio-coined style name, so "traditional hand-drawn cel animation" is the clearest answer — not "cel shading."
+
+**Is Cuphead cel shaded?**  
+Not for the character animation: it was drawn and inked on paper, then coloured digitally. Cel shading normally means quantising lighting on a 3D model. The two terms share "cel" but describe different production methods.
+
 ## Sources and evidence limits
 
 - **29 Sep 2017** — Studio MDHR, official [Cuphead store page](https://store.steampowered.com/app/268910/Cuphead/). Developer-written description and release date.
