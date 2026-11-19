@@ -79,6 +79,24 @@ SPECS = {
         "tags": ["NVL", "ADV", "Visual novel UI", "Ren'Py"],
         "categories": ["Game design", "Visual novel"],
     },
+    "lost-museum-object-heads.md": {
+        "description": "Why does Lost Museum give its characters object heads? The producer explains Chromageists, the refusal to reveal a human form, and building a museum mystery around paintings.",
+        "summary": "A museum mystery where the paintings have object-headed spirits, and a deliberate refusal to turn them back into humans.",
+        "tags": ["Lost Museum", "Visual novel", "Character design", "Game art direction"],
+        "categories": ["Game culture", "Visual novel"],
+    },
+    "labyrinthos-bad-endings.md": {
+        "description": "Developer Astronauts' own survey: over 60% of its players expect bad endings, about 40% hope for pure love stories. Why the studio refuses to drop either.",
+        "summary": "A studio asked its own players about bad endings, then refused to choose between them. What the answers actually say.",
+        "tags": ["LABYRINTHOS", "Visual novel", "Narrative design", "Astronauts"],
+        "categories": ["Game culture", "Visual novel"],
+    },
+    "schrodingers-call-three-people.md": {
+        "description": "How a three-person team built Schrödinger's Call over four years: a custom scripting language, 15-minute music drafts, 10-minute rough visuals, and one scene made together.",
+        "summary": "Three people, four years, and a homemade script that times text, effects and sound as one scene.",
+        "tags": ["Schrodinger's Call", "Visual novel", "Game development", "Narrative design"],
+        "categories": ["Game culture", "Visual novel"],
+    },
 }
 
 FIELDS = [
