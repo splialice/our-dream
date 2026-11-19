@@ -94,41 +94,18 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [menu.main.params]
       icon = "/img/icons/biaoqian.svg"
   
-  # 数据（二级菜单，属于"统计"菜单）
-  [[menu.main]]
-    name = "Data"
-    url = "/data/"
-    weight = 4
-    parent = "statistics"             # 指定父级菜单为"统计"
-    [menu.main.params]
-      icon = "/img/icons/shuju.svg"
+  # 2026-11-19：删掉 Data（/data/）二级菜单。页面 render: never 且为主题示例数据，
+  # 线上一直是 404，保留菜单只会制造死链。
 
-  # 网友菜单（一级菜单，包含二级菜单）
+  # 网友菜单（2026-11-19：原为带 Links / Circle 两个子项的下拉。Circle 指向
+  # /friends-circle/，页面 render: never，线上 404；删掉死链后只剩 Links 一项，
+  # 直接把一级菜单指向 /links/，不再需要下拉层。）
   [[menu.main]]
     name = "Friends"
-    url = "#"
+    url = "/links/"
     weight = 3
-    identifier = "friends"              # 用于二级菜单的父级标识
     [menu.main.params]
       icon = "/img/icons/youlian.svg"   # 网友菜单图标路径（如果不存在会使用默认图标）
-
-  # 友链（二级菜单，属于"网友"菜单）
-  [[menu.main]]
-    name = "Links"
-    url = "/links/"
-    weight = 1
-    parent = "friends"                  # 指定父级菜单为"网友"
-    [menu.main.params]
-      icon = "/img/icons/youlian.svg"
-
-  # 网友圈（二级菜单，属于"网友"菜单）
-  [[menu.main]]
-    name = "Circle"
-    url = "/friends-circle/"
-    weight = 2
-    parent = "friends"                  # 指定父级菜单为"网友"
-    [menu.main.params]
-      icon = "/img/icons/youlian.svg"  # 网友圈菜单图标路径（如果不存在会使用默认图标）
 
   # 生活菜单（一级菜单，包含二级菜单）
 #   [[menu.main]]

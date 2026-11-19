@@ -280,16 +280,16 @@ comments: true
 
 改完必须点一条文章里的外链验证。
 
-### P0：两个菜单死链
+### 已修复：两个菜单死链（2026-11-19）
 
-菜单仍指向已停用页面：
+原来菜单指向两个 `render: never` 的占位页，线上都是 404：
 
-- `Friends > Circle` → `/friends-circle/` → 404
-- `Stats > Data` → `/data/` → 404
+- `Friends > Circle` → `/friends-circle/`
+- `Stats > Data` → `/data/`
 
-原因：`content/friends-circle.md`、`content/data.md` 都是 `render: never`，但 `hugo.toml` 菜单没删。
+修法：从 `hugo.toml` 删掉这两个菜单项。Friends 下拉删掉 Circle 后只剩 Links 一项，索性把一级菜单直接指向 `/links/`，去掉下拉层。两个占位 md 文件仍留档（`render: never`），不渲染、不进 sitemap。
 
-修法：删掉这两个菜单项，或恢复对应页面并英文化。
+验证：`npm run build` 为 0 错误；生成 HTML 已不含 `href="/data/"` 与 `href="/friends-circle/"`；线上重新部署后应确认这两个路径返回 404、导航无死链。
 
 ### P1：提交搜索引擎脚本缺失
 
