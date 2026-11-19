@@ -65,26 +65,26 @@ SPECS = {
         "description": "Visual novel vs dating sim: a narrative form versus a romance simulation genre, with the stat, calendar and love-meter boundary explained.",
         "summary": "One label describes story presentation; the other describes relationship simulation.",
         "tags": ["Visual novel", "Dating sim", "Game genres", "Japanese games"],
-        "categories": ["Game history"],
+        "categories": ["Game design", "Visual novel"],
     },
     "kinetic-novel-meaning.md": {
-        "description": "What is a kinetic novel? A linear visual novel with no choices, the Visual Arts brand origin, and why Planetarian is the cleanest example.",
-        "summary": "No branches, one fixed story, and a term that began as a Visual Arts label.",
+        "description": "What is a kinetic novel? Key's official definition, the 2004 Planetarian origin, and why it means no choices or very few choices.",
+        "summary": "No choices or almost none, one fixed story, and a term that began as a Key label.",
         "tags": ["Kinetic novel", "Visual novel", "Planetarian", "Game genres"],
-        "categories": ["Game history"],
+        "categories": ["Game design", "Visual novel"],
     },
     "nvl-vs-adv.md": {
-        "description": "NVL vs ADV: the two visual novel text layouts, what the abbreviations mean, and why a single game can mix both modes.",
-        "summary": "ADV puts one line in a bottom box; NVL fills the screen with stacked lines.",
+        "description": "NVL vs ADV: two common visual novel text layouts, what the abbreviations mean, and why a single game can mix both modes.",
+        "summary": "ADV advances one dialogue unit in a bottom box; NVL stacks several units.",
         "tags": ["NVL", "ADV", "Visual novel UI", "Ren'Py"],
-        "categories": ["Game history"],
+        "categories": ["Game design", "Visual novel"],
     },
 }
 
 FIELDS = [
     "draft: false",
     'author: "Pixel Dango"',
-    "lastmod: 2026-11-19T10:00:00+08:00",
+    "lastmod: 2026-11-19T12:00:00+08:00",
 ]
 
 

@@ -10,6 +10,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 OUT = pathlib.Path(r"D:\web\our-dream-preview\static\img\covers")
 OUT.mkdir(parents=True, exist_ok=True)
+DIAGRAM_OUT = pathlib.Path(r"D:\web\our-dream-preview\static\img\diagrams")
+DIAGRAM_OUT.mkdir(parents=True, exist_ok=True)
 
 W, H = 1080, 606
 FONT_CANDIDATES = [
@@ -246,8 +248,43 @@ def draw_editorial_cover(spec):
     print(target.name, target.stat().st_size)
 
 
+def draw_layout_diagrams():
+    adv = Image.new("RGB", (W, H), (28, 30, 38))
+    d = ImageDraw.Draw(adv)
+    d.text((70, 52), "ADV-style", font=font(52), fill=(245, 244, 239))
+    d.rounded_rectangle([390, 110, 690, 398], radius=24, fill=(66, 72, 90))
+    d.ellipse([505, 160, 575, 230], fill=(200, 205, 220))
+    d.rounded_rectangle([80, 418, 1000, 562], radius=18, fill=(238, 236, 230))
+    d.rounded_rectangle([110, 438, 280, 470], radius=8, fill=(42, 46, 60))
+    d.text((124, 445), "Speaker", font=font(20), fill=(238, 236, 230))
+    d.text((110, 486), "One dialogue / narration unit", font=font(28), fill=(35, 38, 48))
+    d.text((110, 524), "(may wrap across physical lines)", font=font(20), fill=(90, 95, 105))
+    d.text((70, H - 28), "Schematic diagram - not a game screenshot", font=font(18), fill=(180, 185, 195))
+    adv.save(DIAGRAM_OUT / "adv-layout-schematic.png")
+    print("adv-layout-schematic.png")
+
+    nvl = Image.new("RGB", (W, H), (236, 232, 224))
+    d = ImageDraw.Draw(nvl)
+    d.text((70, 46), "NVL-style", font=font(52), fill=(45, 40, 50))
+    d.rounded_rectangle([80, 118, 1000, 510], radius=18, fill=(250, 248, 242), outline=(190, 185, 175), width=2)
+    lines = [
+        "Narration unit 1",
+        "Dialogue unit 2",
+        "Narration unit 3",
+        "Dialogue unit 4",
+        "Narration unit 5",
+    ]
+    for i, line in enumerate(lines):
+        d.text((120, 145 + i * 64), line, font=font(28), fill=(60, 55, 65))
+    d.text((120, 466), "Multiple units stacked on screen", font=font(20), fill=(130, 125, 135))
+    d.text((70, H - 28), "Schematic diagram - not a game screenshot", font=font(18), fill=(110, 105, 115))
+    nvl.save(DIAGRAM_OUT / "nvl-layout-schematic.png")
+    print("nvl-layout-schematic.png")
+
+
 if __name__ == "__main__":
     wanted = set(sys.argv[1:])
     for spec in EDITORIAL:
         if not wanted or spec["file"] in wanted:
             draw_editorial_cover(spec)
+    draw_layout_diagrams()

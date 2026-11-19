@@ -1,12 +1,12 @@
 ---
-title: "NVL vs ADV: The Two Text Layouts Visual Novels Use"
+title: "NVL vs ADV: Two Common Visual Novel Text Layouts"
 slug: "nvl-vs-adv"
 date: 2026-11-19
 ---
 
 ## Short answer
 
-**ADV** and **NVL** are two text layouts, not two genres. ADV shows dialogue and narration one line at a time in a window at the bottom of the screen. NVL shows multiple lines in a window that covers most or all of the screen. A game can use both; Ren'Py's documentation explicitly describes mixing the two modes.
+**ADV** and **NVL** are two common text layouts, not two genres. ADV presents one dialogue or narration unit at a time, usually in a window at the bottom of the screen. NVL shows several units at once in a window that covers most or all of the screen. A game can use both; Ren'Py's documentation explicitly describes mixing the two modes.
 
 ## The two layouts
 
@@ -14,12 +14,26 @@ Ren'Py's official NVL-Mode Tutorial gives the clearest definition available in t
 
 > "There are two main styles of presentation used for visual novels. ADV-style games present dialogue and narration one line at a time, generally in a window at the bottom of the screen. NVL-style games present multiple lines on the screen at a time, in a window that takes up the entire screen."
 
+A caution about wording: "one line at a time" here means one **dialogue or narration unit** at a time, not one physical line of text on screen. A long unit can wrap across two or three visible lines inside an ADV box; it still advances as one unit when the player clicks.
+
 Wikipedia's visual novel article gives the short-form expansion and the same visual rule: "The two most common textbox formats are ADV (short for 'Adventure'), in which the box occupies only a part of the screen, and NVL ('Novel') in which the textbox fills almost the whole screen or the whole screen."
 
 | Layout | What the player sees | Common shorthand |
 | :--- | :--- | :--- |
-| ADV | One line at a time, usually in a bottom text box | Adventure |
-| NVL | Several stacked lines, usually across most of the screen | Novel |
+| ADV | One dialogue or narration unit at a time, usually in a bottom text box; the text itself may wrap | Adventure |
+| NVL | Several stacked units, usually across most of the screen | Novel |
+
+## Visual examples
+
+These are schematic diagrams showing the layout logic, not screenshots from a specific game.
+
+![ADV-style schematic](/img/diagrams/adv-layout-schematic.png)
+
+*ADV-style: a bottom window advances one dialogue or narration unit at a time. Long units may wrap inside the window.*
+
+![NVL-style schematic](/img/diagrams/nvl-layout-schematic.png)
+
+*NVL-style: a large window keeps multiple units stacked on screen at once.*
 
 ## Where the labels come from
 
@@ -37,7 +51,7 @@ So if you see a game described as "ADV with NVL sections," that is not a contrad
 
 The difference changes reading rhythm. ADV keeps a character scene visible while one line appears at a time. NVL gives narration and dialogue more page-like density, which is why it is often associated with expository or literary passages. These are consequences of the layout definitions above, not claims that one format is better.
 
-For the wider genre question, see [Visual Novel vs Dating Sim](/posts/visual-novel-vs-dating-sim.html/). For story structure rather than text layout, see [What Is a Kinetic Novel?](/posts/kinetic-novel-meaning.html/).
+This article is the **presentation** guide in a three-part mini-series: [Visual Novel vs Dating Sim](/posts/visual-novel-vs-dating-sim.html/) covers genre and mechanics, and [What Is a Kinetic Novel?](/posts/kinetic-novel-meaning.html/) covers story structure.
 
 ## Sources and evidence limits
 
@@ -47,5 +61,3 @@ For the wider genre question, see [Visual Novel vs Dating Sim](/posts/visual-nov
 Evidence limits: this article does not trace the first coinage of ADV or NVL. It also does not evaluate specific games' layouts unless supported by the two sources above. The focus is the current documented meaning.
 
 Checked 19 November 2026.
-
-See also [Visual Novel vs Dating Sim](/posts/visual-novel-vs-dating-sim.html/) and [What Is a Kinetic Novel?](/posts/kinetic-novel-meaning.html/).
