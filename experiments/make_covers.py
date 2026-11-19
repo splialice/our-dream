@@ -106,6 +106,42 @@ EDITORIAL = [
         "motif": "steps",
         "blocks": [(52, 70, 82), (76, 118, 138), (104, 190, 208)],
     },
+    {
+        "file": "visual-novel-vs-dating-sim.webp",
+        "eyebrow": "GENRE GUIDE / 10",
+        "big": "VN/DS",
+        "title": "Visual novel vs dating sim",
+        "sub": "Story form or relationship sim?",
+        "bg": (31, 35, 46),
+        "ink": (245, 244, 239),
+        "accent": (236, 184, 84),
+        "motif": "dialogue",
+        "blocks": [(45, 52, 68), (74, 90, 116), (236, 184, 84)],
+    },
+    {
+        "file": "kinetic-novel-meaning.webp",
+        "eyebrow": "TERM GUIDE / 11",
+        "big": "KN",
+        "title": "Kinetic novel",
+        "sub": "One story, no branches",
+        "bg": (236, 232, 222),
+        "ink": (42, 58, 52),
+        "accent": (57, 104, 92),
+        "motif": "dialogue",
+        "blocks": [(196, 214, 205), (126, 171, 151), (57, 104, 92)],
+    },
+    {
+        "file": "nvl-vs-adv.webp",
+        "eyebrow": "UI GUIDE / 12",
+        "big": "NVL",
+        "title": "NVL vs ADV",
+        "sub": "Two ways to put text on screen",
+        "bg": (30, 28, 38),
+        "ink": (244, 240, 248),
+        "accent": (190, 138, 214),
+        "motif": "dialogue",
+        "blocks": [(58, 52, 72), (112, 86, 134), (190, 138, 214)],
+    },
 ]
 
 
@@ -173,6 +209,13 @@ def draw_motif(d, spec):
             x = 690 + i * 35
             y = 160 + i * 105
             d.rectangle([x, y, 1010, y + 78], fill=col)
+    elif kind == "dialogue":
+        for i, col in enumerate(blocks):
+            y = 92 + i * 132
+            d.rounded_rectangle([680, y, 1020, y + 96], radius=18, fill=col)
+            d.rounded_rectangle([704, y + 20, 820, y + 38], radius=8, fill=spec["bg"])
+            d.rectangle([704, y + 52, 980, y + 60], fill=spec["bg"])
+            d.rectangle([704, y + 70, 920, y + 78], fill=spec["bg"])
 
 
 def draw_editorial_cover(spec):
