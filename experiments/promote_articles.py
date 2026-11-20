@@ -97,12 +97,30 @@ SPECS = {
         "tags": ["Schrodinger's Call", "Visual novel", "Game development", "Narrative design"],
         "categories": ["Game culture", "Visual novel"],
     },
+    "pragmata-fake-ai-new-york.md": {
+        "description": "Why does Pragmata have a New York that looks AI-generated? Capcom's developers explain how humans hand-built the taxis-in-the-floor mistakes to make a fake AI city feel uncanny.",
+        "summary": "A city that looks like AI slop, painstakingly made by human developers — on purpose.",
+        "tags": ["Pragmata", "Capcom", "Game art direction", "AI in games"],
+        "categories": ["Game culture", "Game design"],
+    },
+    "dragon-quest-ai-slimey-friend.md": {
+        "description": "Dragon Quest creator Yuji Horii on why DQ10 is getting a Gemini-powered AI Slimey: not an NPC replacement, but a game character players might treat as a friend.",
+        "summary": "Horii wants an AI companion that lowers the barrier to talking — and the comments show how split players are.",
+        "tags": ["Dragon Quest", "AI in games", "Yuji Horii", "Game design"],
+        "categories": ["Game culture", "Game design"],
+    },
+    "watamari-debanking.md": {
+        "description": "How a yuri visual novel was indefinitely delayed when a bank blocked transfers of its Steam revenue over adult-content patches — and why the developer says the paperwork was pointless.",
+        "summary": "A sale triggered a money-laundering flag, and a game lost months. A story about payment pipelines, not patches.",
+        "tags": ["Watamari", "Visual novel", "Game industry", "Indie development"],
+        "categories": ["Game culture", "Game industry"],
+    },
 }
 
 FIELDS = [
     "draft: false",
     'author: "Pixel Dango"',
-    "lastmod: 2026-11-19T12:00:00+08:00",
+    "lastmod: 2026-11-20T10:45:00+08:00",
 ]
 
 
