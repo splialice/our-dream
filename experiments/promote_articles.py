@@ -115,12 +115,24 @@ SPECS = {
         "tags": ["Watamari", "Visual novel", "Game industry", "Indie development"],
         "categories": ["Game culture", "Game industry"],
     },
+    "big-walk-ai-bug-backlash.md": {
+        "description": "Big Walk got 400+ negative reviews after disclosing a 10-line AI-assisted bug fix. A story about a tricky IGF edge case, day-by-day Steam review data, and whether honesty gets punished.",
+        "summary": "A beloved indie game disclosed minimal AI use — and became the AI debate's most awkward test case.",
+        "tags": ["Big Walk", "House House", "AI in games", "Game industry"],
+        "categories": ["Game culture", "Game industry"],
+    },
+    "valkyrie-tune-japanese-aesthetics.md": {
+        "description": "Former Idolmaster director Akihiro Ishihara on Valkyrie Tune: a cute visual novel with a philosophical turn, and why he refused to water down its Japanese aesthetics for overseas players.",
+        "summary": "Cute girls, dark questions — and a director who thinks overseas players are being underestimated.",
+        "tags": ["Valkyrie Tune", "Visual novel", "Idolmaster", "Game design"],
+        "categories": ["Game culture", "Visual novel"],
+    },
 }
 
 FIELDS = [
     "draft: false",
     'author: "Pixel Dango"',
-    "lastmod: 2026-11-20T10:45:00+08:00",
+    "lastmod: 2026-11-21T09:00:00+08:00",
 ]
 
 

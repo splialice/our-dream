@@ -49,6 +49,27 @@ COVERS = [
         "credit": "© Kuro Irodoru Yomiji / Sekai Project",
         "focus": (0.62, 0.45),
     },
+    {
+        "file": "big-walk-ai-bug-backlash.webp",
+        "source": "big-walk-sunset.jpg",
+        "eyebrow": "GAL CULTURE / 19",
+        "title": ["10 Lines of AI", "400 Bad Reviews"],
+        "sub": "The honesty that backfired",
+        "credit": "© House House / Panic",
+        "focus": (0.5, 0.45),
+    },
+    {
+        "file": "valkyrie-tune-japanese-aesthetics.webp",
+        "source": "valkyrie-tune-cast.jpg",
+        "eyebrow": "GAL CULTURE / 20",
+        "title": ["Cute Girls,", "Dark Questions"],
+        "sub": "A director who won't water it down",
+        "credit": "© Frontwing / GOOD SMILE COMPANY",
+        "focus": (0.5, 0.42),
+        "base_dark": 48,
+        "grad_width": 1.05,
+        "grad_strength": 180,
+    },
 ]
 
 
