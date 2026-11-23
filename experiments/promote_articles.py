@@ -59,7 +59,7 @@ SPECS = {
         "description": "How does GRIS tell a story without dialogue? Nomada Studio on colour scripts, statues, camera cues and character simplification as narrative tools.",
         "summary": "Colour tracks progression; statues carry exposition; camera cues keep it readable.",
         "tags": ["GRIS", "Visual storytelling", "Game art direction", "Nomada Studio"],
-        "categories": ["Game history"],
+        "categories": ["Game design"],
     },
     "visual-novel-vs-dating-sim.md": {
         "description": "Visual novel vs dating sim: a narrative form versus a romance simulation genre, with the stat, calendar and love-meter boundary explained.",
@@ -101,19 +101,19 @@ SPECS = {
         "description": "Why does Pragmata have a New York that looks AI-generated? Capcom's developers explain how humans hand-built the taxis-in-the-floor mistakes to make a fake AI city feel uncanny.",
         "summary": "A city that looks like AI slop, painstakingly made by human developers — on purpose.",
         "tags": ["Pragmata", "Capcom", "Game art direction", "AI in games"],
-        "categories": ["Game culture", "Game design"],
+        "categories": ["Game design"],
     },
     "dragon-quest-ai-slimey-friend.md": {
         "description": "Dragon Quest creator Yuji Horii on why DQ10 is getting a Gemini-powered AI Slimey: not an NPC replacement, but a game character players might treat as a friend.",
         "summary": "Horii wants an AI companion that lowers the barrier to talking — and the comments show how split players are.",
         "tags": ["Dragon Quest", "AI in games", "Yuji Horii", "Game design"],
-        "categories": ["Game culture", "Game design"],
+        "categories": ["Game design"],
     },
     "watamari-debanking.md": {
         "description": "How a yuri visual novel was indefinitely delayed when a bank blocked transfers of its Steam revenue over adult-content patches — and why the developer says the paperwork was pointless.",
         "summary": "A sale triggered a money-laundering flag, and a game lost months. A story about payment pipelines, not patches.",
         "tags": ["Watamari", "Visual novel", "Game industry", "Indie development"],
-        "categories": ["Game culture", "Game industry"],
+        "categories": ["Game industry", "Visual novel"],
     },
     "big-walk-ai-bug-backlash.md": {
         "description": "Big Walk got 400+ negative reviews after disclosing a 10-line AI-assisted bug fix. A story about a tricky IGF edge case, day-by-day Steam review data, and whether honesty gets punished.",

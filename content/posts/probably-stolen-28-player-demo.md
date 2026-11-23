@@ -8,7 +8,7 @@ author: "Pixel Dango"
 description: "In February 2025, a space-station shopkeeping demo peaked at 28 concurrent players. By late October 2026, Probably Stolen was one of the year's larger indie launches. What the public record does and does not connect between them."
 summary: "A Steam page that still says 'coming in 2026', a demo that peaked at 28 concurrent players, and a launch-week hit. What the record actually connects between them."
 tags: ["Probably Stolen", "Deepspace Emporium", "Steam", "tinyBuild", "Demos"]
-categories: ["Game history"]
+categories: ["Game industry"]
 cover: "/img/covers/probably-stolen-28-player-demo.webp"
 comments: true
 ---

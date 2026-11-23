@@ -7,7 +7,7 @@ author: "Pixel Dango"
 description: "Dragon Quest creator Yuji Horii on why DQ10 is getting a Gemini-powered AI Slimey: not an NPC replacement, but a game character players might treat as a friend."
 summary: "Horii wants an AI companion that lowers the barrier to talking — and the comments show how split players are."
 tags: ["Dragon Quest", "AI in games", "Yuji Horii", "Game design"]
-categories: ["Game culture", "Game design"]
+categories: ["Game design"]
 cover: "/img/covers/dragon-quest-ai-slimey-friend.webp"
 comments: true
 lastmod: 2026-11-20T10:45:00+08:00

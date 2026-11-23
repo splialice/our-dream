@@ -12,10 +12,10 @@
 {{- $desc := "" -}}
 {{- if gt $seo.number 1 -}}
   {{- $desc = printf "%s, page %d of %d: %d articles on this page. Browse game history, visual styles and site-building notes with links to the full stories." (cond .IsHome "Pixel Dango articles" .Title) $seo.number $seo.total $seo.count -}}
+{{- else if and (ne .Kind "page") (not .IsHome) -}}
+  {{- $desc = partial "seo/taxonomy-description.html" . -}}
 {{- else if .Description -}}
   {{- $desc = .Description -}}
-{{- else if and (ne .Kind "page") (not .IsHome) -}}
-  {{- $desc = printf "%s on Pixel Dango: %d entries on game history, art direction and rendering, sourced from developer statements." .Title (len .Pages) -}}
 {{- else -}}
   {{- $desc = site.Params.description -}}
 {{- end -}}

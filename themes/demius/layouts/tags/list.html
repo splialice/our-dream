@@ -9,6 +9,10 @@
     </nav>
     <h1>{{ .Title }}</h1>
     <p class="posts-count">共 {{ len .Pages }} 篇文章</p>
+    {{- $intro := partial "seo/taxonomy-description.html" . -}}
+    {{- with $intro }}
+    <p class="taxonomy-intro">{{ . }}</p>
+    {{- end }}
   </header>
   <div class="posts-title-list">
     {{ range $index, $page := .Pages }}

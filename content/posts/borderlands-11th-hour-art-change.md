@@ -7,7 +7,7 @@ draft: false
 author: "Pixel Dango"
 description: "Borderlands shipped in 2009 looking nothing like the game shown in 2007. Gearbox made that call with the project three-quarters finished, then rebuilt most of its levels. The 2009 and 2010 records, and what the 2025 interviews add."
 summary: "A late decision, a secret prototype, and the two numbers that do not quite match."
-tags: ["Borderlands", "Gearbox", "Concept Art Style"]
+tags: ["Borderlands", "Gearbox", "Concept art"]
 categories: ["Game history"]
 cover: "/img/covers/borderlands-11th-hour-art-change.webp"
 comments: true

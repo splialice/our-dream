@@ -1,0 +1,43 @@
+# Descriptions for taxonomy archive pages. Keys are the archive path without the
+# leading/trailing slash, e.g. "tags/borderlands" or "categories/game-history".
+# Anything not listed here gets a unique generated description from
+# layouts/partials/seo/taxonomy-description.html.
+
+# --- Category archives ---
+categories/game-history: "Category: dated, source-backed accounts of how games were made, from studio art-direction decisions and genre origins to the contemporary records behind them."
+categories/game-design: "Category: how design and rendering choices work in practice, from cel shading and colour scripts to silhouettes and narrative structure, explained with concrete game examples."
+categories/visual-novel: "Category: visual novel design, terminology and production, from NVL and ADV text layouts to how small teams build and publish narrative games."
+categories/game-culture: "Category: the people and arguments around games, including fan expectations, terminology disputes and how small teams navigate platform rules."
+categories/game-industry: "Category: reporting on how game companies, publishers and payment systems shape what gets made, based on developer statements and primary sources."
+categories/site-building: "Category: build logs and deployment notes from this Hugo site, covering Cloudflare Pages, PostCSS, CI and the failures behind each fix."
+categories/technical-notes: "Category: short technical notes on rendering and tooling, written for readers who want the mechanism rather than the marketing."
+
+# --- Taxonomy index pages ---
+tags: "Browse every Pixel Dango topic as a tag archive, from game art direction and cel shading to visual novels, Steam and Hugo deployment notes."
+categories: "Browse Pixel Dango by category: game history, game design, visual novels, game culture, industry reporting, site building and technical notes."
+series: "Multi-part Pixel Dango series that group related case files into a single reading order."
+series/art-direction-changes: "A reading order for Pixel Dango's art-direction case files, tracing how studios changed a game's look and what the dated record actually supports."
+
+# --- High-frequency tags ---
+tags/game-art-direction: "Developer statements and dated sources on how games settled on their look, covering Borderlands, Team Fortress 2, GRIS, Firewatch, Journey, Cuphead and Dishonored."
+tags/visual-novel: "Visual novel design, terminology and production: NVL versus ADV layouts, kinetic novels, dating-sim boundaries and how small teams build narrative games."
+tags/borderlands: "Gearbox's Borderlands art-direction change, the Concept Art Style name and the dated record behind the question of whether the game is cel shaded."
+tags/game-design: "How concrete design and rendering decisions work, from hand-built fake cities to character silhouettes and art makeovers, explained with primary sources."
+tags/gearbox: "What Gearbox said about Borderlands and Team Fortress 2, drawn from dated emails, interviews and art-director statements rather than second-hand retellings."
+tags/team-fortress-2: "Valve's Team Fortress 2 art makeover: why the team moved away from realism and how early 20th-century illustration shaped the final look."
+tags/valve: "Valve's written design rationale on Team Fortress 2 silhouettes, character readability and the shift from realistic to illustrative art direction."
+tags/ai-in-games: "How AI is actually used in games and the backlash around it, from Dragon Quest's AI companion to Capcom's hand-built fake New York and player reviews."
+tags/cel-shading: "What cel shading technically is, where the label fits and why studios such as Gearbox and the Cuphead team rejected it for their own distinct looks."
+tags/cloudflare-pages: "Hugo deployment notes from this site: Cloudflare Pages builds, PostCSS failures and the fixes that made a push actually ship."
+tags/concept-art: "Concept art as both a production practice and a named art direction, including Gearbox's Concept Art Style and how it differs from a rendering technique."
+tags/fake-os: "Fake OS and fake internet games such as Hypnospace Outlaw and InterfaceX26, and how simulated interfaces are built to feel like a place."
+tags/hugo: "Building and deploying this Hugo site from zero: PostCSS errors, Cloudflare Pages, CI and what broke along the way."
+tags/steam: "How Steam store pages and platform payment rules affect what players see, and what dated store metadata can and cannot prove."
+tags/colour-script: "How colour scripts shape a game's look, with GRIS, Firewatch and Journey as worked examples of colour carrying story and mood."
+tags/game-genres: "Where genre labels come from and where they split, including kinetic novels, dating sims and the naming disputes around visual novels."
+tags/game-industry: "Reporting on how studios, publishers and platforms make decisions, grounded in developer statements and public records."
+tags/gris: "Nomada Studio's GRIS: its illustrated 2D world, colour-script storytelling and the way it conveys story without dialogue."
+tags/illustrative-rendering: "Illustrative rendering in games, how teams build painterly hand-authored looks and where the term overlaps with concept art direction."
+tags/narrative-design: "How games tell stories without heavy dialogue, from GRIS's visual cues to visual-novel structure and character writing."
+tags/nomada-studio: "Nomada Studio's GRIS and its design choices: illustrated worlds, colour as narrative and dialogue-free storytelling."
+tags/toon-shading: "Toon shading as a rendering choice, the Wind Waker's Space World demo and the turn to cel looks, and how it differs from an art direction label."

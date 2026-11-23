@@ -1,0 +1,34 @@
+{{- /* One description source for every taxonomy archive.
+     Priority: front matter description -> data/taxonomy-descriptions.yaml -> generated fallback.
+     Key is the archive path without leading/trailing slashes, e.g. tags/borderlands.
+     Keeping this in one partial guarantees the meta tag and the on-page intro match. */ -}}
+{{- $page := . -}}
+{{- $desc := "" -}}
+{{- if $page.Description -}}
+  {{- $desc = $page.Description -}}
+{{- else -}}
+  {{- $parts := split (trim $page.RelPermalink "/") "/" -}}
+  {{- $key := index $parts 0 -}}
+  {{- if gt (len $parts) 1 -}}
+    {{- $key = printf "%s/%s" (index $parts 0) (index $parts 1) -}}
+  {{- end -}}
+  {{- $descriptions := index hugo.Data "taxonomy-descriptions" | default dict -}}
+  {{- $custom := index $descriptions $key -}}
+  {{- if $custom -}}
+    {{- $desc = $custom -}}
+  {{- else -}}
+    {{- $n := len $page.Pages -}}
+    {{- $first := "" -}}
+    {{- if gt $n 0 -}}
+      {{- with index $page.Pages 0 }}{{ $first = .Title }}{{ end -}}
+    {{- end -}}
+    {{- $noun := "entries" -}}
+    {{- if eq $page.Kind "term" }}{{ $noun = "articles" }}{{ end -}}
+    {{- if eq $n 1 -}}
+      {{- $desc = printf "%s on Pixel Dango: %s, with sourcing and context." $page.Title $first -}}
+    {{- else -}}
+      {{- $desc = printf "%s on Pixel Dango: %d %s including %s, with sources and dated records." $page.Title $n $noun $first -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $desc -}}

@@ -7,7 +7,7 @@ draft: false
 author: "Pixel Dango"
 description: "The 1999 version was a realistic military shooter. The 2007 release looked like a 1930s advertisement. Valve's conference paper, a failed playtest and two contemporary interviews explain the change."
 summary: "A medic patch nobody could see, three reasons written on a slide, and a rendering style built to be read in a second."
-tags: ["Team Fortress 2", "Valve", "Illustrative Rendering"]
+tags: ["Team Fortress 2", "Valve", "Illustrative rendering"]
 categories: ["Game history"]
 cover: "/img/covers/why-team-fortress-2-stopped-looking-realistic.webp"
 comments: true

@@ -7,8 +7,8 @@ draft: false
 author: "Pixel Dango"
 description: "Valve built a three-level read hierarchy into Team Fortress 2; Riot made silhouette the anchor of champion recognition in League of Legends. Two related answers to the same multiplayer problem, and the products each changed to enforce them."
 summary: "A reading order built into TF2, a skin policy written for League, and a ponytail cut off and then put back."
-tags: ["Team Fortress 2", "League of Legends", "Valve", "Riot Games", "Art direction", "Silhouettes"]
-categories: ["Game history"]
+tags: ["Team Fortress 2", "League of Legends", "Valve", "Riot Games", "Game art direction", "Silhouettes"]
+categories: ["Game design"]
 cover: "/img/covers/why-game-characters-need-distinct-silhouettes.webp"
 comments: true
 ---

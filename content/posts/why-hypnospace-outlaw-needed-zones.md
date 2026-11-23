@@ -8,7 +8,7 @@ author: "Pixel Dango"
 description: "Jay Tholen first wanted Hypnospace's pages sorted by the characters who made them. Playtesters could not read that logic, so MerchantSoft's corporate zones replaced it — and accidentally produced the game's puzzles."
 summary: "How a fictional 1999 web became navigable: a directory built for fidelity, corporate zones built for clarity, and a search box testers did not trust."
 tags: ["Hypnospace Outlaw", "Fake OS", "Jay Tholen", "Game design", "1990s internet"]
-categories: ["Game history"]
+categories: ["Game design"]
 cover: "/img/covers/why-hypnospace-outlaw-needed-zones.webp"
 comments: true
 ---

@@ -1,34 +1,32 @@
 {{ define "content" }}
-{{ $colorMode := site.Params.taxonomy.colorMode | default "random" }}
-{{ $customColor := site.Params.taxonomy.customColor | default "#454141" }}
-<div class="category-posts-page" data-color-mode="{{ $colorMode }}">
-    <!-- 页面头部 -->
-    <header class="category-posts-header">
+<div class="categories-page category-archive" style="padding:1.4rem 1.5rem;">
+    <header class="category-archive-header">
         <nav class="category-breadcrumb">
-            <a href="{{ "/categories/" | relURL }}">{{ site.Params.navCats | default "Categories" }}</a> / 
+            <a href="{{ "/categories/" | relURL }}">{{ site.Params.navCats | default "Categories" }}</a> /
             <span class="current-category">{{ .Title }}</span>
         </nav>
         <h1>{{ .Title }}</h1>
         <p class="posts-count">{{ len .Pages }} posts</p>
+        {{- $intro := partial "seo/taxonomy-description.html" . -}}
+        {{- with $intro }}
+        <p class="taxonomy-intro">{{ . }}</p>
+        {{- end }}
     </header>
-    
-    <!-- 文章标题列表 -->
-    <div class="posts-title-list">
-        {{ range $index, $page := .Pages }}
-        {{ $colorIndex := add (mod $index 8) 1 }}
-        {{ if eq $colorMode "custom" }}
-        <article class="post-title-item custom-color" style="background-color: {{ $customColor }};">
-        {{ else }}
-        <article class="post-title-item color-{{ $colorIndex }}">
+
+    <section class="home-posts" data-columns="1">
+      <div class="post-grid">
+        {{ range .Pages }}
+          {{ partial "post-card.html" . }}
         {{ end }}
-            <a href="{{ .RelPermalink }}" class="post-title-link">
-                <span class="title-text">{{ .Title }}</span>
-                <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-                    {{ .Date.Format "2006.01.02" }}
-                </time>
-            </a>
-        </article>
-        {{ end }}
-    </div>
+      </div>
+    </section>
 </div>
+
+<style>
+.category-archive-header { margin: 0 0 1.4rem; }
+.category-archive-header h1 { margin: .5rem 0 .2rem; font-size: 1.9rem; }
+.category-breadcrumb { font-size: .85rem; opacity: .7; }
+.category-breadcrumb a { text-decoration: none; }
+.category-breadcrumb .current-category { font-weight: 600; }
+</style>
 {{ end }}

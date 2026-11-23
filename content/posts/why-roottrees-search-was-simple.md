@@ -8,7 +8,7 @@ author: "Pixel Dango"
 description: "A Game Jam deadline, a technical shortcut and a trivia habit: what Jeremy Johnston and Robin Ward actually said about the search system, and how the remake turned it into a research tool."
 summary: "What the developers actually said about the original search, and why they later listed it among the things to fix."
 tags: ["The Roottrees are Dead", "Fake OS", "SpiderSearch", "Game Jam", "Game design"]
-categories: ["Game history"]
+categories: ["Game design"]
 cover: "/img/covers/why-roottrees-search-was-simple.webp"
 comments: true
 ---

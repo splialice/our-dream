@@ -8,10 +8,16 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote,quote
 from datetime import datetime,timezone
-import argparse,json,subprocess,uuid,urllib.request,urllib.error,xml.etree.ElementTree as ET
+import argparse,json,re,subprocess,uuid,urllib.request,urllib.error,xml.etree.ElementTree as ET
 from collections import defaultdict
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN='https://pixeldango.com'
+SITEMAP_NS='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+TAXONOMY_PREFIXES=('/tags/','/categories/','/series/')
+def parse_lastmod(value):
+    if not value:return None,'missing'
+    try:return datetime.fromisoformat(value.replace('Z','+00:00')),None
+    except ValueError:return None,'invalid'
 class Page(HTMLParser):
     def __init__(self,text):
         super().__init__();self.canon=[];self.desc=[];self.og=[];self.ogdesc=[];self.twdesc=[];self.robots=[];self.alias=False;self.links=[];self.feed(text)
@@ -27,11 +33,14 @@ class Page(HTMLParser):
             if a.get('http-equiv','').lower()=='refresh':self.alias=True
         if tag=='a' and a.get('href'):self.links.append(a['href'])
 def audit(base):
-    errors=[];pages={};aliases=[];descriptions=defaultdict(list)
+    errors=[];warnings=[];pages={};aliases=[];descriptions=defaultdict(list);counts={}
     for f in base.rglob('*.html'):
         if not f.is_file():continue
         rel=f.relative_to(base).as_posix();path='/'+(rel[:-10] if rel.endswith('index.html') else rel)
-        p=Page(f.read_text(encoding='utf-8'));pages[path]=p
+        raw=f.read_text(encoding='utf-8')
+        p=Page(raw);pages[path]=p
+        m=re.search(r'class="?posts-count"?[^>]*>\s*(?:共\s*)?(\d+)',raw)
+        if m:counts[path]=int(m.group(1))
         if p.alias:aliases.append(path);continue
         if path=='/404.html':
             if not any('noindex' in r for r in p.robots):errors.append('404 should be noindex')
@@ -46,13 +55,37 @@ def audit(base):
     for desc,urls in descriptions.items():
         if len(urls)>1:errors.append(f'description reused: {urls}')
     if '/404.html' not in pages:errors.append('root 404.html missing: Cloudflare may use SPA fallback')
-    locs=[e.text for e in ET.parse(base/'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-    for u in locs:
-        path=unquote(urlsplit(u).path)
-        if path not in {unquote(p) for p in pages}:errors.append(f'sitemap target missing: {path}')
-    if any(urlsplit(u).path=='/404.html' for u in locs):errors.append('404 must not appear in sitemap')
+
+    try:sitemap=ET.parse(base/'sitemap.xml').getroot()
+    except Exception as e:errors.append(f'sitemap unreadable: {e}');sitemap=[]
+    entries=[(url.findtext(SITEMAP_NS+'loc') or '',url.findtext(SITEMAP_NS+'lastmod') or '') for url in sitemap.iter(SITEMAP_NS+'url')]
+    locs=[loc for loc,_ in entries]
+    page_set={unquote(p) for p in pages}
+    page_by_url={unquote(k):v for k,v in pages.items()}
+    alias_set={unquote(a) for a in aliases}
+    now=datetime.now(timezone.utc)
+    for loc,lastmod in entries:
+        path=unquote(urlsplit(loc).path)
+        if path not in page_set:errors.append(f'sitemap target missing: {path}')
+        if path=='/404.html':errors.append('404 must not appear in sitemap')
+        if path in alias_set:errors.append(f'redirect alias in sitemap: {path}')
+        p=page_by_url.get(path)
+        if p and any('noindex' in r for r in p.robots):errors.append(f'noindex page in sitemap: {path}')
+        dt,problem=parse_lastmod(lastmod)
+        if problem=='missing':warnings.append(f'sitemap lastmod missing: {path}')
+        elif problem=='invalid':errors.append(f'sitemap lastmod invalid: {path}: {lastmod}')
+        elif dt is not None:
+            check=dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+            if check>now:warnings.append(f'sitemap lastmod in the future: {path}')
+    for path,p in sorted(pages.items()):
+        if not path.startswith(TAXONOMY_PREFIXES) or p.alias:continue
+        if path.rstrip('/').count('/')<2:continue
+        desc=p.desc[0] if len(p.desc)==1 else ''
+        if re.match(r'^.+ on Pixel Dango:',desc):
+            n=counts.get(path,0);plural='s' if n!=1 else ''
+            warnings.append(f'taxonomy archive uses generated description ({n} post{plural}): {path}')
     snapshot={path:dict(canonical=p.canon,description=p.desc,og=p.og,robots=p.robots,links=p.links,alias=p.alias) for path,p in sorted(pages.items())}
-    return dict(time=datetime.now(timezone.utc).isoformat(),public=str(base),html=len(pages),aliases=aliases,sitemap=len(locs),errors=errors,pages=snapshot)
+    return dict(time=now.isoformat(),public=str(base),html=len(pages),aliases=aliases,sitemap=len(locs),errors=errors,warnings=warnings,pages=snapshot)
 def online(result):
     errors=[];responses=[]
     paths=['/','/page/2/','/this-does-not-exist-xyz123/','/posts/no-such-post-xyz.html/','/tags/appdetails/','/missing-'+uuid.uuid4().hex+'/']
@@ -82,8 +115,9 @@ if __name__=='__main__':
         if proc.returncode:raise SystemExit('Hugo failed; see '+str(record/'build.log'))
     if base is None:ap.error('use --build or specify --public')
     result=audit(base)
-    (record/'build.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     if args.live:
         live=online(result);(record/'live.json').write_text(json.dumps(live,ensure_ascii=False,indent=2),encoding='utf-8');result['errors']+=live['errors']
+    result['status']='pass_with_warnings' if not result['errors'] and result['warnings'] else ('pass' if not result['errors'] else 'fail')
+    (record/'build.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in result.items() if k!='pages'},ensure_ascii=True,indent=2))
     raise SystemExit(bool(result['errors']))

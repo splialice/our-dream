@@ -7,7 +7,7 @@ draft: false
 author: "Pixel Dango"
 description: "Gearbox called Borderlands' visual direction Concept Art Style in April 2009, while Randy Pitchford publicly rejected the cel-shaded label. Here's what the studio actually said, how the look developed, and which term to use."
 summary: "The studio had a name for the look. Most people still use a different one. Both are documented."
-tags: ["Borderlands", "Gearbox", "Concept Art Style", "Cel shading"]
+tags: ["Borderlands", "Gearbox", "Concept art", "Cel shading"]
 categories: ["Game history"]
 cover: "/img/covers/borderlands-art-style.webp"
 comments: true

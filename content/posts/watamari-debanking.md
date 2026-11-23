@@ -7,7 +7,7 @@ author: "Pixel Dango"
 description: "How a yuri visual novel was indefinitely delayed when a bank blocked transfers of its Steam revenue over adult-content patches — and why the developer says the paperwork was pointless."
 summary: "A sale triggered a money-laundering flag, and a game lost months. A story about payment pipelines, not patches."
 tags: ["Watamari", "Visual novel", "Game industry", "Indie development"]
-categories: ["Game culture", "Game industry"]
+categories: ["Game industry", "Visual novel"]
 cover: "/img/covers/watamari-debanking.webp"
 comments: true
 lastmod: 2026-11-20T10:45:00+08:00

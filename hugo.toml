@@ -76,12 +76,11 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
     [menu.main.params]
       icon = "/img/icons/blog.svg"
 
-  # 分类（二级菜单，属于"统计"菜单）
+  # 分类（一级菜单：作为浏览文章的主入口，不再藏在 Stats 下拉里）
   [[menu.main]]
     name = "Categories"
     url = "/categories/"
-    weight = 2
-    parent = "statistics"             # 指定父级菜单为"统计"
+    weight = 3
     [menu.main.params]
       icon = "/img/icons/fenlei.svg"
 
@@ -103,7 +102,7 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
   [[menu.main]]
     name = "Friends"
     url = "/links/"
-    weight = 3
+    weight = 4
     [menu.main.params]
       icon = "/img/icons/youlian.svg"   # 网友菜单图标路径（如果不存在会使用默认图标）
 

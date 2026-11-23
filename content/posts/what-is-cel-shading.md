@@ -8,7 +8,7 @@ author: "Pixel Dango"
 description: "Cel shading is a rendering technique, not an art style. Learn how it works, why outlines are separate, and why Gearbox and Valve rejected the label."
 summary: "A technique with two meanings, five dated reference points, and two studios that argued about the word on the record."
 tags: ["Cel shading", "Toon shading", "Borderlands", "Non-photorealistic rendering", "Game art direction"]
-categories: ["Game history"]
+categories: ["Game design"]
 cover: "/img/covers/what-is-cel-shading.webp"
 comments: true
 ---

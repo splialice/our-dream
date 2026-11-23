@@ -7,7 +7,7 @@ author: "Pixel Dango"
 description: "Why does Pragmata have a New York that looks AI-generated? Capcom's developers explain how humans hand-built the taxis-in-the-floor mistakes to make a fake AI city feel uncanny."
 summary: "A city that looks like AI slop, painstakingly made by human developers — on purpose."
 tags: ["Pragmata", "Capcom", "Game art direction", "AI in games"]
-categories: ["Game culture", "Game design"]
+categories: ["Game design"]
 cover: "/img/covers/pragmata-fake-ai-new-york.webp"
 comments: true
 lastmod: 2026-11-20T10:45:00+08:00

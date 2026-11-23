@@ -7,7 +7,7 @@ draft: false
 description: "An AI agent in China costs roughly one fiftieth of what the same run costs on a Western frontier model. That price gap, not enthusiasm, is why Chinese users handed their social accounts to a model first."
 summary: "I ran an AI agent for a week. 202 million tokens, 16 yuan, about 2 dollars. Here is the bill, and why it explains the whole phenomenon."
 tags: ["AI agents", "DeepSeek", "computer use", "cost analysis"]
-categories: ["AI"]
+categories: ["Game industry"]
 cover: "/img/covers/agent-craze-cover.jpg"
 comments: false
 ---

@@ -7,7 +7,7 @@ author: "Pixel Dango"
 description: "How does GRIS tell a story without dialogue? Nomada Studio on colour scripts, statues, camera cues and character simplification as narrative tools."
 summary: "Colour tracks progression; statues carry exposition; camera cues keep it readable."
 tags: ["GRIS", "Visual storytelling", "Game art direction", "Nomada Studio"]
-categories: ["Game history"]
+categories: ["Game design"]
 cover: "/img/covers/how-gris-tells-story-without-dialogue.webp"
 comments: true
 lastmod: 2026-11-18T10:30:00+08:00

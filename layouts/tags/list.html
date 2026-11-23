@@ -1,0 +1,29 @@
+{{ define "content" }}
+<div class="categories-page tag-archive" style="padding:1.4rem 1.5rem;">
+  <header class="tag-archive-header">
+    <nav class="category-breadcrumb">
+      <a href="{{ "/tags/" | relURL }}">{{ site.Params.navTags | default "Tags" }}</a> /
+      <span class="current-category">{{ .Title }}</span>
+    </nav>
+    <h1>{{ .Title }}</h1>
+    <p class="posts-count">{{ len .Pages }} posts</p>
+    {{- $intro := partial "seo/taxonomy-description.html" . -}}
+    {{- with $intro }}
+    <p class="taxonomy-intro">{{ . }}</p>
+    {{- end }}
+  </header>
+
+  <section class="home-posts" data-columns="1">
+    <div class="post-grid">
+      {{ range .Pages }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+<style>
+.tag-archive-header { margin: 0 0 1.4rem; }
+.tag-archive-header h1 { margin: .5rem 0 .2rem; font-size: 1.9rem; }
+</style>
+{{ end }}
