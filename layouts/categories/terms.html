@@ -1,25 +1,28 @@
 {{ define "content" }}
+{{ $terms := .Pages }}
 <div class="categories-page cat-browser">
+  {{/* 隐藏的 radio：每个分类一个，纯 CSS 切换，不依赖任何 JS */}}
+  {{ range $index, $term := $terms }}
+  <input type="radio" name="cat-tab" id="cat-tab-{{ $index }}" class="cat-radio"{{ if eq $index 0 }} checked{{ end }}>
+  {{ end }}
+
   <header class="cat-browser-header">
     <h1>{{ site.Params.navCats | default "Categories" }}</h1>
     {{ with .Content }}<div class="cat-browser-lead">{{ . }}</div>{{ end }}
   </header>
 
-  <div class="cat-tabs" role="tablist" aria-label="Categories">
-    {{ range $index, $term := .Pages }}
-    <button type="button" class="cat-tab{{ if eq $index 0 }} is-active{{ end }}"
-            role="tab" aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
-            data-cat="{{ $term.RelPermalink }}">
+  <div class="cat-tabs" aria-label="Categories">
+    {{ range $index, $term := $terms }}
+    <label for="cat-tab-{{ $index }}" class="cat-tab">
       <span class="cat-tab-name">{{ $term.Title }}</span>
       <span class="cat-tab-count">{{ len $term.Pages }}</span>
-    </button>
+    </label>
     {{ end }}
   </div>
 
   <div class="cat-panels">
-    {{ range $index, $term := .Pages }}
-    <section class="cat-panel{{ if eq $index 0 }} is-active{{ end }}"
-             role="tabpanel" data-cat="{{ $term.RelPermalink }}">
+    {{ range $index, $term := $terms }}
+    <section class="cat-panel" data-panel="{{ $index }}">
       <div class="cat-panel-head">
         <h2>{{ $term.Title }}</h2>
         <a href="{{ $term.RelPermalink }}">Open category <span aria-hidden="true">&#8594;</span></a>
@@ -34,56 +37,44 @@
   </div>
 </div>
 
-<script>
-(function () {
-  var root = document.querySelector('.cat-browser');
-  if (!root) return;
-  var tabs = root.querySelectorAll('.cat-tab');
-  var panels = root.querySelectorAll('.cat-panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var key = tab.getAttribute('data-cat');
-      tabs.forEach(function (t) {
-        var on = t === tab;
-        t.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      panels.forEach(function (p) {
-        p.classList.toggle('is-active', p.getAttribute('data-cat') === key);
-      });
-    });
-  });
-})();
-</script>
-
 <style>
 .cat-browser { padding: 1.4rem 1.5rem; }
 .cat-browser-header h1 { margin: 0 0 .4rem; font-size: 2rem; }
 .cat-browser-lead { margin: 0 0 1.2rem; opacity: .8; line-height: 1.6; }
+
+.cat-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 .cat-tabs { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.3rem; }
 .cat-tab {
   display: inline-flex; align-items: center; gap: .45rem;
   padding: .45rem .85rem; border-radius: 999px; cursor: pointer;
   border: 1px solid rgba(127,127,127,.3); background: rgba(127,127,127,.06);
-  color: inherit; font: inherit; font-size: .88rem; font-weight: 600;
+  color: inherit; font-size: .88rem; font-weight: 600; user-select: none;
   transition: background .16s ease, border-color .16s ease;
 }
 .cat-tab:hover { border-color: var(--accent, #6a5acd); }
-.cat-tab.is-active { background: var(--accent, #6a5acd); border-color: var(--accent, #6a5acd); color: #fff; }
 .cat-tab-count {
   min-width: 1.35rem; padding: .05rem .35rem; border-radius: 999px;
   background: rgba(127,127,127,.2); font-size: .72rem; text-align: center;
 }
-.cat-tab.is-active .cat-tab-count { background: rgba(255,255,255,.25); }
-.cat-tab:focus-visible { outline: 2px solid var(--accent, #6a5acd); outline-offset: 2px; }
+.cat-tab:focus-within { outline: 2px solid var(--accent, #6a5acd); outline-offset: 2px; }
 
 .cat-panel { display: none; }
-.cat-panel.is-active { display: block; }
 .cat-panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 .25rem; }
 .cat-panel-head h2 { margin: 0; font-size: 1.35rem; }
 .cat-panel-head a { font-size: .85rem; text-decoration: none; opacity: .8; }
 .cat-panel-head a:hover { text-decoration: underline; opacity: 1; }
 .cat-panel-intro { margin: .3rem 0 1.2rem; font-size: .9rem; line-height: 1.55; opacity: .72; }
+
+/* 纯 CSS：radio 选中时高亮对应按钮、显示对应面板 */
+{{ range $index, $term := $terms }}
+#cat-tab-{{ $index }}:checked ~ .cat-tabs .cat-tab[for="cat-tab-{{ $index }}"] {
+  background: var(--accent, #6a5acd); border-color: var(--accent, #6a5acd); color: #fff;
+}
+#cat-tab-{{ $index }}:checked ~ .cat-tabs .cat-tab[for="cat-tab-{{ $index }}"] .cat-tab-count {
+  background: rgba(255,255,255,.25);
+}
+#cat-tab-{{ $index }}:checked ~ .cat-panels .cat-panel[data-panel="{{ $index }}"] { display: block; }
+{{ end }}
 </style>
 {{ end }}
