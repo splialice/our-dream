@@ -139,6 +139,12 @@ SPECS = {
         "tags": ["GTA 6", "Game industry", "Game culture", "Player backlash"],
         "categories": ["Game culture", "Game industry"],
     },
+    "what-is-an-otome-game.md": {
+        "description": "What is an otome game? The first was Angelique in 1994, but players named the genre years later. The Ruby Party story, the heroine who grew from 17 to 25, and how it differs from dating sims.",
+        "summary": "A genre named by its readers, not its makers.",
+        "tags": ["Otome game", "Dating sim", "Game genres", "Angelique"],
+        "categories": ["Game culture", "Game design"],
+    },
 }
 
 FIELDS = [
