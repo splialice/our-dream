@@ -620,9 +620,9 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       backgroundSize = "cover"             # 背景图片尺寸：cover（覆盖）| contain（包含）| auto（自动）
       backgroundPosition = "center"        # 背景图片位置：center | top | bottom | left | right
       backgroundRepeat = "no-repeat"       # 背景图片重复：no-repeat | repeat | repeat-x | repeat-y
-      textColor = ""                       # 文字颜色（留空则使用默认颜色）
-      textShadow = false                   # 是否为文字添加阴影（提高在背景图上的可读性）
-      overlayColor = ""                    # 遮罩层颜色（在背景图上添加半透明遮罩，例如："rgba(0, 0, 0, 0.3)"）
+      textColor = "#ffffff"                # 白字：背景图较花，需固定文字色
+      textShadow = true                    # 文字阴影：提高在背景图上的可读性
+      overlayColor = "rgba(0, 0, 0, 0.5)"  # 深色遮罩：压暗背景图，标签才看得清
       borderRadius = ""                    # 圆角大小（留空则使用默认圆角）
 
     # 分类组件配置
@@ -633,9 +633,9 @@ hasCJKLanguage = true                      # 启用中日韩语言支持，优�
       backgroundSize = "cover"             # 背景图片尺寸：cover（覆盖）| contain（包含）| auto（自动）
       backgroundPosition = "center"        # 背景图片位置：center | top | bottom | left | right
       backgroundRepeat = "no-repeat"       # 背景图片重复：no-repeat | repeat | repeat-x | repeat-y
-      textColor = ""                       # 文字颜色（留空则使用默认颜色）
-      textShadow = false                   # 是否为文字添加阴影（提高在背景图上的可读性）
-      overlayColor = ""                    # 遮罩层颜色（在背景图上添加半透明遮罩，例如："rgba(0, 0, 0, 0.3)"）
+      textColor = "#ffffff"                # 白字：背景图较花，需固定文字色
+      textShadow = true                    # 文字阴影：提高在背景图上的可读性
+      overlayColor = "rgba(0, 0, 0, 0.5)"  # 深色遮罩：压暗背景图，标签才看得清
       borderRadius = ""                    # 圆角大小（留空则使用默认圆角）
 
     # 广告组件配置

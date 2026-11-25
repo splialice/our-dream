@@ -159,29 +159,26 @@
     filter: brightness(0.9);
   }
 
-/* 背景模式下的标签样式优化 */
+/* 背景模式下的标签样式：实底白字，保证在花背景上可读 */
 .tags-card-with-bg .tag-link {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: inherit !important;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
+  background: rgba(17, 24, 39, 0.72) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="dark"] .tags-card-with-bg .tag-link {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .tags-card-with-bg .tag-link:hover {
-  background: rgba(255, 255, 255, 0.35) !important;
-  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--accent, #6a5acd) !important;
+  border-color: var(--accent, #6a5acd);
+  color: #fff !important;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-[data-theme="dark"] .tags-card-with-bg .tag-link:hover {
-  background: rgba(0, 0, 0, 0.4) !important;
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 /* 背景模式下的标签数字徽章 */
@@ -189,38 +186,37 @@
   opacity: 1;
 }
 
-/* 背景模式下的标题样式 */
+/* 背景模式下的标题样式：白字加阴影 */
 .tags-card-with-bg .aside-title {
   opacity: 1;
+  color: #fff !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* ===================================================================
    分类组件背景模式下的样式优化
    =================================================================== */
 
-/* 背景模式下的分类标签样式优化 */
+/* 背景模式下的分类标签：实底白字，保证在花背景上可读 */
 .categories-card-with-bg .tag-link {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: inherit !important;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(5px);
+  background: rgba(17, 24, 39, 0.72) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="dark"] .categories-card-with-bg .tag-link {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .categories-card-with-bg .tag-link:hover {
-  background: rgba(255, 255, 255, 0.35) !important;
-  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--accent, #6a5acd) !important;
+  border-color: var(--accent, #6a5acd);
+  color: #fff !important;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-[data-theme="dark"] .categories-card-with-bg .tag-link:hover {
-  background: rgba(0, 0, 0, 0.4) !important;
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 /* 背景模式下的分类数字徽章 */
@@ -231,4 +227,6 @@
 /* 背景模式下的标题样式 */
 .categories-card-with-bg .aside-title {
   opacity: 1;
+  color: #fff !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }

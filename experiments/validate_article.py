@@ -24,6 +24,7 @@ BASE = pathlib.Path(__file__).parent
 SOURCE_TYPES = {
     "developer_document",
     "developer_interview",
+    "republished_interview",
     "official_store",
     "contemporary_reporting",
     "retrospective_reporting",

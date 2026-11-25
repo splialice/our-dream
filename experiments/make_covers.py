@@ -180,6 +180,30 @@ EDITORIAL = [
         "motif": "dialogue",
         "blocks": [(42, 56, 66), (60, 96, 112), (104, 192, 206)],
     },
+    {
+        "file": "gta-v-art-style.webp",
+        "eyebrow": "ART STYLE / 07",
+        "big": "V",
+        "title": "GTA V",
+        "sub": "A city, not a filter",
+        "bg": (214, 168, 112),
+        "ink": (34, 42, 52),
+        "accent": (60, 92, 120),
+        "motif": "bars",
+        "blocks": [(150, 118, 78), (92, 108, 118), (60, 92, 120)],
+    },
+    {
+        "file": "what-a-gta-6-trailer-cant-tell-you.webp",
+        "eyebrow": "EVIDENCE / 01",
+        "big": "VI",
+        "title": "GTA 6 trailer",
+        "sub": "What the footage proves, and what it doesn't",
+        "bg": (26, 42, 70),
+        "ink": (238, 244, 246),
+        "accent": (74, 190, 210),
+        "motif": "swatches",
+        "blocks": [(38, 58, 92), (52, 120, 150), (74, 190, 210)],
+    },
 ]
 
 

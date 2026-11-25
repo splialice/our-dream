@@ -93,23 +93,36 @@
 
 /* 首页分类入口条：让按主题浏览一眼可见，不用去菜单里找 */
 .home-cat-strip {
+  --hcs-bg: rgba(255,255,255,.96);
+  --hcs-border: rgba(15,23,42,.12);
+  --hcs-fg: rgba(15,23,42,.88);
+  --hcs-chip: rgba(15,23,42,.06);
   display: flex; flex-wrap: wrap; align-items: center; gap: .4rem;
-  margin: 0 0 1.1rem; padding: .55rem .8rem;
-  border: 1px solid rgba(127,127,127,.22); border-radius: 12px;
-  background: rgba(127,127,127,.04);
+  margin: 0 0 1.1rem; padding: .6rem .85rem;
+  border: 1px solid var(--hcs-border); border-radius: 12px;
+  background: var(--hcs-bg); color: var(--hcs-fg);
+  box-shadow: 0 4px 16px rgba(15,23,42,.08);
+}
+[data-theme="dark"] .home-cat-strip {
+  --hcs-bg: rgba(26,26,26,.96);
+  --hcs-border: rgba(255,255,255,.14);
+  --hcs-fg: rgba(235,235,235,.9);
+  --hcs-chip: rgba(255,255,255,.08);
+  box-shadow: none;
 }
 .home-cat-label {
   font-size: .78rem; font-weight: 700; letter-spacing: .04em;
-  text-transform: uppercase; opacity: .55; margin-right: .15rem;
+  text-transform: uppercase; opacity: .7; margin-right: .15rem;
 }
 .home-cat-strip a {
   font-size: .83rem; text-decoration: none; padding: .25rem .6rem;
-  border: 1px solid rgba(127,127,127,.22); border-radius: 999px;
+  border: 1px solid var(--hcs-border); border-radius: 999px;
+  background: var(--hcs-chip); color: var(--hcs-fg);
   transition: border-color .18s ease, background .18s ease;
 }
 .home-cat-strip a:hover {
   border-color: var(--accent, #6a5acd);
-  background: rgba(127,127,127,.1);
+  background: rgba(106,90,205,.12);
 }
 .home-cat-strip .home-cat-all { margin-left: auto; font-weight: 650; }
 

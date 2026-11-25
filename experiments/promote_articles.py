@@ -127,6 +127,18 @@ SPECS = {
         "tags": ["Valkyrie Tune", "Visual novel", "Idolmaster", "Game design"],
         "categories": ["Game culture", "Visual novel"],
     },
+    "gta-v-art-style.md": {
+        "description": "What is the GTA V art style? Rockstar never gave it one official name. Aaron Garbut on capturing the feeling of California, a lighting system built over years, and the GDC idea of spatial cinematography.",
+        "summary": "A city assembled from research and handcraft, not a filter with a name.",
+        "tags": ["Game art direction", "Los Santos", "Lighting", "Game design"],
+        "categories": ["Game history"],
+    },
+    "gta-6-player-backlash.md": {
+        "description": "GTA 6 scored 99 with critics and around 5.6 with players. A look at the Lucia backlash, the honour and relationship systems, and why Rockstar says every choice serves a couple on the run.",
+        "summary": "The 99 is for a game. The 5.6 is for GTA.",
+        "tags": ["GTA 6", "Game industry", "Game culture", "Player backlash"],
+        "categories": ["Game culture", "Game industry"],
+    },
 }
 
 FIELDS = [
