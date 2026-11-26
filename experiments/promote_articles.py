@@ -145,6 +145,12 @@ SPECS = {
         "tags": ["Otome game", "Dating sim", "Game genres", "Angelique"],
         "categories": ["Game culture", "Game design"],
     },
+    "what-is-a-visual-novel.md": {
+        "description": "What is a visual novel? A form built around reading, not a fixed set of mechanics — and why Danganronpa, Persona and Omori all get called one despite their store genres.",
+        "summary": "The form, the name, and three games that sit across the boundary.",
+        "tags": ["Visual novel", "Danganronpa", "Persona", "Omori"],
+        "categories": ["Game culture", "Visual novel"],
+    },
 }
 
 FIELDS = [
